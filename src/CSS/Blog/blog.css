@@ -1,0 +1,137 @@
+.blog-container {
+  margin: 56px auto 64px auto;
+}
+/* HIGH LIGHED BLOG POST  */
+
+.hlblog {
+  justify-content: space-around;
+}
+.hlblog-text {
+  padding-right: 32px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.hlblog-img > img {
+  height: 360px;
+  width: 582;
+}
+
+.hlseperator {
+  width: 100%;
+  border: 1px solid var(--gray-6);
+  margin: 64px 0;
+}
+
+/* BLOG POST CONTAINER */
+.blog-posts-container {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* BLOG CARD */
+
+.blog-post-card {
+  margin-bottom: 64px;
+  width: 100%;
+  max-width: 560px;
+}
+
+.blog-post-card .img {
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.post-card-info {
+  text-align: left;
+}
+
+.post-card-info > h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: -0.01em;
+  color: var(--color-9);
+}
+
+.post-card-info > p {
+  word-wrap: break;
+  margin-top: 4px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  color: var(--gray-6);
+}
+
+/* READBLOG */
+
+.readBlog-container {
+  max-width: 794px;
+  margin: auto;
+}
+
+.readBlog-img > img {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.readBlog {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.readBlog-text > p {
+  margin-top: 48px;
+  font-size: 20px;
+  line-height: 38px;
+}
+.readBlog-details {
+  margin-top: 12px;
+}
+
+.readBlog-details > p:nth-child(1) {
+  color: var(--color-7);
+  font-weight: 600;
+}
+.readBlog-details > p:nth-child(2) {
+  margin-right: 20px;
+  color: var(--gray-6);
+  font-weight: 600;
+}
+
+.readBlog-details {
+  display: flex;
+}
+
+.readblog-detals-hr {
+  border: 1px solid var(--gray-6);
+  height: 18px;
+  margin: 0 10px;
+}
+
+/* RELATED ARTICLE */
+.read-articels-container {
+  margin-top: 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.read-articels-container > h1 {
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.read-articels {
+  width: 70%;
+  margin: auto;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}

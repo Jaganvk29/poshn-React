@@ -1,0 +1,138 @@
+/* section */
+.about-me-section {
+  overflow: hidden;
+  padding-bottom: 72px;
+}
+
+/* wrapper */
+.about-me-section .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* title */
+.about-me-section .title {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  letter-spacing: -0.01em;
+  color: var(--color-3);
+  user-select: none;
+}
+
+/* img */
+.about-me-section .img {
+  width: 100%;
+  max-width: 280px;
+  box-shadow: 0px 2px 34px 5px #ff2a6a12;
+  border: 8px solid white;
+}
+
+/* text */
+.about-me-section .text {
+  width: 100%;
+  max-width: 300px;
+}
+
+.about-me-section .text h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  letter-spacing: -0.01em;
+  color: var(--color-7);
+  margin-bottom: 16px;
+}
+
+.about-me-section .text p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: var(--color-6);
+  margin-bottom: 32px;
+}
+
+/* animation */
+/* 
+.about-me-section .img,
+.about-me-section .text {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: ease;
+  transition-duration: 600ms;
+}
+
+.about-me-section .img {
+  transform: translate(-100px, 0);
+}
+
+.about-me-section .text {
+  transform: translate(100px, 0);
+}
+
+.about-me-section.ani .img,
+.about-me-section.ani .text {
+  opacity: 1;
+  transform: translate(0, 0);
+  transform: translate3d(0, 0);
+} */
+
+@media screen and (min-width: 500px) {
+  .about-me-section .title {
+    font-size: 80px;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .about-me-section .wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .about-me-section .title {
+    font-size: 120px;
+    line-height: 120px;
+  }
+}
+
+@media screen and (min-width: 845px) {
+  .about-me-section .wrapper {
+    gap: 40px;
+  }
+
+  .about-me-section .img {
+    max-width: 373px;
+    height: 554px;
+  }
+
+  .about-me-section .text {
+    max-width: 440px;
+  }
+
+  .about-me-section .text h1 {
+    font-size: 56px;
+  }
+
+  .about-me-section .text p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .about-me-section .title {
+    font-size: 170px;
+    line-height: 170px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .about-me-section .wrapper {
+    gap: 48px;
+  }
+}

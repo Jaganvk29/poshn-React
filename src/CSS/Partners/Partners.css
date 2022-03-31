@@ -1,0 +1,35 @@
+.partner-container{
+    margin-top: 80px;
+}
+
+
+.partner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.partner-title >h1{
+    margin-bottom: 80px;
+   
+}
+
+.partner-nav > a{
+margin-right: 40px;
+font-weight: 500;
+color: var(--gray-6);
+    
+}
+
+.partner-nav > a:hover{
+    margin-right: 40px;
+    font-weight: 500;
+    color: var(--color-7);
+        
+    }
+
+.partner-nav-active{
+    
+    color: var(--color-7);
+        
+}

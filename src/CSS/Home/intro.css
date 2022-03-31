@@ -1,0 +1,136 @@
+.intro-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* wrapper */
+.intro-section .wrapper {
+  padding-top: 40px;
+}
+
+/* intro text */
+.intro-section .text {
+  position: relative;
+}
+
+.intro-section .text h1 {
+  width: 100%;
+  max-width: 235px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: -0.01em;
+  color: var(--color-7);
+  margin-bottom: 24px;
+}
+
+.intro-section .text p {
+  width: 100%;
+  max-width: 320px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: var(--color-6);
+  margin-bottom: 40px;
+}
+
+.intro-section .text button {
+  margin-bottom: 40px;
+}
+
+/* intro img */
+.intro-section .img-container {
+  position: relative;
+  line-height: 0;
+  text-align: center;
+  height: 400px;
+}
+
+.intro-section .img-container .img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+/* animation */
+.intro-section .text {
+  opacity: 0;
+  transform: translate(-100px, 0);
+  animation: header-ani-end 400ms ease-in-out forwards;
+  animation-delay: 400ms;
+}
+
+.intro-section .img-container {
+  opacity: 0;
+  transform: translate(100px, 0);
+  animation: header-ani-end 400ms ease-in-out forwards;
+  animation-delay: 300ms;
+}
+
+@media screen and (min-width: 630px) {
+  .intro-section .wrapper {
+    display: flex;
+    max-width: 690px;
+    padding-top: 20px;
+  }
+
+  .intro-section .text,
+  .intro-section .img-container {
+    flex: 100%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .intro-section .wrapper {
+    padding-top: 0;
+  }
+
+  .intro-section .img-container {
+    height: 450px;
+  }
+}
+
+@media screen and (min-width: 845px) {
+  .intro-section .wrapper {
+    max-width: 1200px;
+  }
+
+  .intro-section .text h1 {
+    max-width: 455px;
+    font-size: 52px;
+  }
+
+  .intro-section .text p {
+    max-width: 380px;
+    font-size: 20px;
+    color: var(--color-6);
+  }
+
+  .intro-section .img-container {
+    padding-top: 20px;
+  }
+
+  .intro-section .img-container {
+    height: 600px;
+  }
+}
+
+@media screen and (min-width: 870px) {
+  .intro-section {
+    overflow: visible;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .intro-section .text h1 {
+    font-size: 56px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .intro-section .img-container {
+    height: 700px;
+  }
+}

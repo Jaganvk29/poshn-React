@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+/* helper */
+@import url("./Helper/helper.css");
+/* scroll snap */
+@import url("./scroll-snap.css");
+/* home */
+@import url("./Home/home.css");
+/* about */
+@import url("./About/about.css");
+/* BLOG */
+@import url("./Blog/blog.css");
+
+
+/* PARTNER */
+@import url("./Partners/Partners.css");
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  font-family: Poppins, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: inherit;
+  
+  
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+

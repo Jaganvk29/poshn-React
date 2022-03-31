@@ -1,0 +1,74 @@
+/* OVER ALL CONTAINER */
+.packages {
+  /* height: 150vh; */
+  background-color: var(--color-3);
+}
+/* BLUE COLOR CONTAINER */
+.packages-title-container {
+  height: 423px;
+}
+
+.packages-title {
+  margin-top: 96px;
+  justify-content: center;
+}
+
+.packages-title > h1 {
+  color: var(--color-1);
+  font-size: 56px;
+}
+
+/* CONTAINER USED TO DISPLAY TOP ON BLUE CONTAINER */
+.package-Details {
+  margin-top: -200px;
+
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* PACKAGE DETAILS CONTAINER */
+
+/* PACKAGE CARD */
+
+.package-card {
+  padding: 36px;
+  height: 436px;
+  width: 368px;
+  margin-top: 48px;
+  background-color: var(--color-1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.package-card img {
+  width: 100px;
+  height: 100px;
+}
+
+.package-card-header {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+.package-card-header h2 {
+  margin-top: 32px;
+  color: var(--color-9);
+}
+
+.package-card-header p {
+  margin-top: 16px;
+  color: var(--gray-6);
+  text-align: center;
+}
+
+.package-tc {
+  padding: 48px 0;
+  /* padding: 48px auto; */
+  text-align: center;
+  color: var(--gray-6);
+}
