@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Accordion from "./Accordion";
 
 const Faq = () => {
   return (
@@ -9,20 +10,18 @@ const Faq = () => {
             <div className="faq-title">
               <h1>Frequently asked questions</h1>
             </div>
-            <div className="faq-questions-container">
-              <div className="faq-questions">
-                <h2>How can i ask for a refund?</h2>
-                <button>expand</button>
-              </div>
+            <Accordion />
+            <Accordion />
+            <Accordion />
+            <Accordion />
+            <Accordion />
 
-              <div>
-                <p>
-                  We are dreamers, scientists, engineers, writers, artists. Each
-                  of us has a personal reason to try to create a more
-                  emotionally resilient world. We are dreamers, scientists,
-                  engineers, writers, artists. Each of us has a personal reason.
-                </p>
-              </div>
+            <div className="faq-footer">
+              <h1>Still have a question?</h1>
+              <p>
+                If you cannot find answer to your question in our FAQ, You can
+                always contact us. We’ll answer to you shortly!
+              </p>
             </div>
           </div>
         </div>
