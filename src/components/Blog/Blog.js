@@ -10,12 +10,7 @@ import weightplate from "../../Assets/Blog_image/weightplate.png";
 import yoga2 from "../../Assets/Blog_image/Yoga2.png";
 import Footer from "../Footer/Footer";
 import BlogPostCard from "./BlogPostCard";
-import {
-  Link,
-  useParams,
-  NavLink,
-  BrowserRouter as Router,
-} from "react-router-dom";
+import { Link, useParams, NavLink, Routes } from "react-router-dom";
 import HlBlog from "./HlBlog";
 
 const Blog = () => {
@@ -26,58 +21,54 @@ const Blog = () => {
           {/* HIGHLIGHTED(hl) BLOG -- FIRST POST */}
           <HlBlog />
           <hr className="hlseperator" />
-          <Router>
-            <div className="blog-posts-container flex">
-              <Link to={"/blog/post1"}>
-                <BlogPostCard
-                  img={yoga}
-                  title={
-                    "Is Yoga good or bad, if I have a problem in my spine?"
-                  }
-                  date={"03 JUNE 2021"}
-                />
-              </Link>
-              <BlogPostCard
-                img={icecream}
-                title={"Can i add icecream in my diet?"}
-                date={"03 JUNE 2021"}
-              />
-              <BlogPostCard
-                img={Meat}
-                title={"I hate green vegetables, I love junk food."}
-                date={"03 JUNE 2021"}
-              />
-              <BlogPostCard
-                img={Excer}
-                title={
-                  "I can deadlift twice my weight, Is it enough for a person?"
-                }
-                date={"03 JUNE 2021"}
-              />
-              <BlogPostCard
-                img={pushup}
-                title={"Is Yoga good or bad, if I have a  problem in my spine?"}
-                date={"03 JUNE 2021"}
-              />
-              <BlogPostCard
-                img={yoga2}
-                title={"Can i add icecream in my diet?"}
-                date={"03 JUNE 2021"}
-              />
-              <BlogPostCard
-                img={boxing}
-                title={"I hate green vegetables, I love junk food."}
-                date={"03 JUNE 2021"}
-              />
-              <BlogPostCard
-                img={weightplate}
-                title={
-                  "I can deadlift twice my weight, Is it enough for a person?"
-                }
-                date={"03 JUNE 2021"}
-              />
-            </div>
-          </Router>
+
+          <div className="blog-posts-container flex">
+            <BlogPostCard
+              img={yoga}
+              title={"Is Yoga good or bad, if I have a problem in my spine?"}
+              date={"03 JUNE 2021"}
+            />
+
+            <BlogPostCard
+              img={icecream}
+              title={"Can i add icecream in my diet?"}
+              date={"03 JUNE 2021"}
+            />
+            <BlogPostCard
+              img={Meat}
+              title={"I hate green vegetables, I love junk food."}
+              date={"03 JUNE 2021"}
+            />
+            <BlogPostCard
+              img={Excer}
+              title={
+                "I can deadlift twice my weight, Is it enough for a person?"
+              }
+              date={"03 JUNE 2021"}
+            />
+            <BlogPostCard
+              img={pushup}
+              title={"Is Yoga good or bad, if I have a  problem in my spine?"}
+              date={"03 JUNE 2021"}
+            />
+            <BlogPostCard
+              img={yoga2}
+              title={"Can i add icecream in my diet?"}
+              date={"03 JUNE 2021"}
+            />
+            <BlogPostCard
+              img={boxing}
+              title={"I hate green vegetables, I love junk food."}
+              date={"03 JUNE 2021"}
+            />
+            <BlogPostCard
+              img={weightplate}
+              title={
+                "I can deadlift twice my weight, Is it enough for a person?"
+              }
+              date={"03 JUNE 2021"}
+            />
+          </div>
         </div>
       </div>
       <Footer />

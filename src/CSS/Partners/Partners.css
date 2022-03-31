@@ -1,5 +1,6 @@
 .partner-container{
     margin-top: 80px;
+
 }
 
 
@@ -32,4 +33,66 @@ color: var(--gray-6);
     
     color: var(--color-7);
         
+}
+
+.Partner-card-container{
+    margin-top:56px ;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+
+}
+
+.Partner-card{
+    margin-top: 48px;
+padding: 32px 16px;
+height: 274px;
+width: 256px;
+background: #FFFFFF;
+box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.05), 0px 0px 28px rgba(250, 112, 1, 0.08);
+border-radius: 16px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+.Partner-card > h1{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.Partner-card > p{
+    font-size: 16px;
+    color: var(--gray-6);
+    text-align: center;
+}
+
+.Partner-card-btn {
+    width: 100%;
+    margin-top:13px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.Partner-card-btn > button{
+background: #FFFFFF;
+box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+border-radius: 8px;
+padding: 8px;
+display: flex;
+ align-items: center;
+}
+.Partner-card-btn > button >img{
+  height: 24px;
+  width: 24px;
+}
+
+.spacer{
+    margin-top: 76px;
 }

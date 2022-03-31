@@ -1,9 +1,9 @@
 import React from "react";
-import { Link, NavLink, BrowserRouter as Router } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Nav = (props) => {
   return (
-    <Router>
+    <div>
       <header className="has-snap has-ani header bg-color-7">
         <nav className="nav">
           <div className="wrapper flex flex-jc-sb flex-ai-c bg-color-4">
@@ -20,30 +20,48 @@ const Nav = (props) => {
             {/* <!--Desktop Menu --> */}
             <div className="menu-desk flex-jc-sb flex-ai-c">
               <NavLink
-                activeClassName="activeNav"
                 to="/about"
-                className="color-5"
+                className={({ isActive }) =>
+                  isActive ? "activeNav" : "color-5"
+                }
               >
                 About
               </NavLink>
-              <a href="#" className="color-5">
-                Diet guide
-              </a>
+
+              {/* DIET GUIDE */}
               <NavLink
-                activeClassName="activeNav"
-                to="/ourpartners"
-                className="color-5"
+                to="/dietguide"
+                className={({ isActive }) =>
+                  isActive ? "activeNav" : "color-5"
+                }
+              >
+                Diet guide
+              </NavLink>
+              {/* OUR PARTNERS */}
+              <NavLink
+                to="/ourpartners/doctors"
+                className={({ isActive }) =>
+                  isActive ? "activeNav" : "color-5"
+                }
               >
                 Our partners
               </NavLink>
+              {/* BLOGS */}
               <NavLink
-                activeClassName="activeNav"
                 to="/blog"
-                className="color-5"
+                className={({ isActive }) =>
+                  isActive ? "activeNav" : "color-5"
+                }
               >
                 Blogs
               </NavLink>
-              <NavLink to="/blog/post1" className="color-5">
+              {/* SURVEY */}
+              <NavLink
+                to="/blog/post1"
+                className={({ isActive }) =>
+                  isActive ? "activeNav" : "color-5"
+                }
+              >
                 Survey
               </NavLink>
             </div>
@@ -76,7 +94,7 @@ const Nav = (props) => {
         </nav>
       </header>
       <div>{props.children}</div>
-    </Router>
+    </div>
   );
 };
 

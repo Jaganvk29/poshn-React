@@ -1,5 +1,8 @@
 import React from "react";
 
+import Footer from "../Footer/Footer";
+import PartnerGym from "./PartnerGym";
+import { Link, NavLink, Routes, Route, Outlet } from "react-router-dom";
 const Partners = () => {
   return (
     <div className="partner-container">
@@ -9,12 +12,19 @@ const Partners = () => {
             <h1>Our Partners</h1>
           </div>
           <div className="partner-nav">
-            <a className="partner-nav-active">Doctors</a>
-            <a>Gym</a>
-            <a>Fitness Coaches</a>
+            <Link to={"/ourpartners/doctors"} className="partner-nav-active">
+              Doctors
+            </Link>
+            <Link to={"/ourpartners/gym"}>Gym</Link>
+            <Link to={"/ourpartners/fitnesscoaches"}>Fitness Coaches</Link>
+          </div>
+          <div>
+            <Outlet />
           </div>
         </div>
       </div>
+      <div className="spacer"></div>
+      <Footer />
     </div>
   );
 };
