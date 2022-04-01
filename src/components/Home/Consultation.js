@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import ModalContact from "./Modal/ModalContact";
-
+import PoshContext from "../../PoshContext";
 const Consultation = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, modalHandler } = useContext(PoshContext);
 
   const buttonClick = () => {
     console.log("CLICKED");
-    setIsOpen(true);
+    modalHandler(true);
   };
 
   return (
@@ -21,7 +22,7 @@ const Consultation = () => {
         </div>
       </div>
       <ModalContact
-        onClose={() => setIsOpen(false)}
+        // onClose={() => setIsOpen(false)}
         open={isOpen}
       ></ModalContact>
     </section>

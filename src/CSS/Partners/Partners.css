@@ -8,10 +8,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .partner-title >h1{
     margin-bottom: 80px;
+   
+}
+.partner-nav{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
    
 }
 
@@ -19,6 +27,8 @@
 margin-right: 40px;
 font-weight: 500;
 color: var(--gray-6);
+
+
     
 }
 
@@ -26,6 +36,7 @@ color: var(--gray-6);
     margin-right: 40px;
     font-weight: 500;
     color: var(--color-7);
+
         
     }
 
@@ -95,4 +106,38 @@ display: flex;
 
 .spacer{
     margin-top: 76px;
+}
+
+
+
+
+@media only screen and (max-width: 450px) {
+
+  
+    
+    .partner-nav{
+    width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+       
+    }
+    
+    .partner-nav > a{
+   margin-right: 0;
+   
+    
+    
+        
+    }
+    
+    .partner-nav > a:hover{
+       margin-right: 0;
+       
+    
+            
+        }
+    
+    
 }

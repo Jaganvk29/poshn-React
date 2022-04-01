@@ -86,3 +86,32 @@
 .faq-footer > h1{
  font-weight: 500;
   }
+
+  /* MOBILE */
+
+  @media only screen and (max-width: 735px) {
+    .faq-questions-container{
+        width: 100%;
+        
+    
+    }
+    .faq-footer{
+        width: 100%;
+        
+    }
+    .faq-title{
+        justify-content: center;
+    } 
+
+    .faq-title > h1{
+       font-weight: bold;
+        font-size:30px;
+    }
+  }
+
+  @media only screen and (max-width: 490px) {
+    .faq-title > h1{
+        font-weight: bold;
+         font-size:20px;
+     }
+  }

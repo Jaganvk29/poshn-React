@@ -4,12 +4,15 @@ import App from "./App.js";
 import "./CSS/main.css";
 import { BrowserRouter } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
+import { PoshProvider } from "./PoshContext.js";
 
 const root = ReactDom.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <Nav>
-      <App />
-    </Nav>
+    <PoshProvider>
+      <Nav>
+        <App />
+      </Nav>
+    </PoshProvider>
   </BrowserRouter>
 );

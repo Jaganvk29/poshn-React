@@ -40,13 +40,15 @@
 
 .booking-overlay .btn-container {
   text-align: right;
+
 }
 
 .booking-overlay .btn-close {
+  
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  background-image: url("https://image.flaticon.com/icons/png/512/1828/1828778.png");
+  background-image: url("../../Assets/close.png");
   background-color: #eee;
   background-size: 15px;
   background-repeat: no-repeat;

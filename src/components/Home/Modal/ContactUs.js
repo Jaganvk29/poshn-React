@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
+import PoshContext from "../../../PoshContext";
 
 const ContactUs = () => {
+  const { isOpen, modalHandler } = useContext(PoshContext);
+
+  const modalBtnHandler = () => {
+    modalHandler(false);
+  };
+
   return (
     <div>
       <div class="scroll ">
         <div class="content">
           <div class="btn-container">
-            <button class="btn-close"></button>
+            <button onClick={modalBtnHandler} class="btn-close"></button>
           </div>
           <div class="booking">
             <div class="btn-container">
-              <button class="btn-close"></button>
+              <button onClick={modalBtnHandler} class="btn-close"></button>
             </div>
             <div class="title">
               <h2>Get in touch!</h2>
