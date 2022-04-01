@@ -11,13 +11,22 @@
     padding: 22px 32px;
     border-radius: 8px;
     margin: 10px;
+    cursor: pointer;
+
 }
 .faq-questions{
     display: flex;
     justify-content: space-between;
    
 }
+.faq-questions >button {
+    background-color: transparent;
+}
 
+.faq-questions >button >img{
+  height: 24px;
+  width: 24px;
+}
 
 .faq-questions >h2{
     font-size: 20px;
@@ -25,11 +34,12 @@
     color: #6D747A;
 }
 
+
 .faq-content{
     max-height: 0;
     /* margin-top: 16px; */
     overflow: hidden;
-    transition:  all 0.5s cubic-bezier(0,1,0,1);
+    transition:  all 0.5s cubic-bezier(0,1,0,1) ease-in;
 
 }
 
@@ -45,8 +55,7 @@
     height: auto;
     max-height: 999px;
      margin-top: 16px;
-    
-    transition:  all 0.5s cubic-bezier(1,0,1,0) ;
+    transition:  all 0.5s cubic-bezier(1,0,1,0) ease-out ;
 
 }
 

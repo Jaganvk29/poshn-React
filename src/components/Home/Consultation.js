@@ -7,9 +7,6 @@ const Consultation = () => {
   const buttonClick = () => {
     console.log("CLICKED");
     setIsOpen(true);
-
-    document.querySelector("body").classList.add("overflow-hidden");
-    document.querySelector(".booking-overlay").classList.remove("none");
   };
 
   return (
@@ -23,10 +20,10 @@ const Consultation = () => {
           </button>
         </div>
       </div>
-      <ModalContact onClose={() => setIsOpen(false)} open={isOpen}>
-        {" "}
-        Fancy Modal
-      </ModalContact>
+      <ModalContact
+        onClose={() => setIsOpen(false)}
+        open={isOpen}
+      ></ModalContact>
     </section>
   );
 };

@@ -3,7 +3,6 @@ import React from "react";
 const ContactUs = () => {
   return (
     <div>
-      <div class="overlay"></div>
       <div class="scroll ">
         <div class="content">
           <div class="btn-container">
@@ -29,7 +28,6 @@ const ContactUs = () => {
                         class="input-field"
                         type="text"
                         placeholder="Enter name"
-                        value=""
                       />
                     </div>
                   </div>
@@ -42,7 +40,6 @@ const ContactUs = () => {
                         class="input-field"
                         type="text"
                         placeholder="Enter email"
-                        value=""
                         required
                       />
                     </div>
@@ -56,7 +53,6 @@ const ContactUs = () => {
                         class="input-field"
                         type="text"
                         placeholder="Enter phone"
-                        value=""
                       />
                     </div>
                   </div>
@@ -70,7 +66,6 @@ const ContactUs = () => {
                         class="input-field"
                         cols=""
                         rows="5"
-                        value=""
                       ></textarea>
                     </div>
                   </div>

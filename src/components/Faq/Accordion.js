@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import plus from "../../Assets/Plus.png";
+import minus from "../../Assets/Minus.png";
 
 const Accordion = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -14,7 +16,9 @@ const Accordion = () => {
         }
       >
         <h2>How can i ask for a refund?</h2>
-        <button>expand</button>
+        <button>
+          <img src={isExpanded ? minus : plus} />
+        </button>
       </div>
 
       <div className={isExpanded ? "faq-content-show" : "faq-content"}>
