@@ -30,6 +30,7 @@
 
 .faq-questions >h2{
     font-size: 20px;
+
     font-weight: 500;
     color: #6D747A;
 }
@@ -46,7 +47,6 @@
 
 .faq-questions-active >h2{
     font-weight: 600;
-   
     color: var(--color-7)
 }
 
@@ -64,11 +64,13 @@
 
 .faq-title{
     margin-bottom: 40px;
+    
 }
 
 .faq-title > h1{
     font-weight: 500;
     font-size: 40px;
+    
 }
 /* FAQ FOOTER  */
 .faq-footer{
@@ -85,6 +87,11 @@
 }
 .faq-footer > h1{
  font-weight: 500;
+  }
+
+
+  .accord-text{
+      font-size: 10px;
   }
 
   /* MOBILE */

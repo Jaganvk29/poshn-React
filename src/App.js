@@ -9,6 +9,7 @@ import Faq from "./components/Faq/Faq";
 import PartnerGym from "./components/Partners/PartnerGym";
 import PartnerDoctor from "./components/Partners/PartnerDoctor";
 import FitnessCoach from "./components/Partners/FitnessCoach";
+
 const App = () => {
   return (
     // <div>

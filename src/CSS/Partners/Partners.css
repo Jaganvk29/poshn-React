@@ -74,6 +74,7 @@ align-items: center;
 .Partner-card > h1{
     margin-top: 20px;
     font-size: 20px;
+    text-align: center;
 }
 .Partner-card > p{
     font-size: 16px;

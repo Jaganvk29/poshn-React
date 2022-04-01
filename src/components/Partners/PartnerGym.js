@@ -13,7 +13,52 @@ const PartnerGym = () => {
       />
       <PartnerCard
         img={pgym1}
+        title="Sparten Gym"
+        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
+      />
+      <PartnerCard
+        img={pgym1}
+        title="Fitness Club"
+        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
+      />
+      <PartnerCard
+        img={pgym1}
+        title="Rockstar Gym"
+        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
+      />
+      <PartnerCard
+        img={pgym1}
         title="Gold's Gym"
+        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
+      />
+      <PartnerCard
+        img={pgym1}
+        title="Oxygen Gym"
+        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
+      />
+      <PartnerCard
+        img={pgym1}
+        title="Habits Gym"
+        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
+      />
+      <PartnerCard
+        img={pgym1}
+        title="Transformation Studio"
+        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
+      />
+      <PartnerCard
+        img={pgym1}
+        title="Sparten Gym"
+        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
+      />
+      <PartnerCard
+        img={pgym1}
+        title="Gold's Gym"
+        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
+      />
+      <PartnerCard
+        img={pgym1}
+        title="Sparten Gym"
         content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
       />
       <PartnerCard
@@ -28,7 +73,7 @@ const PartnerGym = () => {
       />
       <PartnerCard
         img={pgym1}
-        title="Gold's Gym"
+        title="Zumba Class"
         content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
       />
       <PartnerCard
@@ -38,52 +83,7 @@ const PartnerGym = () => {
       />
       <PartnerCard
         img={pgym1}
-        title="Gold's Gym"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-      <PartnerCard
-        img={pgym1}
-        title="Gold's Gym"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-      <PartnerCard
-        img={pgym1}
-        title="Gold's Gym"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-      <PartnerCard
-        img={pgym1}
-        title="Gold's Gym"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-      <PartnerCard
-        img={pgym1}
-        title="Gold's Gym"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-      <PartnerCard
-        img={pgym1}
-        title="Gold's Gym"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-      <PartnerCard
-        img={pgym1}
-        title="Gold's Gym"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-      <PartnerCard
-        img={pgym1}
-        title="Gold's Gym"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-      <PartnerCard
-        img={pgym1}
-        title="Gold's Gym"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-      <PartnerCard
-        img={pgym1}
-        title="Gold's Gym"
+        title="Habits Gym"
         content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
       />
     </div>

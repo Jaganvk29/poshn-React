@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import plus from "../../Assets/Plus.png";
 import minus from "../../Assets/Minus.png";
 
-const Accordion = () => {
+const Accordion = (props) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const faqquestionhandler = () => {
@@ -15,7 +15,7 @@ const Accordion = () => {
           isExpanded ? "faq-questions faq-questions-active" : "faq-questions"
         }
       >
-        <h2>How can i ask for a refund?</h2>
+        <h2>{props.title}</h2>
         <button>
           <img src={isExpanded ? minus : plus} />
         </button>
