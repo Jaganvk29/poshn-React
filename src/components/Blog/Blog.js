@@ -23,17 +23,20 @@ const Blog = () => {
           <hr className="hlseperator" />
 
           <div className="blog-posts-container flex">
-            <BlogPostCard
-              img={yoga}
-              title={"Is Yoga good or bad, if I have a problem in my spine?"}
-              date={"03 JUNE 2021"}
-            />
-
-            <BlogPostCard
-              img={icecream}
-              title={"Can i add icecream in my diet?"}
-              date={"03 JUNE 2021"}
-            />
+            <Link to={"50"}>
+              <BlogPostCard
+                img={yoga}
+                title={"Is Yoga good or bad, if I have a problem in my spine?"}
+                date={"03 JUNE 2021"}
+              />
+            </Link>
+            <Link to={"50"}>
+              <BlogPostCard
+                img={icecream}
+                title={"Can i add icecream in my diet?"}
+                date={"03 JUNE 2021"}
+              />
+            </Link>
             <BlogPostCard
               img={Meat}
               title={"I hate green vegetables, I love junk food."}

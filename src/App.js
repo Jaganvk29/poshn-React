@@ -21,9 +21,7 @@ const App = () => {
       <Route path="/about" element={<About />} />
 
       <Route path="/blog" element={<Blog />} />
-
       <Route path="/blog/:postId" element={<ReadBlog />} />
-
       <Route path="/ourpartners/*" element={<Partners />}>
         <Route index path="doctors" element={<PartnerDoctor />} />
         <Route path="fitnesscoaches" element={<FitnessCoach />} />

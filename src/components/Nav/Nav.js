@@ -1,17 +1,30 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, NavLink, useParams } from "react-router-dom";
 
 const Nav = (props) => {
+  const [navopen, setNavOpen] = useState(false);
+
+  const paramlins = useParams();
+  console.log(paramlins);
+
+  const hamburgerhandler = () => {
+    setNavOpen(!navopen);
+    console.log("YES THIS ONE");
+  };
+
   return (
     <div>
       <header className="has-snap has-ani header bg-color-7">
-        <nav className="nav">
-          <div className="wrapper flex flex-jc-sb flex-ai-c bg-color-4">
+        <nav className={navopen ? "nav open" : "nav"}>
+          <div className="wrapper flex flex-jc-sb flex-ai-c bg-color-7">
             {/* <!-- Logo --> */}
             <NavLink to="/" className="logo logo-1"></NavLink>
 
             {/* <!-- Hamburger --> */}
-            <button className="hamburger flex flex-col flex-jc-sb">
+            <button
+              onClick={hamburgerhandler}
+              className="hamburger flex flex-col flex-jc-sb"
+            >
               <span className="bg-color-5"></span>
               <span className="bg-color-5"></span>
               <span className="bg-color-5"></span>
@@ -57,7 +70,7 @@ const Nav = (props) => {
               </NavLink>
               {/* SURVEY */}
               <NavLink
-                to="/blog/post1"
+                to={`/blog/1`}
                 className={({ isActive }) =>
                   isActive ? "activeNav" : "color-5"
                 }
@@ -75,21 +88,41 @@ const Nav = (props) => {
 
           {/* <!--Mobile Menu --> */}
           <div className="menu-mob">
-            <a href="/HTML/about.html" className="color-5">
+            <NavLink
+              onClick={() => setNavOpen(false)}
+              to="/about"
+              className="color-7"
+            >
               About
-            </a>
-            <a href="#" className="color-5">
+            </NavLink>
+            <NavLink
+              onClick={() => setNavOpen(false)}
+              to="/dietguide"
+              className="color-NavLink"
+            >
               Diet guide
-            </a>
-            <a href="#" className="color-5">
+            </NavLink>
+            <NavLink
+              onClick={() => setNavOpen(false)}
+              to="/ourpartners/doctors"
+              className="color-7"
+            >
               Our partners
-            </a>
-            <a href="#" className="color-5">
+            </NavLink>
+            <NavLink
+              onClick={() => setNavOpen(false)}
+              to="/blog"
+              className="color-7"
+            >
               Blogs
-            </a>
-            <a href="#" className="color-5">
+            </NavLink>
+            <NavLink
+              onClick={() => setNavOpen(false)}
+              to={`/blog/1`}
+              className="color-7"
+            >
               Survey
-            </a>
+            </NavLink>
           </div>
         </nav>
       </header>

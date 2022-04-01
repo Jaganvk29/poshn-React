@@ -1,8 +1,11 @@
 import React from "react";
+import { Link, useParams } from "react-router-dom";
 import person from "../../Assets/person.jpg";
 import "../../CSS/main.css";
 
 const AboutMe = () => {
+  const paramlins = useParams();
+  console.log(paramlins);
   return (
     <section className="has-snap has-ani about-me-section">
       <h1 className="title">About me</h1>
@@ -17,7 +20,9 @@ const AboutMe = () => {
             numerous accolades, including two National Film Awards and five Film
             fare Awards.
           </p>
-          <button className="btn btn-toggle">Read more</button>
+          <button className="btn btn-toggle">
+            <Link to={"/about"}>Read more</Link>
+          </button>
         </div>
       </div>
     </section>

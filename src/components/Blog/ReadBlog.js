@@ -7,6 +7,8 @@ import Footer from "../Footer/Footer";
 import { useParams } from "react-router-dom";
 export const ReadBlog = () => {
   const params = useParams();
+  const postId = params.postId;
+  console.log(postId);
 
   console.log(params.postId);
   return (
