@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Accordion from "./Accordion";
+import { faqData } from "./faqdata";
 
 const Faq = () => {
   return (
@@ -10,13 +11,13 @@ const Faq = () => {
             <div className="faq-title">
               <h1>Frequently asked questions</h1>
             </div>
-            <Accordion title="How can i ask for a refund?" />
-            <Accordion title="Who are the doctors here?" />
-            <Accordion title="I want to lose fat, how much time will it take?" />
-            <Accordion title="I’m Skinny, I want to gain weight." />
-            <Accordion title="Will you provide coaching in India too?" />
-            <Accordion title="Can I pay in Indian Rupee?" />
-            <Accordion title="I love the product, How can I join your team?" />
+            {faqData.map((faq, i) => (
+              <Accordion
+                key={i}
+                faqtitle={faq.faqQuestion}
+                faqanswer={faq.faqAnswer}
+              />
+            ))}
 
             <div className="faq-footer">
               <h1>Still have a question?</h1>

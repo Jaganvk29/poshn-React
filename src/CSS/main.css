@@ -13,6 +13,10 @@
 @import url("./Faq/Faq.css");
 /* PARTNER */
 @import url("./Partners/Partners.css");
+/* SURVEY */
+@import url("./Survey/Survey.css");
+/* ADMIN */
+@import url("./Admin/Admin.css");
 
 html {
   font-size: 100%;

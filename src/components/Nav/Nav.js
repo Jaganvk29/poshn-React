@@ -70,7 +70,7 @@ const Nav = (props) => {
               </NavLink>
               {/* SURVEY */}
               <NavLink
-                to={`/blog/1`}
+                to="/survey"
                 className={({ isActive }) =>
                   isActive ? "activeNav" : "color-5"
                 }
@@ -118,7 +118,7 @@ const Nav = (props) => {
             </NavLink>
             <NavLink
               onClick={() => setNavOpen(false)}
-              to={`/blog/1`}
+              to="/survey"
               className="color-7"
             >
               Survey

@@ -50,14 +50,16 @@ color: var(--gray-6);
     margin-top:56px ;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content:  center;
+    
+    
     flex-wrap: wrap;
 
 
 }
 
 .Partner-card{
-    margin-top: 48px;
+    margin: 15px;
 padding: 32px 16px;
 height: 274px;
 width: 256px;
@@ -68,6 +70,8 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+flex:  1 1 10rem;
+/* margin-right: 30px; */
 
 }
 

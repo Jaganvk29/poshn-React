@@ -1,13 +1,44 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useState } from "react";
 import PoshContext from "../../../PoshContext";
 
 const ContactUs = () => {
-  const { isOpen, modalHandler } = useContext(PoshContext);
+  const { modalHandler } = useContext(PoshContext);
+  const [selected, setSelected] = useState([]);
+
+  const userNameref = useRef();
+  const userEmailref = useRef();
+  const userPhoneref = useRef();
+  const userMesgref = useRef();
+  const selectoption = useRef();
+
+  const checkboxhandler = (e) => {
+    if (e.target.checked) {
+      setSelected([...selected, e.target.value]);
+    } else {
+      setSelected(selected.filter((select) => select != e.target.value));
+    }
+  };
+
+  // console.log(selected);
 
   const modalBtnHandler = () => {
     modalHandler(false);
   };
 
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const consultationType = [];
+    consultationType.push(...selected);
+
+    const formData = {
+      name: userNameref.current.value,
+      email: userEmailref.current.value,
+      phone: userPhoneref.current.value,
+      msg: userMesgref.current.value,
+      consultation: consultationType,
+    };
+    console.log(formData);
+  };
   return (
     <div>
       <div class="scroll ">
@@ -23,7 +54,7 @@ const ContactUs = () => {
               <h2>Get in touch!</h2>
               <h5>Get advice related to the service</h5>
             </div>
-            <form class="form">
+            <form class="form" onSubmit={submitHandler}>
               <div class="container">
                 <div class="flex-1 mr-32px">
                   <div class="field mb-24px">
@@ -35,6 +66,7 @@ const ContactUs = () => {
                         class="input-field"
                         type="text"
                         placeholder="Enter name"
+                        ref={userNameref}
                       />
                     </div>
                   </div>
@@ -48,6 +80,7 @@ const ContactUs = () => {
                         type="text"
                         placeholder="Enter email"
                         required
+                        ref={userEmailref}
                       />
                     </div>
                   </div>
@@ -60,6 +93,7 @@ const ContactUs = () => {
                         class="input-field"
                         type="text"
                         placeholder="Enter phone"
+                        ref={userPhoneref}
                       />
                     </div>
                   </div>
@@ -73,20 +107,22 @@ const ContactUs = () => {
                         class="input-field"
                         cols=""
                         rows="5"
+                        ref={userMesgref}
                       ></textarea>
                     </div>
                   </div>
                 </div>
               </div>
-
+              {/* CHECK BOXES */}
               <div class="field mt-40px">
                 <label>Consultation type</label>
-                <div class="btn-selection">
+                <div ref={selectoption} class="btn-selection">
                   <label>
                     <input
                       type="checkbox"
                       name="consultationType"
                       value="diet"
+                      onChange={checkboxhandler}
                     />
                     <span class="input-btn">Diet</span>
                   </label>
@@ -95,6 +131,7 @@ const ContactUs = () => {
                       type="checkbox"
                       name="consultationType"
                       value="nutrition"
+                      onChange={checkboxhandler}
                     />
                     <span class="input-btn">Nutrition</span>
                   </label>
@@ -103,6 +140,7 @@ const ContactUs = () => {
                       type="checkbox"
                       name="consultationType"
                       value="fitness"
+                      onChange={checkboxhandler}
                     />
                     <span class="input-btn">Fitness</span>
                   </label>
@@ -111,6 +149,7 @@ const ContactUs = () => {
                       type="checkbox"
                       name="consultationType"
                       value="fatloss"
+                      onChange={checkboxhandler}
                     />
                     <span class="input-btn">Fatloss</span>
                   </label>

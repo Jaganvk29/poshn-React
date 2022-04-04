@@ -1,14 +1,59 @@
-import React from "react";
+import React, { useEffect } from "react";
 import burger from "../../Assets/burger.png";
 import momos from "../../Assets/momos.png";
 import veggies from "../../Assets/veggies.png";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const LatestBlogs = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+  });
+  const textani = useAnimation();
+  const paraani = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      paraani.start({
+        y: 0,
+        opacity: 1,
+        transition: {
+          ease: "easeInOut",
+          duration: 0.5,
+          bounce: 0.3,
+        },
+      });
+
+      textani.start({
+        opacity: 1,
+        scale: 1,
+        transition: {
+          ease: "easeInOut",
+
+          duration: 0.5,
+          bounce: 0.3,
+        },
+      });
+    }
+    // TO CHECK IF ITS NOT VIEW PORT TO REMOVE ANIMATION
+    if (!inView) {
+      paraani.start({
+        y: 100,
+        opacity: 0,
+      });
+
+      textani.start({
+        scale: 0.3,
+        opacity: 0,
+      });
+    }
+  }, [inView]);
+
   return (
-    <section class="has-snap has-ani blogs-section">
+    <section ref={ref} class="has-snap has-ani blogs-section">
       <div class="wrapper">
-        <h1>The Latest Blogs</h1>
-        <div class="blogs-container">
+        <motion.h1 animate={textani}>The Latest Blogs</motion.h1>
+        <motion.div animate={paraani} class="blogs-container">
           {/* <!-- card 1 --> */}
           <div class="blog-card">
             <img class="img" src={burger} />
@@ -42,7 +87,7 @@ const LatestBlogs = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

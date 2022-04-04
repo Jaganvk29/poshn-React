@@ -1,9 +1,19 @@
 import React from "react";
 import ropeworkout from "../../Assets/ropeworkout.png";
-
+import { motion } from "framer-motion";
 const HlBlog = () => {
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   return (
-    <div className="hlblog flex">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={variants}
+      className="hlblog flex"
+    >
       <div className="hlblog-text flex">
         <p>03 JUNE 2021</p>
         <h1>HIIT Workouts: How effective they really are?</h1>
@@ -19,7 +29,7 @@ const HlBlog = () => {
       <div className="hlblog-img">
         <img src={ropeworkout} />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

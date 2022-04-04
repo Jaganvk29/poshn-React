@@ -1,101 +1,18 @@
 import React from "react";
 import pgym1 from "../../Assets/Partnerimg/pgym1.png";
 import PartnerCard from "./PartnerCard";
+import { partnersData } from "./partnersdata";
+
 const FitnessCoach = () => {
   return (
     <div className="Partner-card-container">
-      <PartnerCard
-        img={pgym1}
-        title="FITNESS COACH"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-
-      <PartnerCard
-        img={pgym1}
-        title="FITNESS COACH"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-
-      <PartnerCard
-        img={pgym1}
-        title="FITNESS COACH"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-
-      <PartnerCard
-        img={pgym1}
-        title="FITNESS COACH"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-      <PartnerCard
-        img={pgym1}
-        title="FITNESS COACH"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-
-      <PartnerCard
-        img={pgym1}
-        title="FITNESS COACH"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-
-      <PartnerCard
-        img={pgym1}
-        title="FITNESS COACH"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-
-      <PartnerCard
-        img={pgym1}
-        title="FITNESS COACH"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-      <PartnerCard
-        img={pgym1}
-        title="FITNESS COACH"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-
-      <PartnerCard
-        img={pgym1}
-        title="FITNESS COACH"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-
-      <PartnerCard
-        img={pgym1}
-        title="FITNESS COACH"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-
-      <PartnerCard
-        img={pgym1}
-        title="FITNESS COACH"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-      <PartnerCard
-        img={pgym1}
-        title="FITNESS COACH"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-
-      <PartnerCard
-        img={pgym1}
-        title="FITNESS COACH"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-
-      <PartnerCard
-        img={pgym1}
-        title="FITNESS COACH"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
-
-      <PartnerCard
-        img={pgym1}
-        title="FITNESS COACH"
-        content="1901 Thornridge Cir. Shiloh, Hawaii 81063"
-      />
+      {partnersData[0].fitnesscoach.map((partner) => (
+        <PartnerCard
+          img={partner.partnerProfile}
+          title={partner.partnerName}
+          content={partner.partnerAddress}
+        />
+      ))}
     </div>
   );
 };

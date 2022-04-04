@@ -1,25 +1,70 @@
-import React from "react";
+import React, { useEffect } from "react";
 import hand from "../../../Assets/Package_Icon/Hand.png";
 import shoe from "../../../Assets/Package_Icon/SHOE.png";
 import banana from "../../../Assets/Package_Icon/Banana.png";
 import bottle from "../../../Assets/Package_Icon/Bottle.png";
 import apple from "../../../Assets/Package_Icon/Apple.png";
 import juice from "../../../Assets/Package_Icon/Juice.png";
-
 import CardPackage from "./CardPackage";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Packages = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+  });
+  const textani = useAnimation();
+  const paraani = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      paraani.start({
+        y: 0,
+        opacity: 1,
+        transition: {
+          ease: "easeInOut",
+          duration: 0.5,
+          bounce: 0.3,
+        },
+      });
+
+      textani.start({
+        opacity: 1,
+        scale: 1,
+        transition: {
+          ease: "easeInOut",
+          duration: 0.5,
+          bounce: 0.3,
+        },
+      });
+    }
+    // TO CHECK IF ITS NOT VIEW PORT TO REMOVE ANIMATION
+    if (!inView) {
+      paraani.start({
+        y: 100,
+        opacity: 0,
+      });
+
+      textani.start({
+        scale: 0.3,
+        opacity: 0,
+      });
+    }
+  }, [inView]);
+
   return (
     <div>
-      <div className=" packages">
+      <div ref={ref} className=" packages">
         <div className=" packages-title-container flex bg-color-7">
           <div className=" wrapper flex packages-title">
-            <h1>Let’s plan what’s work best for you</h1>
+            <motion.h1 animate={textani}>
+              Let’s plan what’s work best for you
+            </motion.h1>
           </div>
         </div>
 
         <div className="wrapper package-Details-container">
-          <div className="package-Details">
+          <motion.div animate={paraani} className="package-Details">
             <CardPackage
               img={hand}
               titleText={"Discovery call"}
@@ -69,11 +114,11 @@ const Packages = () => {
               }
               btnText={"Select Gold Package"}
             />
-          </div>
+          </motion.div>
         </div>
-        <p className="package-tc">
+        <motion.p animate={textani} className="package-tc">
           Insurances accepted (Kentucky Residents Only) | Private Pay Accepted
-        </p>
+        </motion.p>
       </div>
     </div>
   );

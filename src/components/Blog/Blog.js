@@ -12,6 +12,7 @@ import Footer from "../Footer/Footer";
 import BlogPostCard from "./BlogPostCard";
 import { Link, useParams, NavLink, Routes } from "react-router-dom";
 import HlBlog from "./HlBlog";
+import { blogData } from "./blogData";
 
 const Blog = () => {
   return (
@@ -23,54 +24,15 @@ const Blog = () => {
           <hr className="hlseperator" />
 
           <div className="blog-posts-container flex">
-            <Link to={"50"}>
-              <BlogPostCard
-                img={yoga}
-                title={"Is Yoga good or bad, if I have a problem in my spine?"}
-                date={"03 JUNE 2021"}
-              />
-            </Link>
-            <Link to={"50"}>
-              <BlogPostCard
-                img={icecream}
-                title={"Can i add icecream in my diet?"}
-                date={"03 JUNE 2021"}
-              />
-            </Link>
-            <BlogPostCard
-              img={Meat}
-              title={"I hate green vegetables, I love junk food."}
-              date={"03 JUNE 2021"}
-            />
-            <BlogPostCard
-              img={Excer}
-              title={
-                "I can deadlift twice my weight, Is it enough for a person?"
-              }
-              date={"03 JUNE 2021"}
-            />
-            <BlogPostCard
-              img={pushup}
-              title={"Is Yoga good or bad, if I have a  problem in my spine?"}
-              date={"03 JUNE 2021"}
-            />
-            <BlogPostCard
-              img={yoga2}
-              title={"Can i add icecream in my diet?"}
-              date={"03 JUNE 2021"}
-            />
-            <BlogPostCard
-              img={boxing}
-              title={"I hate green vegetables, I love junk food."}
-              date={"03 JUNE 2021"}
-            />
-            <BlogPostCard
-              img={weightplate}
-              title={
-                "I can deadlift twice my weight, Is it enough for a person?"
-              }
-              date={"03 JUNE 2021"}
-            />
+            {blogData.map((blog) => (
+              <Link to={`./${blog.blogId}`}>
+                <BlogPostCard
+                  img={blog.blogthumbnail}
+                  title={blog.blogtitle}
+                  date={blog.blogDate}
+                />
+              </Link>
+            ))}
           </div>
         </div>
       </div>

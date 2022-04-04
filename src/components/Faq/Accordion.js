@@ -15,19 +15,14 @@ const Accordion = (props) => {
           isExpanded ? "faq-questions faq-questions-active" : "faq-questions"
         }
       >
-        <h2>{props.title}</h2>
+        <h2>{props.faqtitle}</h2>
         <button>
           <img src={isExpanded ? minus : plus} />
         </button>
       </div>
 
       <div className={isExpanded ? "faq-content-show" : "faq-content"}>
-        <p>
-          We are dreamers, scientists, engineers, writers, artists. Each of us
-          has a personal reason to try to create a more emotionally resilient
-          world. We are dreamers, scientists, engineers, writers, artists. Each
-          of us has a personal reason.
-        </p>
+        <p>{props.faqanswer}</p>
       </div>
     </div>
   );

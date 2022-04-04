@@ -5,6 +5,8 @@ import Excer from "../../Assets/Blog_image/Excer.png";
 import Meat from "../../Assets/Blog_image/Meat.png";
 import Footer from "../Footer/Footer";
 import { useParams } from "react-router-dom";
+import { blogData } from "./blogData";
+
 export const ReadBlog = () => {
   const params = useParams();
   const postId = params.postId;
@@ -17,52 +19,18 @@ export const ReadBlog = () => {
         <div className="wrapper">
           <div className="readBlog">
             <div className="readBlog-header">
-              <h1> Is Yoga good or bad, if I have a problem in my spine?</h1>
+              <h1> {blogData[postId].blogtitle}</h1>
               <div className="readBlog-details">
-                <p>JAGAN VK</p>
+                <p>{blogData[postId].blogAuther}</p>
                 <hr className="readblog-detals-hr" />
-                <p>03 JUNE 2021</p>
+                <p>{blogData[postId].blogDate}</p>
               </div>
             </div>
             <div className="readBlog-img">
-              <img src={ReadYoga} />
+              <img src={blogData[postId].blogthumbnail} />
             </div>
             <div className="readBlog-text">
-              <p>
-                We are dreamers, scientists, engineers, writers, artists. Each
-                of us has a personal reason to try to create a more emotionally
-                resilient world. We are dreamers, scientists, engineers,
-                writers, artists. Each of us has a personal reason to try to
-                create a more emotionally resilient world.We are dreamers,
-                scientists, engineers, writers, artists. Each of us has a
-                personal reason to try to create a more emotionally resilient
-                world.We are dreamers, scientists, engineers, writers, artists.
-                Each of us has a personal reason to try to create a more
-                emotionally resilient world. We are dreamers, scientists,
-                engineers, writers, artists. Each of us has a personal reason to
-                try to create a more emotionally resilient world.
-              </p>
-
-              <p>
-                We are dreamers, scientists, engineers, writers, artists. Each
-                of us has a personal reason to try to create a more emotionally
-                resilient world. We are dreamers, scientists, engineers,
-                writers, artists. Each of us has a personal reason to try to
-                create a more emotionally resilient world.
-              </p>
-
-              <p>
-                We are dreamers, scientists, engineers, writers, artists. Each
-                of us has a personal reason to try to create a more emotionally
-                resilient world. We are dreamers, scientists, engineers,
-                writers, artists. Each of us has a personal reason to try to
-                create a more emotionally resilient world. We are dreamers,
-                scientists, engineers, writers, artists. Each of us has a
-                personal reason to try to create a more emotionally resilient
-                world.We are dreamers, scientists, engineers, writers, artists.
-                Each of us has a personal reason to try to create a more
-                emotionally resilient world.
-              </p>
+              <p>{blogData[postId].blogContent}</p>
             </div>
           </div>
         </div>
