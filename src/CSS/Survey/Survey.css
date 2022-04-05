@@ -4,15 +4,23 @@
     align-items: center;
     /* flex-direction: row; */
     min-height: 100vh;
+    /* background-color: red; */
+    /* width: 100%; */
+
+
     
    
 
 }
+
+
 .survey-ans{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+    width: 100%;
+
 }
 
 
@@ -21,29 +29,51 @@
      justify-content: flex-start; 
     align-items: center;
     flex-direction: column;
+    max-width: 800px;
+    /* background-color: #207edc; */
+
   
 
 }
+
 .survey{
      display: flex; 
      justify-content: center; 
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    
-
+    max-width: 100%;
+    padding: 1rem;
+    /* background-color: aqua; */
+ 
 }
+
+
+.newwrapper{
+    max-width: 100%;
+   /* background-color: #08090A; */
+}
+
+
+
 
 .survey input[type="checkbox"]{
     display: none;
 }
 
-.survey span{
+
+
+
+
+
+
+
+.survey span , .userText input{
     color: #6D747A;
     font-weight: 500;
     margin-bottom: 20px;
     min-height: 48px;
-    width: 592px;
+    min-width: 100%;
     padding: 10px 20px;
     position: relative;
     border-radius:32px ;
@@ -94,7 +124,7 @@
 /* SURVEY QUESTION  CONTAINER (HEADER)*/
 
 .survey-ques-container{
-    width: 592px;
+    max-width: 592px;
     /* margin-bottom: 48px; */
     display: flex;
     flex-direction: column;
@@ -156,11 +186,14 @@
 
 .otherText{
    margin-bottom: 16px;
-    width: 592px;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .otherText input{
-    width: 100%;
+    max-width: 100%;
     border: 2px solid rgb(41, 45, 156);
     height: 40px;
     font-size: 20px;
@@ -171,9 +204,12 @@
 
 .formnavbtn{
     margin: 16px;
-    width: 572px;
+    max-width: 572px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-end;
 }
+
+
+
