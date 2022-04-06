@@ -6,7 +6,10 @@ const Myproduct = () => {
       {" "}
       <div className="dash-col1">
         <div className="pricingmembership">
-          <h2> Pricing Membership</h2>
+          <div className="dash-container-header">
+            <h2> Pricing Membership</h2>
+            <button>Change Pricing</button>
+          </div>
         </div>
       </div>
     </div>

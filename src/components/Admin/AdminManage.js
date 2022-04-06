@@ -5,7 +5,10 @@ const AdminManage = () => {
   return (
     <div>
       <div className="managecontainer">
-        <h2>PARTNERS</h2>
+        <div className="dash-container-header">
+          <h2>PARTNERS</h2>
+          <button>EDIT</button>
+        </div>
         <div className="partner">
           <div className="partner-nav">
             <Link to={"doctors"} className="partner-nav-active">
@@ -19,6 +22,10 @@ const AdminManage = () => {
             <Outlet />
           </div>
         </div>
+      </div>
+      <div className="add-ctaBtn-container">
+        {" "}
+        <button className="btn btn-dark">Add Partner</button>
       </div>
     </div>
   );

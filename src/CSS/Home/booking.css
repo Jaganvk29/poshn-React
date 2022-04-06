@@ -109,35 +109,35 @@
 }
 
 .icon-user {
-  background: url("/Assets/user.svg");
+  background: url("../../Assets/user.svg");
 }
 
 .icon-mail {
-  background: url("/Assets/mail.svg");
+  background: url("../../Assets/mail.svg");
 }
 
 .icon-phone {
-  background: url("/Assets/smartphone.svg");
+  background: url("../../Assets/smartphone.svg");
 }
 
 .icon-map-pin {
-  background: url("/Assets/map-pin.svg");
+  background: url("../../Assets/map-pin.svg");
 }
 
 .icon-instagram-outline {
-  background: url("/Assets/instagram-outline.svg");
+  background: url("../../Assets/instagram-outline.svg");
 }
 
 .icon-facebook-outline {
-  background: url("/Assets/facebook-outline.svg");
+  background: url("../../Assets/facebook-outline.svg");
 }
 
 .icon-twitter-outline {
-  background: url("/Assets/twitter-outline.svg");
+  background: url("../../Assets/twitter-outline.svg");
 }
 
 .icon-linkedin-outline {
-  background: url("/Assets/linkedin-outline.svg");
+  background: url("../../Assets/linkedin-outline.svg");
 }
 
 .icon-grey {

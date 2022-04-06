@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { faqData } from "../Faq/faqdata";
 import { useParams } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 const AdminFaqEdit = () => {
   const params = useParams();
@@ -10,24 +11,33 @@ const AdminFaqEdit = () => {
     answer: faqData[faqId].faqAnswer,
   });
 
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors, isValid },
+  } = useForm({ mode: "all" });
+  const onSubmit = (data) => console.log(data);
+
   console.log(faqId);
   return (
     <div>
-      <div className="adminfaq-container">
+      <div className="managecontainer">
         <div className="wrapper">
           <div className="adminfaq">
             <h1>EDIT FAQ</h1>
 
             <div className="adminfaq-edit">
-              <form>
+              <form onSubmit={handleSubmit(onSubmit)}>
                 <h2>QUESTION</h2>
 
                 <input
                   className="faqedittext"
                   contenteditable="true"
                   value={textState.question}
-                  onChange={(e) => setTextState({ question: e.target.value })}
                   type="text"
+                  {...register("faqquestion", { required: true })}
+                  onChange={(e) => setTextState({ question: e.target.value })}
                 ></input>
 
                 <h2>Answer</h2>
@@ -36,13 +46,14 @@ const AdminFaqEdit = () => {
                   className="faqedittext"
                   cols="50"
                   rows="5"
-                  contenteditable="true"
+                  // contenteditable="true"
                   value={textState.answer}
+                  {...register("faqanswer", { required: true })}
                   onChange={(e) => setTextState({ answer: e.target.value })}
                 ></textarea>
 
                 <div className="adminsavebtn">
-                  <button type="button" className="btn btn-dark">
+                  <button type="submit" className="btn btn-dark">
                     SAVE
                   </button>
                 </div>
@@ -50,7 +61,6 @@ const AdminFaqEdit = () => {
             </div>
           </div>
         </div>
-        <button>Add Faq</button>
       </div>
     </div>
   );

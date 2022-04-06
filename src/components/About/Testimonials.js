@@ -1,8 +1,21 @@
 import React from "react";
 import prevBtn from "../../Assets/prev-btn.png";
 import nextBtn from "../../Assets/next-btn.png";
+import Slider from "react-slick";
+
+import OwlCarousel from "react-owl-carousel2";
+import "react-owl-carousel2/lib/styles.css";
+import "react-owl-carousel2/src/owl.theme.default.css";
 
 const Testimonials = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <section class="testimonial bg-color-7">
       <div class="wrapper">

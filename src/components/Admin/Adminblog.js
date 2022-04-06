@@ -6,8 +6,11 @@ const Adminblog = () => {
   return (
     <div>
       <div className="dash-col1">
-        <div className="pricingmembership">
-          <h2>MANAGE YOUR BLOGS</h2>
+        <div className="managecontainer">
+          <div className="dash-container-header">
+            <h2>MANAGE YOUR BLOGS</h2>
+            <button>Edit</button>
+          </div>
 
           <div className="adminblog">
             <BlogPostCard
@@ -41,6 +44,10 @@ const Adminblog = () => {
               date={blogData[0].blogDate}
             />
           </div>
+        </div>
+        <div className="add-ctaBtn-container">
+          {" "}
+          <button className="btn btn-dark">Add Blog</button>
         </div>
       </div>
     </div>

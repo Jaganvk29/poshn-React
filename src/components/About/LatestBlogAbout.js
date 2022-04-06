@@ -2,6 +2,13 @@ import React from "react";
 import burger from "../../Assets/burger.png";
 import momos from "../../Assets/momos.png";
 import veggies from "../../Assets/veggies.png";
+import Slider from "react-slick";
+import PartnerCard from "../Partners/PartnerCard";
+import { partnersData } from "../Partners/partnersdata";
+import pgym1 from "../../Assets/Partnerimg/pgym1.png";
+import "slick-carousel/slick/slick.css";
+
+import "slick-carousel/slick/slick-theme.css";
 
 const LatestBlogAbout = () => {
   return (

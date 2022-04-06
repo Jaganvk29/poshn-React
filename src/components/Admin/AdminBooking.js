@@ -3,22 +3,8 @@ import React from "react";
 const AdminBooking = () => {
   return (
     <div>
-      <div className="pricingmembership">
+      <div className="managecontainer">
         <h2> Booking Details</h2>
-        {/* <div className="reponces-header">
-        <h3>ID</h3>
-        <h3>PROFILE</h3>
-        <h3>FULL NAME</h3>
-        <h3>DATE</h3>
-        <h3>CONTACT</h3>
-      </div>
-      <div className="reponces-data">
-        <p>1</p>
-        <p>photo</p>
-        <p>JAGAN VK</p>
-        <p>04 04 2022</p>
-        <p>9988774455</p>
-      </div> */}
 
         <table className="content-table">
           <thead>

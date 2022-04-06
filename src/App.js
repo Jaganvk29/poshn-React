@@ -23,6 +23,7 @@ import AdmindietSurvey from "./components/Admin/AdmindietSurvey";
 import Adminabout from "./components/Admin/Adminabout";
 import Adminresponses from "./components/Admin/Adminresponses";
 import Plan from "./components/Plan/Plan";
+import ProtectedRoutes from "./components/Admin/ProtectedRoutes";
 
 const App = () => {
   return (
@@ -48,22 +49,24 @@ const App = () => {
       <Route path="/survey" element={<Survey />} />
       <Route path="/admin" element={<Admin />} />
 
-      <Route path="/admin/main" element={<AdminMain />}>
-        <Route path="dashboard" element={<AdminHome />} />
-        <Route path="about" element={<Adminabout />} />
+      <Route element={<ProtectedRoutes />}>
+        <Route path="/admin/main" element={<AdminMain />}>
+          <Route path="dashboard" element={<AdminHome />} />
+          <Route path="about" element={<Adminabout />} />
 
-        <Route path="myproducts" element={<Myproduct />} />
-        <Route path="faq" element={<Adminfaq />} />
-        <Route path="faq/edit/:faqId" element={<AdminFaqEdit />} />
-        <Route path="blog" element={<Adminblog />} />
-        <Route path="bookings" element={<AdminBooking />} />
-        <Route path="manage" element={<AdminManage />}>
-          <Route index path="doctors" element={<PartnerDoctor />} />
-          <Route path="fitnesscoaches" element={<FitnessCoach />} />
-          <Route path="gym" element={<PartnerGym />} />
+          <Route path="myproducts" element={<Myproduct />} />
+          <Route path="faq" element={<Adminfaq />} />
+          <Route path="faq/edit/:faqId" element={<AdminFaqEdit />} />
+          <Route path="blog" element={<Adminblog />} />
+          <Route path="bookings" element={<AdminBooking />} />
+          <Route path="manage" element={<AdminManage />}>
+            <Route index path="doctors" element={<PartnerDoctor />} />
+            <Route path="fitnesscoaches" element={<FitnessCoach />} />
+            <Route path="gym" element={<PartnerGym />} />
+          </Route>
+          <Route path="dietsurvey" element={<AdmindietSurvey />} />
+          <Route path="responses" element={<Adminresponses />} />
         </Route>
-        <Route path="dietsurvey" element={<AdmindietSurvey />} />
-        <Route path="responses" element={<Adminresponses />} />
       </Route>
     </Routes>
   );

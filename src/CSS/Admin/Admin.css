@@ -1,10 +1,51 @@
 .admin{
     min-height: 100vh;
-    background-color: #E5E5E5;
+    background-color: #E5E5E5;  
 }
 
+.admin-login-container{
+    min-height: 100vh;
+    /* width: 100%; */
+    background-color: var(--color-7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-login{
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.admin-login >form{
+    display: flex;
+    /* gap:20px ;     */
+    flex-direction: column; 
+}
+
+.admin-login >form >input{
+   padding: 20px;
+   border-radius: 8px; 
+   font-size: 1.1em;
+   margin-top: 20px;
+}
+.admin-login >form >button{
+    margin-top: 20px;
+ }
+
+.admin-login >form >h1{
+   color: white;
+ }
 
 
+ .form-err-text{
+     color: red;
+     text-align: left;
+     padding-top:5px ;
+     
+    }
 /* DASHBOARD */
 
 .dashboard{
@@ -87,29 +128,42 @@
     margin: 12px;
     background-color: white;
     max-height: 419px;
-    
+    /* display: flex; */
+    /* justify-content: space-between; */
 
     border-radius: 12px;
     padding: 24px;
     overflow: hidden;
     overflow-y: scroll;
+    /* FOR MOZILLA FIREFOX SCROLL BAR DISABLE */
+    scrollbar-width: none;
 
+
+}
+
+.dash-container-header{
+    display: flex;
+    justify-content: space-between;
 }
 
 .managecontainer{
     flex-grow:3 ;
     margin: 12px;
     background-color: white;
-    max-height: 767px;
+    max-height: 700px;
     border-radius: 12px;
     padding: 24px;
     overflow: hidden;
     overflow-y: scroll;
 
+    /* FOR MOZILLA FIREFOX SCROLL BAR DISABLE */
+    scrollbar-width: none;
+
 }
 
 
 
+    /* FOR CHROME SCROLL BAR DISABLE */
 
 .managecontainer::-webkit-scrollbar {
     display: none;
@@ -218,7 +272,7 @@ adminfaq-container{
 
 
 .adminfaq-card{
-    background-color: #fff;
+    background-color: #E5E5E5;  
     color: black;
     
     max-width:792px;
@@ -263,6 +317,8 @@ padding: 0 32px;
     min-height: 72px;
     padding: 16px;
     font-size: 20px;
+    background-color: #E5E5E5;  
+
     color: #6D747A;
     margin: 16px 0;
 }
@@ -281,7 +337,15 @@ padding: 0 32px;
     align-items: center;
 }
 
-
+.add-ctaBtn-container{
+    
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+align-items: center;
+justify-content: flex-end;
+    /* background-color: aqua; */
+}
 
 
 @media only screen and (max-width: 870px) {

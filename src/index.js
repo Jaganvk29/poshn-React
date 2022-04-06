@@ -13,8 +13,8 @@ const root = ReactDom.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <PoshProvider>
-      <Nav />
-      {/* <AdminNav /> */}
+      {/* <Nav /> */}
+      <AdminNav />
       <ScrollToTop />
       <App />
     </PoshProvider>

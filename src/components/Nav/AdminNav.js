@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink, useParams } from "react-router-dom";
+import PoshContext from "../../PoshContext";
 
 const AdminNav = (props) => {
   const [navopen, setNavOpen] = useState(false);
+  const { isLogged, authHandler } = useContext(PoshContext);
 
   const paramlins = useParams();
   console.log(paramlins);
@@ -10,6 +12,10 @@ const AdminNav = (props) => {
   const hamburgerhandler = () => {
     setNavOpen(!navopen);
     console.log("YES THIS ONE");
+  };
+
+  const logoutBtnHadler = () => {
+    authHandler(false);
   };
 
   return (
@@ -53,7 +59,12 @@ const AdminNav = (props) => {
             </div>
 
             {/* <!-- Button --> */}
-            <button className="cta btn btn-light">Log Out</button>
+
+            <Link to="/">
+              <button onClick={logoutBtnHadler} className="cta btn btn-light">
+                Log Out
+              </button>{" "}
+            </Link>
           </div>
 
           {/* <!-- Overlay --> */}

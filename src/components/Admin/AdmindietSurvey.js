@@ -3,7 +3,7 @@ import React from "react";
 const AdmindietSurvey = () => {
   return (
     <div>
-      <div className="pricingmembership">
+      <div className="managecontainer">
         <h2>Diet Survey Details</h2>
 
         <table className="content-table">
