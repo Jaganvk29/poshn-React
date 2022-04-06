@@ -6,15 +6,17 @@ import { BrowserRouter } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
 import { PoshProvider } from "./PoshContext.js";
 import ScrollToTop from "./ScrollToTop.js";
+import Admin from "./components/Admin/Admin.js";
+import AdminNav from "./components/Nav/AdminNav.js";
 
 const root = ReactDom.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <PoshProvider>
-      <Nav>
-        <ScrollToTop />
-        <App />
-      </Nav>
+      <Nav />
+      {/* <AdminNav /> */}
+      <ScrollToTop />
+      <App />
     </PoshProvider>
   </BrowserRouter>
 );

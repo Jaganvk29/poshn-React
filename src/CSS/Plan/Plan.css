@@ -1,0 +1,75 @@
+
+
+/* .plan-container{
+
+width: 100vw;
+}  */
+.plan-img {
+    position: relative;
+   background-color: black;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0,0, 0.5)), url("../../Assets/imgplan.png");
+    background-size: cover;
+    background-position: right center;
+    color: white;
+    height: 597px;
+    max-width: 100%;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+
+  .plan-img h1{
+      font-size: 80px;
+  }
+
+  .plan > h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 109px 0 80px 0;
+  }
+
+
+  .plan-card-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+  .plan-card{
+    max-width: 360px;
+    padding: 20px;
+  
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+
+  }
+
+
+  .plan-card > img{
+    max-width: 360px;
+    max-height: 574px;
+    margin-bottom: 30px;
+  }
+
+  .plan-card > h2{
+    margin-bottom: 30px;
+  }
+  .plan-card > p{
+    margin-bottom: 30px;
+  }
+
+
+
+
+
+  .plan-card-btn {
+    border-radius: 8px;
+  }

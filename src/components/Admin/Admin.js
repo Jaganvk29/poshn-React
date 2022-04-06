@@ -4,7 +4,8 @@ import Dashboard from "./Dashboard";
 const Admin = () => {
   return (
     <div className="admin">
-      <Dashboard />
+      {/* <Dashboard></Dashboard> */}
+      <button className="btn btn-dark">LOGIN</button>
     </div>
   );
 };

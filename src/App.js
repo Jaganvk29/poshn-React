@@ -16,6 +16,13 @@ import AdminHome from "./components/Admin/AdminHome";
 import Adminfaq from "./components/Admin/Adminfaq";
 import AdminFaqEdit from "./components/Admin/AdminFaqEdit";
 import Adminblog from "./components/Admin/Adminblog";
+import AdminMain from "./components/Admin/AdminMain";
+import AdminBooking from "./components/Admin/AdminBooking";
+import AdminManage from "./components/Admin/AdminManage";
+import AdmindietSurvey from "./components/Admin/AdmindietSurvey";
+import Adminabout from "./components/Admin/Adminabout";
+import Adminresponses from "./components/Admin/Adminresponses";
+import Plan from "./components/Plan/Plan";
 
 const App = () => {
   return (
@@ -37,15 +44,26 @@ const App = () => {
         <Route path="gym" element={<PartnerGym />} />
       </Route>
 
-      <Route path="/dietguide" element={<Faq />} />
+      <Route path="/dietguide" element={<Plan />} />
       <Route path="/survey" element={<Survey />} />
+      <Route path="/admin" element={<Admin />} />
 
-      <Route path="/admin" element={<Admin />}>
-        <Route path="main" element={<AdminHome />} />
+      <Route path="/admin/main" element={<AdminMain />}>
+        <Route path="dashboard" element={<AdminHome />} />
+        <Route path="about" element={<Adminabout />} />
+
         <Route path="myproducts" element={<Myproduct />} />
         <Route path="faq" element={<Adminfaq />} />
         <Route path="faq/edit/:faqId" element={<AdminFaqEdit />} />
         <Route path="blog" element={<Adminblog />} />
+        <Route path="bookings" element={<AdminBooking />} />
+        <Route path="manage" element={<AdminManage />}>
+          <Route index path="doctors" element={<PartnerDoctor />} />
+          <Route path="fitnesscoaches" element={<FitnessCoach />} />
+          <Route path="gym" element={<PartnerGym />} />
+        </Route>
+        <Route path="dietsurvey" element={<AdmindietSurvey />} />
+        <Route path="responses" element={<Adminresponses />} />
       </Route>
     </Routes>
   );

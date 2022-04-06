@@ -5,7 +5,6 @@ import AdminHome from "./AdminHome";
 const Dashboard = () => {
   return (
     <div className="dashboard">
-      <div className="dashboardmenu2"></div>
       <div className="dashboardmenu">
         <Link to={"myproducts"} className="menuitem">
           <h2>My product</h2>
@@ -16,18 +15,18 @@ const Dashboard = () => {
         <Link to={"blog"} className="menuitem">
           <h2>Blogs</h2>
         </Link>
-        <div className="menuitem">
+        <Link to={"dietsurvey"} className="menuitem">
           <h2>Diet Survey</h2>
-        </div>
-        <div className="menuitem">
+        </Link>
+        <Link to={"bookings"} className="menuitem">
           <h2>Bookings</h2>
-        </div>
-        <div className="menuitem">
+        </Link>
+        <Link to={"responses"} className="menuitem">
           <h2>Responses</h2>
-        </div>
-        <div className="menuitem">
+        </Link>
+        <Link to={"manage/doctors"} className="menuitem">
           <h2>Manage</h2>
-        </div>
+        </Link>
       </div>
 
       <div className="DashboardTiles">

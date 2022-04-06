@@ -35,6 +35,18 @@ const AdminHome = () => {
                 <td>JAGAN VIJAYARAGHAVAN</td>
                 <td>04 JUNE 2022I</td>
               </tr>
+              <tr>
+                <td>JAGAN VIJAYARAGHAVAN</td>
+                <td>04 JUNE 2022I</td>
+              </tr>
+              <tr>
+                <td>JAGAN VIJAYARAGHAVAN</td>
+                <td>04 JUNE 2022I</td>
+              </tr>
+              <tr>
+                <td>JAGAN VIJAYARAGHAVAN</td>
+                <td>04 JUNE 2022I</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -82,6 +94,69 @@ const AdminHome = () => {
                 <td>04 JUNE 2022I</td>
                 <td>9988776655</td>
               </tr>
+              <tr>
+                <td>45612</td>
+                <td>pic</td>
+                <td>JAGAN VIJAYARAGHAVAN</td>
+                <td>04 JUNE 2022I</td>
+                <td>9988776655</td>
+              </tr>
+              <tr>
+                <td>45612</td>
+                <td>pic</td>
+                <td>JAGAN VIJAYARAGHAVAN</td>
+                <td>04 JUNE 2022I</td>
+                <td>9988776655</td>
+              </tr>
+              <tr>
+                <td>45612</td>
+                <td>pic</td>
+                <td>JAGAN VIJAYARAGHAVAN</td>
+                <td>04 JUNE 2022I</td>
+                <td>9988776655</td>
+              </tr>
+              <tr>
+                <td>45612</td>
+                <td>pic</td>
+                <td>JAGAN VIJAYARAGHAVAN</td>
+                <td>04 JUNE 2022I</td>
+                <td>9988776655</td>
+              </tr>
+              <tr>
+                <td>45612</td>
+                <td>pic</td>
+                <td>JAGAN VIJAYARAGHAVAN</td>
+                <td>04 JUNE 2022I</td>
+                <td>9988776655</td>
+              </tr>
+              <tr>
+                <td>45612</td>
+                <td>pic</td>
+                <td>JAGAN VIJAYARAGHAVAN</td>
+                <td>04 JUNE 2022I</td>
+                <td>9988776655</td>
+              </tr>
+              <tr>
+                <td>45612</td>
+                <td>pic</td>
+                <td>JAGAN VIJAYARAGHAVAN</td>
+                <td>04 JUNE 2022I</td>
+                <td>9988776655</td>
+              </tr>{" "}
+              <tr>
+                <td>45612</td>
+                <td>pic</td>
+                <td>JAGAN VIJAYARAGHAVAN</td>
+                <td>04 JUNE 2022I</td>
+                <td>9988776655</td>
+              </tr>
+              <tr>
+                <td>45612</td>
+                <td>pic</td>
+                <td>JAGAN VIJAYARAGHAVAN</td>
+                <td>04 JUNE 2022I</td>
+                <td>9988776655</td>
+              </tr>{" "}
               <tr>
                 <td>45612</td>
                 <td>pic</td>

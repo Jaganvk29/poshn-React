@@ -39,12 +39,12 @@ const DietChart = () => {
     // TO CHECK IF ITS NOT VIEW PORT TO REMOVE ANIMATION
     if (!inView) {
       paraani.start({
-        x: -100,
+        x: -50,
         opacity: 0,
       });
 
       textani.start({
-        x: 100,
+        x: 50,
         opacity: 0,
       });
     }

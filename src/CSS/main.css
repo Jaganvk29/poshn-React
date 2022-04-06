@@ -17,6 +17,8 @@
 @import url("./Survey/Survey.css");
 /* ADMIN */
 @import url("./Admin/Admin.css");
+/* PLAN */
+@import url("./Plan/Plan.css");
 
 html {
   font-size: 100%;
