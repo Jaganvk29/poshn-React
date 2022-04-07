@@ -85,17 +85,24 @@
 }
 
 
-
+ 
 .survey label input[type="checkbox"]:checked +span{
     background-color: var(--color-7);
-    color: aliceblue;
+    color: rgb(255, 255, 255);
+/* min-width: 200px; */
 
-}
+} 
+
+/* span{
+    background-color: aqua;
+} */
+
 .survey label input[type="checkbox"]:checked +span::before{
-    min-height: 30px;
-    min-width: 30px;
+
     border: 5px solid rgb(255, 255, 255);
    
+    min-height: 30px;
+    min-width: 30px;
     background: transparent;
 }
 
@@ -211,5 +218,25 @@
     align-items: flex-end;
 }
 
+
+@media only screen and (max-width: 600px) {
+
+    .survey > form{
+        display: flex; 
+         justify-content: flex-start; 
+        align-items: center;
+        flex-direction: column;
+        max-width: 400px;
+        /* background-color: #207edc; */
+    
+      
+    
+    }
+
+    .survey-ques > h1{
+        font-size: 20px;
+
+    }
+  }
 
 

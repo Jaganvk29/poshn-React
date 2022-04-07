@@ -113,51 +113,10 @@ const ContactUs = () => {
                   </div>
                 </div>
               </div>
-              {/* CHECK BOXES */}
-              <div class="field mt-40px">
-                <label>Consultation type</label>
-                <div ref={selectoption} class="btn-selection">
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="consultationType"
-                      value="diet"
-                      onChange={checkboxhandler}
-                    />
-                    <span class="input-btn">Diet</span>
-                  </label>
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="consultationType"
-                      value="nutrition"
-                      onChange={checkboxhandler}
-                    />
-                    <span class="input-btn">Nutrition</span>
-                  </label>
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="consultationType"
-                      value="fitness"
-                      onChange={checkboxhandler}
-                    />
-                    <span class="input-btn">Fitness</span>
-                  </label>
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="consultationType"
-                      value="fatloss"
-                      onChange={checkboxhandler}
-                    />
-                    <span class="input-btn">Fatloss</span>
-                  </label>
-                </div>
-              </div>
+
               <div class="text-center">
                 <button type="submit" class="btn btn-dark submit-btn">
-                  Book free consultation
+                  Contact Us
                 </button>
               </div>
             </form>

@@ -1,19 +1,15 @@
 import React, { useState, Fragment } from "react";
 import Footer from "../Footer/Footer";
-import SurveyOption from "./SurveyOption";
+
 import { useForm } from "react-hook-form";
 import prevbtn from "../../Assets/prevbtn.png";
-import SurevyOptions from "./SurevyOptions";
-import SurveyStep1 from "./SurveyStep1";
+
+import SurveyStep from "./SurveyStep";
 
 const Survey = () => {
   const [selected, setSelected] = useState([]);
   const [formstep, setFormStep] = useState(0);
   const [othersel, setOthersel] = useState(false);
-
-  const handletxtrender = () => {
-    setOthersel(!othersel);
-  };
 
   console.log(othersel);
 
@@ -50,7 +46,7 @@ const Survey = () => {
   };
 
   const prevbtnrender = () => {
-    if (formstep >= 1) {
+    if (formstep >= 1 && formstep <= 10) {
       return (
         <div className="survey-prevbtn" onClick={prevFormStep}>
           <img src={prevbtn} /> <p>Previous</p>
@@ -64,7 +60,12 @@ const Survey = () => {
   const rendersubmitButton = () => {
     if (formstep === 10) {
       return (
-        <button disabled={!isValid} type="submit" className="btn btn-dark">
+        <button
+          disabled={!isValid}
+          type="submit"
+          className="btn btn-dark"
+          onClick={completeFormStep}
+        >
           Submit
         </button>
       );
@@ -98,7 +99,9 @@ const Survey = () => {
           <div className="survey">
             <div className="survey-ques-container">
               <div className="survey-ques-no-tracker">
-                {formstep > 0 && <h3>Question {formstep} / 10 </h3>}
+                {formstep > 0 && formstep <= 10 && (
+                  <h3>Question {formstep} / 10 </h3>
+                )}
               </div>
             </div>
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -154,7 +157,7 @@ const Survey = () => {
 
               {/* STEP 1 */}
               {formstep === 1 && (
-                <SurveyStep1
+                <SurveyStep
                   question="Tell us about YOUR current relationship with foods?"
                   option1="Not so positive: I am ready to throw in the towel"
                   option2="Yo-Yo and So-So"
@@ -172,7 +175,7 @@ const Survey = () => {
 
               {/* STEP 2 */}
               {formstep === 2 && (
-                <SurveyStep1
+                <SurveyStep
                   question="At PoshN, You are in the safe hands of a Board Certified
                         Registered Dietitian Nutritionist, an expert in food and
                         nutrition. Tell us about your goals? (Select all that
@@ -197,7 +200,7 @@ const Survey = () => {
 
               {/* STEP 3 */}
               {formstep === 3 && (
-                <SurveyStep1
+                <SurveyStep
                   question="We would like to know about your diet history. What
                         diets have you tried before? (Select all that apply)"
                   option1="Carb Controlled"
@@ -219,7 +222,7 @@ const Survey = () => {
 
               {/* STEP 4  */}
               {formstep === 4 && (
-                <SurveyStep1
+                <SurveyStep
                   question="Any known food allergies"
                   option1="Peanuts"
                   option2="Treenuts"
@@ -243,7 +246,7 @@ const Survey = () => {
               )}
               {/* STEP 5 */}
               {formstep === 5 && (
-                <SurveyStep1
+                <SurveyStep
                   question="Personalized meals will actually help you eat healthier
                         and you can enjoy your favorite foods. What are your
                         dietary preferences?"
@@ -261,7 +264,7 @@ const Survey = () => {
               {/* STEP 6 */}
 
               {formstep === 6 && (
-                <SurveyStep1
+                <SurveyStep
                   question="List your food likes and dislikes:"
                   text1="Likes"
                   text2="DisLikes"
@@ -276,7 +279,7 @@ const Survey = () => {
               {/* STEP 7 */}
 
               {formstep === 7 && (
-                <SurveyStep1
+                <SurveyStep
                   question="In order to have sustainable relationship, we would like
                         to know your communication style"
                   option1="Inner Circle: Someone who can provide safe space and I can open up to"
@@ -290,7 +293,7 @@ const Survey = () => {
               )}
               {/* STEP 8 */}
               {formstep === 8 && (
-                <SurveyStep1
+                <SurveyStep
                   question=" Anything else we might need to know related to your
                       nutritional goals"
                   text1="Other Nutrition Goals"
@@ -301,7 +304,7 @@ const Survey = () => {
               )}
               {/* STEP 9 */}
               {formstep === 9 && (
-                <SurveyStep1
+                <SurveyStep
                   question="Your favorite restaurants?"
                   text1="City / State"
                   text1register={{
@@ -312,7 +315,7 @@ const Survey = () => {
 
               {/* STEP 10 */}
               {formstep === 10 && (
-                <SurveyStep1
+                <SurveyStep
                   question="You are almost there we would love to know how did you
                         hear about us?"
                   option1="INSTAGRAM"
@@ -335,18 +338,18 @@ const Survey = () => {
 
               {/* SUBMIT ALERT */}
 
-              {/* {formstep === 10 && (
+              {formstep === 11 && (
                 <div>
                   <h1> SURVEY SUBMITED</h1>
                 </div>
-              )} */}
+              )}
               {errors.Answers && <p>This field is required</p>}
 
               <div className="formnavbtn">
                 {rendernxtButton()}
                 {rendersubmitButton()}
               </div>
-              <pre>{JSON.stringify(watch(), null, 2)}</pre>
+              {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
             </form>
           </div>
         </div>

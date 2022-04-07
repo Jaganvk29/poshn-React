@@ -13,7 +13,10 @@ const SurevyOptions = (props) => {
           {...props.register}
         />
 
-        <span onClick={props.onpress}> {props.answer}</span>
+        <span onClick={props.onpress}>
+          {" "}
+          <p>{props.answer}</p>
+        </span>
       </label>
     </div>
   );

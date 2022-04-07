@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import ContactUs from "./ContactUs";
 import PoshContext from "../../../PoshContext";
+import Booking from "./Booking";
 
 const ModalContact = ({ open, children }) => {
   // const { isOpen } = useContext(PoshContext);
@@ -9,6 +10,7 @@ const ModalContact = ({ open, children }) => {
     <div>
       <div className="Modal"></div>
       <div className="Overlay booking-overlay">
+        {/* <Booking /> */}
         <ContactUs />
         {/* <button onClick={onClose}>close</button> */}
       </div>

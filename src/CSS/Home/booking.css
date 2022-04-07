@@ -121,23 +121,23 @@
 }
 
 .icon-map-pin {
-  background: url("../../Assets/map-pin.svg");
+  background: url("../../Assets/modalico/map-pin.svg");
 }
 
 .icon-instagram-outline {
-  background: url("../../Assets/instagram-outline.svg");
+  background: url("../../Assets/modalico/instagraminsta.svg");
 }
 
 .icon-facebook-outline {
-  background: url("../../Assets/facebook-outline.svg");
+  background: url("../../Assets/modalico/facebookfb.svg");
 }
 
 .icon-twitter-outline {
-  background: url("../../Assets/twitter-outline.svg");
+  background: url("../../Assets/modalico/twittertwit.svg");
 }
 
 .icon-linkedin-outline {
-  background: url("../../Assets/linkedin-outline.svg");
+  background: url("../../Assets/modalico/linkedinliink.svg");
 }
 
 .icon-grey {
@@ -145,9 +145,8 @@
     brightness(85%) contrast(83%);
 }
 
-.icon-orange {
-  filter: invert(48%) sepia(47%) saturate(3429%) hue-rotate(2deg)
-    brightness(100%) contrast(101%);
+.icon-blue {
+  filter: brightness(0) saturate(100%) invert(21%) sepia(59%) saturate(1838%) hue-rotate(212deg) brightness(94%) contrast(88%);
 }
 
 .booking .form {

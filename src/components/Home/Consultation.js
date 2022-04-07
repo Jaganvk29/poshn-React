@@ -3,6 +3,7 @@ import ModalContact from "./Modal/ModalContact";
 import PoshContext from "../../PoshContext";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import BookingModal from "./Modal/BookingModal";
 
 const Consultation = () => {
   // const [isOpen, setIsOpen] = useState(false);
@@ -79,10 +80,10 @@ const Consultation = () => {
           </motion.button>
         </div>
       </div>
-      <ModalContact
+      <BookingModal
         // onClose={() => setIsOpen(false)}
         open={isOpen}
-      ></ModalContact>
+      ></BookingModal>
     </section>
   );
 };
