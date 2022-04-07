@@ -11,6 +11,9 @@
     justify-content: center;
     align-items: center;
 }
+.admin-login-btn-container{
+margin-top: 20px;
+}
 
 .admin-login{
     padding: 24px;
@@ -301,17 +304,25 @@ padding: 0 32px;
     justify-content: center
 }
 
-.adminfaq-edit{
+.adminfaq-edit, .adminblog-edit  {
     margin: 32px 0;
     width: 792px;
     height: 100%;
 }
 
-.adminfaq-edit >form> h2{
+.blog-edit-img{
+    max-width: 50%;
+    object-fit: contain;
+}
+
+
+
+
+.adminfaq-edit >form> h2 , .adminblog-edit >form> h2 {
     font-weight: 500;
 }
 
-.faqedittext{
+.faqedittext , .blogedittext{
     border-radius: 8px;
     width: 100%;
     min-height: 72px;

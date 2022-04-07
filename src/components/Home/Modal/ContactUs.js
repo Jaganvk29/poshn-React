@@ -1,44 +1,22 @@
 import React, { useContext, useRef, useState } from "react";
 import PoshContext from "../../../PoshContext";
+import { useForm } from "react-hook-form";
 
 const ContactUs = () => {
-  const { modalHandler } = useContext(PoshContext);
-  const [selected, setSelected] = useState([]);
+  const { contactModalHandler } = useContext(PoshContext);
 
-  const userNameref = useRef();
-  const userEmailref = useRef();
-  const userPhoneref = useRef();
-  const userMesgref = useRef();
-  const selectoption = useRef();
-
-  const checkboxhandler = (e) => {
-    if (e.target.checked) {
-      setSelected([...selected, e.target.value]);
-    } else {
-      setSelected(selected.filter((select) => select != e.target.value));
-    }
-  };
-
-  // console.log(selected);
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors, isValid },
+  } = useForm({ mode: "all" });
+  const onSubmit = (data) => console.log(data);
 
   const modalBtnHandler = () => {
-    modalHandler(false);
+    contactModalHandler(false);
   };
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-    const consultationType = [];
-    consultationType.push(...selected);
-
-    const formData = {
-      name: userNameref.current.value,
-      email: userEmailref.current.value,
-      phone: userPhoneref.current.value,
-      msg: userMesgref.current.value,
-      consultation: consultationType,
-    };
-    console.log(formData);
-  };
   return (
     <div>
       <div class="scroll ">
@@ -54,7 +32,7 @@ const ContactUs = () => {
               <h2>Get in touch!</h2>
               <h5>Get advice related to the service</h5>
             </div>
-            <form class="form" onSubmit={submitHandler}>
+            <form class="form" onSubmit={handleSubmit(onSubmit)}>
               <div class="container">
                 <div class="flex-1 mr-32px">
                   <div class="field mb-24px">
@@ -66,9 +44,18 @@ const ContactUs = () => {
                         class="input-field"
                         type="text"
                         placeholder="Enter name"
-                        ref={userNameref}
+                        // ref={userNameref}
+                        {...register("username", {
+                          required: true,
+                          minLength: 3,
+                        })}
                       />
                     </div>
+                    {errors.username && (
+                      <p className="form-err-text">
+                        Minimum 3 Character Required
+                      </p>
+                    )}
                   </div>
                   <div class="field mb-24px">
                     <label>Email</label>
@@ -79,10 +66,22 @@ const ContactUs = () => {
                         class="input-field"
                         type="text"
                         placeholder="Enter email"
-                        required
-                        ref={userEmailref}
+                        // ref={userEmailref}
+                        {...register("useremail", {
+                          required: true,
+                          minLength: 3,
+                          pattern: {
+                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                            message: "invalid email address",
+                          },
+                        })}
                       />
                     </div>
+                    {errors.useremail && (
+                      <p className="form-err-text">
+                        {errors.useremail.message}
+                      </p>
+                    )}
                   </div>
                   <div class="field">
                     <label>Phone</label>
@@ -93,9 +92,16 @@ const ContactUs = () => {
                         class="input-field"
                         type="text"
                         placeholder="Enter phone"
-                        ref={userPhoneref}
+                        // ref={userPhoneref}
+                        {...register("userphone", {
+                          required: true,
+                          minLength: 10,
+                        })}
                       />
                     </div>
+                    {errors.userphone && (
+                      <p className="form-err-text">Invalid Mobile Number</p>
+                    )}
                   </div>
                 </div>
                 <div class="flex-2">
@@ -107,15 +113,28 @@ const ContactUs = () => {
                         class="input-field"
                         cols=""
                         rows="5"
-                        ref={userMesgref}
+                        // ref={userMesgref}
+                        {...register("usermessage", {
+                          required: true,
+                          minLength: 20,
+                        })}
                       ></textarea>
                     </div>
+                    {errors.usermessage && (
+                      <p className="form-err-text">
+                        Minimum 20 Character Required
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>
 
               <div class="text-center">
-                <button type="submit" class="btn btn-dark submit-btn">
+                <button
+                  disabled={!isValid}
+                  type="submit"
+                  class="btn btn-dark submit-btn"
+                >
                   Contact Us
                 </button>
               </div>

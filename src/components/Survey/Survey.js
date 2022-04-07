@@ -115,13 +115,23 @@ const Survey = () => {
                   <div className="survey-ans">
                     <div className="userText">
                       <label>
-                        <input
-                          name="name"
-                          class="input-field"
-                          type="text"
-                          placeholder="Enter Your Name"
-                          {...register("Userdetails.name", { required: true })}
-                        />
+                        <div>
+                          <input
+                            name="name"
+                            class="input-field"
+                            type="text"
+                            placeholder="Enter Your Name"
+                            {...register("userdetails.name", {
+                              required: true,
+                              minLength: 3,
+                            })}
+                          />
+                        </div>
+                        {errors.userdetails?.name && (
+                          <p className="form-err-text">
+                            Minimum 3 Character Required
+                          </p>
+                        )}
                       </label>
                     </div>
 
@@ -132,10 +142,14 @@ const Survey = () => {
                           class="input-field"
                           type="text"
                           placeholder="Enter Your Mobile Number"
-                          {...register("Userdetails.number", {
+                          {...register("userdetails.number", {
                             required: true,
+                            minLength: 10,
                           })}
                         />
+                        {errors.userdetails?.number && (
+                          <p className="form-err-text">Invalid Mobile Number</p>
+                        )}
                       </label>
                       <div className="userText">
                         <label>
@@ -144,10 +158,21 @@ const Survey = () => {
                             class="input-field"
                             type="email"
                             placeholder="Enter Your Email Address"
-                            {...register("Userdetails.email", {
+                            {...register("userdetails.email", {
                               required: true,
+                              pattern: {
+                                value:
+                                  /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                message: "invalid email address",
+                              },
                             })}
                           />
+
+                          {errors.userdetails?.email && (
+                            <p className="form-err-text">
+                              {errors.userdetails?.email.message}
+                            </p>
+                          )}
                         </label>
                       </div>
                     </div>
@@ -170,6 +195,13 @@ const Survey = () => {
                   optionalRegister={{
                     ...register("Question1.other", { required: true }),
                   }}
+                  validationmsg={
+                    errors.Question1 && (
+                      <p className="form-err-text">
+                        Select Any Option To Continue
+                      </p>
+                    )
+                  }
                 />
               )}
 
@@ -195,6 +227,13 @@ const Survey = () => {
                   optionalRegister={{
                     ...register("Question2.othergoals", { required: true }),
                   }}
+                  validationmsg={
+                    errors.Question2 && (
+                      <p className="form-err-text">
+                        Select Any Option To Continue
+                      </p>
+                    )
+                  }
                 />
               )}
 
@@ -217,6 +256,13 @@ const Survey = () => {
                   optionalRegister={{
                     ...register("Question3.othergoals", { required: true }),
                   }}
+                  validationmsg={
+                    errors.Question3 && (
+                      <p className="form-err-text">
+                        Select Any Option To Continue
+                      </p>
+                    )
+                  }
                 />
               )}
 
@@ -242,6 +288,13 @@ const Survey = () => {
                       required: true,
                     }),
                   }}
+                  validationmsg={
+                    errors.Question4 && (
+                      <p className="form-err-text">
+                        Select Any Option To Continue
+                      </p>
+                    )
+                  }
                 />
               )}
               {/* STEP 5 */}
@@ -258,6 +311,13 @@ const Survey = () => {
                   register={{
                     ...register("Question5", { required: true }),
                   }}
+                  validationmsg={
+                    errors.Question5 && (
+                      <p className="form-err-text">
+                        Select Any Option To Continue
+                      </p>
+                    )
+                  }
                 />
               )}
 
@@ -274,6 +334,11 @@ const Survey = () => {
                   text2register={{
                     ...register("Question6.Dislikes", { required: true }),
                   }}
+                  validationmsg={
+                    errors.Question6 && (
+                      <p className="form-err-text">All Fields Are Required</p>
+                    )
+                  }
                 />
               )}
               {/* STEP 7 */}
@@ -289,6 +354,13 @@ const Survey = () => {
                   register={{
                     ...register("Question7", { required: true }),
                   }}
+                  validationmsg={
+                    errors.Question7 && (
+                      <p className="form-err-text">
+                        Select Any Option To Continue
+                      </p>
+                    )
+                  }
                 />
               )}
               {/* STEP 8 */}
@@ -300,6 +372,11 @@ const Survey = () => {
                   text1register={{
                     ...register("Question8", { required: true }),
                   }}
+                  validationmsg={
+                    errors.Question8 && (
+                      <p className="form-err-text">All Fields Are Required</p>
+                    )
+                  }
                 />
               )}
               {/* STEP 9 */}
@@ -310,6 +387,11 @@ const Survey = () => {
                   text1register={{
                     ...register("Question9", { required: true }),
                   }}
+                  validationmsg={
+                    errors.Question9 && (
+                      <p className="form-err-text">All Fields Are Required</p>
+                    )
+                  }
                 />
               )}
 
@@ -333,6 +415,13 @@ const Survey = () => {
                       required: true,
                     }),
                   }}
+                  validationmsg={
+                    errors.Question10 && (
+                      <p className="form-err-text">
+                        Select Any Option To Continue
+                      </p>
+                    )
+                  }
                 />
               )}
 
@@ -343,7 +432,7 @@ const Survey = () => {
                   <h1> SURVEY SUBMITED</h1>
                 </div>
               )}
-              {errors.Answers && <p>This field is required</p>}
+              {/* {errors.Answers && <p>This field is required</p>} */}
 
               <div className="formnavbtn">
                 {rendernxtButton()}

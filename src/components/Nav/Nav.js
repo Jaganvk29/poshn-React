@@ -1,7 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink, useParams } from "react-router-dom";
+import PoshContext from "../../PoshContext";
 
 const Nav = (props) => {
+  const { contactIsOpen, contactModalHandler } = useContext(PoshContext);
+  const buttonClick = () => {
+    console.log("CLICKED");
+    contactModalHandler(true);
+  };
+
   const [navopen, setNavOpen] = useState(false);
 
   const paramlins = useParams();
@@ -80,7 +87,9 @@ const Nav = (props) => {
             </div>
 
             {/* <!-- Button --> */}
-            <button className="cta btn btn-light">Let's get healthy</button>
+            <button onClick={buttonClick} className="cta btn btn-light">
+              Let's get healthy
+            </button>
           </div>
 
           {/* <!-- Overlay --> */}

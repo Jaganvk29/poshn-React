@@ -1,9 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import heroimg from "../../Assets/cute-asian.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import ModalContact from "./Modal/ModalContact";
+import PoshContext from "../../PoshContext";
 
 const Intro = () => {
+  const { contactIsOpen, contactModalHandler } = useContext(PoshContext);
+  const buttonClick = () => {
+    console.log("CLICKED");
+    contactModalHandler(true);
+  };
+
   const { ref, inView } = useInView({
     threshold: 0.3,
   });
@@ -65,7 +73,9 @@ const Intro = () => {
             instead.
           </p>
           <div>
-            <button className="btn btn-dark">Let's get healthy</button>
+            <button onClick={buttonClick} className="btn btn-dark">
+              Let's get healthy
+            </button>
           </div>
         </motion.div>
         <motion.div animate={photoani} className="img-container">
@@ -74,6 +84,7 @@ const Intro = () => {
           <div className="leaf-3"></div>
         </motion.div>
       </div>
+      <ModalContact open={contactIsOpen} />
     </section>
   );
 };

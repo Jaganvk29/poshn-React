@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { ReactDOM } from "react";
 import ContactUs from "./ContactUs";
 import PoshContext from "../../../PoshContext";
 import Booking from "./Booking";

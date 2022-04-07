@@ -6,6 +6,7 @@ import Intro from "./Intro";
 import LatestBlogs from "./LatestBlogs";
 import Footer from "../Footer/Footer";
 import Packages from "./Packages/Packages";
+import LatestBlogAbout from "../About/LatestBlogAbout";
 
 const Home = () => {
   return (
@@ -15,7 +16,7 @@ const Home = () => {
       <DietChart />
       <Consultation />
       <Packages />
-      <LatestBlogs />
+      <LatestBlogAbout />
       <Footer />
     </div>
   );

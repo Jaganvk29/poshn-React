@@ -155,6 +155,7 @@ const SurveyStep = (props) => {
             answer="I have healthy sustainable relationship"
           ></SurevyOptions> */}
         </div>
+        {<p>{props.validationmsg}</p>}
       </section>
     </div>
   );

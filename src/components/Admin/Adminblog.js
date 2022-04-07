@@ -1,6 +1,7 @@
 import React from "react";
 import BlogPostCard from "../Blog/BlogPostCard";
 import { blogData } from "../Blog/blogData";
+import { Link } from "react-router-dom";
 
 const Adminblog = () => {
   return (
@@ -13,36 +14,17 @@ const Adminblog = () => {
           </div>
 
           <div className="adminblog">
-            <BlogPostCard
-              img={blogData[0].blogthumbnail}
-              title={blogData[0].blogtitle}
-              date={blogData[0].blogDate}
-            />
-            <BlogPostCard
-              img={blogData[0].blogthumbnail}
-              title={blogData[0].blogtitle}
-              date={blogData[0].blogDate}
-            />
-            <BlogPostCard
-              img={blogData[0].blogthumbnail}
-              title={blogData[0].blogtitle}
-              date={blogData[0].blogDate}
-            />
-            <BlogPostCard
-              img={blogData[0].blogthumbnail}
-              title={blogData[0].blogtitle}
-              date={blogData[0].blogDate}
-            />
-            <BlogPostCard
-              img={blogData[0].blogthumbnail}
-              title={blogData[0].blogtitle}
-              date={blogData[0].blogDate}
-            />
-            <BlogPostCard
-              img={blogData[0].blogthumbnail}
-              title={blogData[0].blogtitle}
-              date={blogData[0].blogDate}
-            />
+            {blogData.map((blog) => (
+              <div key={blog.blogId} class="blog-card">
+                <Link to={`edit/${blog.blogId}`}>
+                  <BlogPostCard
+                    img={blog.blogthumbnail}
+                    title={blog.blogtitle}
+                    date={blog.blogDate}
+                  />
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
         <div className="add-ctaBtn-container">

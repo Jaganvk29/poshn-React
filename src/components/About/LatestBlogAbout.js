@@ -1,14 +1,13 @@
 import React from "react";
-import burger from "../../Assets/burger.png";
 import momos from "../../Assets/momos.png";
 import veggies from "../../Assets/veggies.png";
 import Slider from "react-slick";
-import PartnerCard from "../Partners/PartnerCard";
-import { partnersData } from "../Partners/partnersdata";
-import pgym1 from "../../Assets/Partnerimg/pgym1.png";
+import { blogData } from "../Blog/blogData";
 import "slick-carousel/slick/slick.css";
+import { Link, useParams } from "react-router-dom";
 
 import "slick-carousel/slick/slick-theme.css";
+import BlogPostCard from "../Blog/BlogPostCard";
 
 const LatestBlogAbout = () => {
   return (
@@ -16,39 +15,20 @@ const LatestBlogAbout = () => {
       <div class="wrapper">
         <h1>The Latest Blogs</h1>
         <div class="blogs-container">
-          {/* <!-- card 1 --> */}
-          <div class="blog-card">
-            <img class="img" src={burger} />
-            <div class="card-info">
-              <h3>Junk food is not bad</h3>
-              <p>
-                Junk food is not bad, if you are smart enough. One burger
-                consists around 400 to 500 calories...
-              </p>
-            </div>
-          </div>
-          {/* <!-- card 2 --> */}
-          <div class="blog-card">
-            <img class="img" src={momos} />
-            <div class="card-info">
-              <h3>Is keto diet for you? A Mayo ex...</h3>
-              <p>
-                If you’re on a diet of 1600 calories you can eat at least two
-                burgers daily and still have 800-1....
-              </p>
-            </div>
-          </div>
-          {/* <!-- card 3 --> */}
-          <div class="blog-card">
-            <img class="img" src={veggies} />
-            <div class="card-info">
-              <h3>15 healthiest vegetables on...</h3>
-              <p>
-                Eat at least two burgers daily and still have 800-1000 calories
-                left for protein and other...
-              </p>
-            </div>
-          </div>
+          {blogData.map(
+            (blog, index) =>
+              index < 3 && (
+                <div class="blog-card">
+                  <Link to={`/blog/${blog.blogId}`}>
+                    <BlogPostCard
+                      img={blog.blogthumbnail}
+                      title={blog.blogtitle}
+                      date={blog.blogDate}
+                    />
+                  </Link>
+                </div>
+              )
+          )}
         </div>
       </div>
     </section>

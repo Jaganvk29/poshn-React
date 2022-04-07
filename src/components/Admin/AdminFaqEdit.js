@@ -19,7 +19,7 @@ const AdminFaqEdit = () => {
   } = useForm({ mode: "all" });
   const onSubmit = (data) => console.log(data);
 
-  console.log(faqId);
+  // console.log(faqId);
   return (
     <div>
       <div className="managecontainer">
@@ -36,9 +36,18 @@ const AdminFaqEdit = () => {
                   contenteditable="true"
                   value={textState.question}
                   type="text"
-                  {...register("faqquestion", { required: true })}
+                  {...register("faqquestion", {
+                    required: true,
+                    minLength: 10,
+                  })}
                   onChange={(e) => setTextState({ question: e.target.value })}
                 ></input>
+                {errors.faqquestion && (
+                  <p className="form-err-text">
+                    {" "}
+                    Minimum 10 Character Required{" "}
+                  </p>
+                )}
 
                 <h2>Answer</h2>
 
@@ -48,9 +57,15 @@ const AdminFaqEdit = () => {
                   rows="5"
                   // contenteditable="true"
                   value={textState.answer}
-                  {...register("faqanswer", { required: true })}
+                  {...register("faqanswer", { required: true, minLength: 20 })}
                   onChange={(e) => setTextState({ answer: e.target.value })}
                 ></textarea>
+                {errors.faqanswer && (
+                  <p className="form-err-text">
+                    {" "}
+                    Minimum 20 Character Required{" "}
+                  </p>
+                )}
 
                 <div className="adminsavebtn">
                   <button type="submit" className="btn btn-dark">

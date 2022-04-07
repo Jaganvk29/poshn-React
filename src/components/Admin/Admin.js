@@ -30,29 +30,31 @@ const Admin = () => {
               <input
                 type="text"
                 placeholder="ENTER USERNAME"
-                {...register("adminusername", { required: true })}
+                {...register("adminusername", { required: true, minLength: 8 })}
               />
               {errors.adminusername && (
-                <p className="form-err-text">This field is required</p>
+                <p className="form-err-text">Minimum 8 Character Required</p>
               )}
 
               <input
                 type="password"
                 placeholder="ENTER PASSWORD"
-                {...register("adminpassword", { required: true })}
+                {...register("adminpassword", { required: true, minLength: 8 })}
               ></input>
               {errors.adminpassword && (
-                <p className="form-err-text">This field is required</p>
+                <p className="form-err-text">Minimum 8 Character Required</p>
               )}
-              <Link to={"main/dashboard"}>
-                <button
-                  onClick={loginBtnHadler}
-                  type="submit"
-                  className="btn btn-light"
-                >
-                  LOGIN
-                </button>
-              </Link>
+              <div className="admin-login-btn-container">
+                <Link to={"main/dashboard"}>
+                  <button
+                    onClick={loginBtnHadler}
+                    type="submit"
+                    className="btn btn-light"
+                  >
+                    LOGIN
+                  </button>
+                </Link>
+              </div>
             </form>
           </div>
         </div>

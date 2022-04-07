@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import person from "../../Assets/person.jpg";
 import "../../CSS/main.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { AboutData } from "../About/AboutData";
 
 const AboutMe = () => {
   const paramlins = useParams();
@@ -56,16 +56,14 @@ const AboutMe = () => {
     <section ref={ref} className="has-snap has-ani about-me-section">
       <h1 className="title">About me</h1>
       <div className="wrapper">
-        <motion.img animate={photoani} className="img" src={person} />
+        <motion.img
+          animate={photoani}
+          className="img"
+          src={AboutData[0].aboutprof}
+        />
         <motion.div animate={textani} className="text">
           <h1>Hello, I’m Mudita</h1>
-          <p>
-            Mudita is an Indian diet specialist, singer, and film producer. The
-            winner of the Miss World 2000 pageant, Chopra is one of India's
-            highest-paid and most popular entertainers. She has received
-            numerous accolades, including two National Film Awards and five Film
-            fare Awards.
-          </p>
+          <p>{AboutData[0].aboutdesc}</p>
           <button className="btn btn-toggle">
             <Link to={"/about"}>Read more</Link>
           </button>

@@ -10,12 +10,10 @@ import Admin from "./components/Admin/Admin.js";
 import AdminNav from "./components/Nav/AdminNav.js";
 
 const root = ReactDom.createRoot(document.getElementById("root"));
+
 root.render(
   <BrowserRouter>
     <PoshProvider>
-      <Nav />
-      {/* <AdminNav /> */}
-      <ScrollToTop />
       <App />
     </PoshProvider>
   </BrowserRouter>
