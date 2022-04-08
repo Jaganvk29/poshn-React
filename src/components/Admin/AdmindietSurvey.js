@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { DietSurveyData } from "./Data/DietSurveyData";
 
 const AdmindietSurvey = () => {
   return (
@@ -14,113 +16,23 @@ const AdmindietSurvey = () => {
               <th>DATE</th>
               <th>CONTACT</th>
               <th>EMAIL</th>
+              <th>SURVEY</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>45612</td>
+            {DietSurveyData.map((data) => (
+              <tr key={data.id}>
+                <td>{data.id}</td>
 
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-              <td>email@email.com</td>
-            </tr>
-            <tr>
-              <td>45612</td>
-
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-              <td>email@email.com</td>
-            </tr>
-            <tr>
-              <td>45612</td>
-
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-              <td>email@email.com</td>
-            </tr>
-            <tr>
-              <td>45612</td>
-
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-              <td>email@email.com</td>
-            </tr>
-            <tr>
-              <td>45612</td>
-
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-              <td>email@email.com</td>
-            </tr>
-            <tr>
-              <td>45612</td>
-
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-              <td>email@email.com</td>
-            </tr>
-            <tr>
-              <td>45612</td>
-
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-              <td>email@email.com</td>
-            </tr>
-            <tr>
-              <td>45612</td>
-
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-              <td>email@email.com</td>
-            </tr>
-            <tr>
-              <td>45612</td>
-
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-              <td>email@email.com</td>
-            </tr>{" "}
-            <tr>
-              <td>45612</td>
-
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-              <td>email@email.com</td>
-            </tr>
-            <tr>
-              <td>45612</td>
-
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-              <td>email@email.com</td>
-            </tr>{" "}
-            <tr>
-              <td>45612</td>
-
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-              <td>email@email.com</td>
-            </tr>
-            <tr>
-              <td>45612</td>
-
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-              <td>email@email.com</td>
-            </tr>
+                <td>{data.fullname}</td>
+                <td>{data.Date}</td>
+                <td>{data.contact}</td>
+                <td>{data.email}</td>
+                <Link to="detail">
+                  <td>READ</td>
+                </Link>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>

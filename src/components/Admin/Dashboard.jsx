@@ -6,27 +6,62 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <div className="dashboardmenu">
-        <Link to={"myproducts"} className="menuitem">
+        <NavLink
+          to={"myproducts"}
+          className={({ isActive }) =>
+            isActive ? "menuitem active" : "menuitem"
+          }
+        >
           <h2>My product</h2>
-        </Link>
-        <Link to={"faq"} className="menuitem">
+        </NavLink>
+        <NavLink
+          to={"faq"}
+          className={({ isActive }) =>
+            isActive ? "menuitem active" : "menuitem"
+          }
+        >
           <h2>FAQ'S</h2>
-        </Link>
-        <Link to={"blog"} className="menuitem">
+        </NavLink>
+        <NavLink
+          to={"blog"}
+          className={({ isActive }) =>
+            isActive ? "menuitem active" : "menuitem"
+          }
+        >
           <h2>Blogs</h2>
-        </Link>
-        <Link to={"dietsurvey"} className="menuitem">
+        </NavLink>
+        <NavLink
+          to={"dietsurvey"}
+          className={({ isActive }) =>
+            isActive ? "menuitem active" : "menuitem"
+          }
+        >
           <h2>Diet Survey</h2>
-        </Link>
-        <Link to={"bookings"} className="menuitem">
+        </NavLink>
+        <NavLink
+          to={"bookings"}
+          className={({ isActive }) =>
+            isActive ? "menuitem active" : "menuitem"
+          }
+        >
           <h2>Bookings</h2>
-        </Link>
-        <Link to={"responses"} className="menuitem">
+        </NavLink>
+        <NavLink
+          to={"responses"}
+          className={({ isActive }) =>
+            isActive ? "menuitem active" : "menuitem"
+          }
+        >
           <h2>Responses</h2>
-        </Link>
-        <Link to={"manage/doctors"} className="menuitem">
+        </NavLink>
+        <NavLink
+          to={"manage/doctors"}
+          className={({ isActive }) =>
+            isActive ? "menuitem active" : "menuitem"
+          }
+        >
           <h2>Manage</h2>
-        </Link>
+        </NavLink>
       </div>
 
       <div className="DashboardTiles">

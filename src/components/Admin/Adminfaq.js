@@ -26,7 +26,9 @@ const Adminfaq = () => {
       </div>
       <div className="add-ctaBtn-container">
         {" "}
-        <button className="btn btn-dark">Add Faq</button>
+        <Link to={"add"}>
+          <button className="btn btn-dark">Add Faq</button>
+        </Link>
       </div>
     </div>
   );

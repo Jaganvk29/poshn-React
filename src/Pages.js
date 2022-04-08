@@ -25,6 +25,10 @@ import Adminresponses from "./components/Admin/Adminresponses";
 import Plan from "./components/Plan/Plan";
 import ProtectedRoutes from "./components/Admin/ProtectedRoutes";
 import AdminBlogEdit from "./components/Admin/AdminBlogEdit";
+import AdminAddFaq from "./components/Admin/AdminAddFaq";
+import AdminAddBlog from "./components/Admin/AdminAddBlog";
+import AdminSurveyDetail from "./components/Admin/AdminSurveyDetail";
+import AdminResponceDeatil from "./components/Admin/AdminResponceDeatil";
 
 const Pages = () => {
   return (
@@ -52,9 +56,15 @@ const Pages = () => {
           <Route path="about" element={<Adminabout />} />
 
           <Route path="myproducts" element={<Myproduct />} />
-          <Route path="faq" element={<Adminfaq />} />
+          <Route path="faq" element={<Adminfaq />}></Route>
+
+          <Route path="faq/add" element={<AdminAddFaq />} />
+
           <Route path="faq/edit/:faqId" element={<AdminFaqEdit />} />
+
           <Route path="blog" element={<Adminblog />} />
+          <Route path="blog/add" element={<AdminAddBlog />} />
+
           <Route path="blog/edit/:blogId" element={<AdminBlogEdit />} />
 
           <Route path="bookings" element={<AdminBooking />} />
@@ -64,7 +74,14 @@ const Pages = () => {
             <Route path="gym" element={<PartnerGym />} />
           </Route>
           <Route path="dietsurvey" element={<AdmindietSurvey />} />
+          <Route path="dietsurvey/detail" element={<AdminSurveyDetail />} />
+
           <Route path="responses" element={<Adminresponses />} />
+          <Route path="responses" element={<Adminresponses />} />
+          <Route
+            path="responses/detail/:resposeID"
+            element={<AdminResponceDeatil />}
+          />
         </Route>
       </Route>
     </Routes>

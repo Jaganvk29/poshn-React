@@ -61,7 +61,7 @@ const AdminNav = (props) => {
             {/* <!-- Button --> */}
 
             <Link to="/">
-              <button onClick={logoutBtnHadler} className="cta btn btn-light">
+              <button onClick={logoutBtnHadler} className="cta btn btn-dark">
                 Log Out
               </button>{" "}
             </Link>

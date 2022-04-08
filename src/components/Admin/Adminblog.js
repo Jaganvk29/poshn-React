@@ -29,7 +29,9 @@ const Adminblog = () => {
         </div>
         <div className="add-ctaBtn-container">
           {" "}
-          <button className="btn btn-dark">Add Blog</button>
+          <Link to={"add"}>
+            <button className="btn btn-dark">Add Blog</button>
+          </Link>
         </div>
       </div>
     </div>

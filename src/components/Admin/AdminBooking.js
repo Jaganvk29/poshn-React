@@ -1,4 +1,5 @@
 import React from "react";
+import { BookingData } from "./Data/BookingData";
 
 const AdminBooking = () => {
   return (
@@ -10,104 +11,22 @@ const AdminBooking = () => {
           <thead>
             <tr>
               <th>ID</th>
-              <th>PROFILE</th>
+              {/* <th>PROFILE</th> */}
               <th>FULLNAME</th>
               <th>DATE</th>
               <th>CONTACT</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>45612</td>
-              <td>pic</td>
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-            </tr>
-            <tr>
-              <td>45612</td>
-              <td>pic</td>
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-            </tr>
-            <tr>
-              <td>45612</td>
-              <td>pic</td>
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-            </tr>
-            <tr>
-              <td>45612</td>
-              <td>pic</td>
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-            </tr>
-            <tr>
-              <td>45612</td>
-              <td>pic</td>
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-            </tr>
-            <tr>
-              <td>45612</td>
-              <td>pic</td>
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-            </tr>
-            <tr>
-              <td>45612</td>
-              <td>pic</td>
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-            </tr>
-            <tr>
-              <td>45612</td>
-              <td>pic</td>
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-            </tr>
-            <tr>
-              <td>45612</td>
-              <td>pic</td>
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-            </tr>{" "}
-            <tr>
-              <td>45612</td>
-              <td>pic</td>
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-            </tr>
-            <tr>
-              <td>45612</td>
-              <td>pic</td>
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-            </tr>{" "}
-            <tr>
-              <td>45612</td>
-              <td>pic</td>
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-            </tr>
-            <tr>
-              <td>45612</td>
-              <td>pic</td>
-              <td>JAGAN VIJAYARAGHAVAN</td>
-              <td>04 JUNE 2022I</td>
-              <td>9988776655</td>
-            </tr>
+            {BookingData.map((data) => (
+              <tr key={data.id}>
+                <td>{data.id}</td>
+
+                <td>{data.fullname}</td>
+                <td>{data.Date}</td>
+                <td>{data.contact}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
