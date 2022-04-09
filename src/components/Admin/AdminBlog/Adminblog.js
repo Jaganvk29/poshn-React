@@ -1,6 +1,6 @@
 import React from "react";
-import BlogPostCard from "../Blog/BlogPostCard";
-import { blogData } from "../Blog/blogData";
+import BlogPostCard from "../../Blog/BlogPostCard";
+import { blogData } from "../../Blog/blogData";
 import { Link } from "react-router-dom";
 
 const Adminblog = () => {

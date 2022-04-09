@@ -7,14 +7,16 @@ export function PoshProvider({ children }) {
   const [contactIsOpen, setContactIsOpen] = useState(false);
 
   const [isLogged, setIsLogged] = useState(false);
-
+  // BOOKING MODAL
   const modalHandler = function (expand) {
     setIsOpen(expand);
   };
+  // CONTACT MODAL HANDLER
 
   const contactModalHandler = function (expand) {
     setContactIsOpen(expand);
   };
+  // ADMIN LOGIN HANDLER
 
   const authHandler = function (loggedIn) {
     setIsLogged(loggedIn);
@@ -23,12 +25,15 @@ export function PoshProvider({ children }) {
   return (
     <PoshContext.Provider
       value={{
+        // BOOKING MODAL
         isOpen,
         modalHandler,
-        isLogged,
-        authHandler,
+        // CONTACT MODAL HANDLER
         contactIsOpen,
         contactModalHandler,
+        // ADMIN LOGIN HANDLER
+        isLogged,
+        authHandler,
       }}
     >
       {children}

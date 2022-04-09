@@ -168,7 +168,7 @@
   }
 
   .nav .logo {
-    width: 161.29px;
+    max-width: 161.29px;
     height: 64px;
   }
 

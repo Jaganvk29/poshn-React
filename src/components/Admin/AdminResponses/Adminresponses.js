@@ -1,35 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { DietSurveyData } from "./Data/DietSurveyData";
+import { ContactUsData } from "../Data/ContactUsData";
 
-const AdmindietSurvey = () => {
+const Adminresponses = () => {
   return (
     <div>
       <div className="managecontainer">
-        <h2>Diet Survey Details</h2>
+        <h2>Responses</h2>
 
         <table className="content-table">
           <thead>
             <tr>
-              <th>ID</th>
               <th>FULLNAME</th>
               <th>DATE</th>
               <th>CONTACT</th>
               <th>EMAIL</th>
-              <th>SURVEY</th>
+              <th>MESSAGES</th>
             </tr>
           </thead>
           <tbody>
-            {DietSurveyData.map((data) => (
+            {ContactUsData.map((data) => (
               <tr key={data.id}>
-                <td>{data.id}</td>
-
                 <td>{data.fullname}</td>
                 <td>{data.Date}</td>
                 <td>{data.contact}</td>
                 <td>{data.email}</td>
-                <Link to="detail">
-                  <td>READ</td>
+
+                <Link to={`detail/${data.id}`}>
+                  <td>Read Now</td>
                 </Link>
               </tr>
             ))}
@@ -40,4 +38,4 @@ const AdmindietSurvey = () => {
   );
 };
 
-export default AdmindietSurvey;
+export default Adminresponses;

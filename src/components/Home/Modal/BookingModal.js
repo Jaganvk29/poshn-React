@@ -1,12 +1,8 @@
-import React, { useContext } from "react";
-import ContactUs from "./ContactUs";
+import React from "react";
 
-import PoshContext from "../../../PoshContext";
 import Booking from "./Booking";
-import { ReactDOM } from "react";
 
-const BookingModal = ({ open, children }) => {
-  // const { isOpen } = useContext(PoshContext);
+const BookingModal = ({ open }) => {
   if (!open) return null;
   return (
     <>
@@ -14,7 +10,6 @@ const BookingModal = ({ open, children }) => {
         <div className="Modal"></div>
         <div className="Overlay booking-overlay">
           <Booking />
-          {/* <ContactUs></ContactUs> */}
         </div>
       </div>
     </>

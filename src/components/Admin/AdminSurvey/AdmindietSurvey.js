@@ -1,30 +1,36 @@
 import React from "react";
-import { BookingData } from "./Data/BookingData";
+import { Link } from "react-router-dom";
+import { DietSurveyData } from "../Data/DietSurveyData";
 
-const AdminBooking = () => {
+const AdmindietSurvey = () => {
   return (
     <div>
       <div className="managecontainer">
-        <h2> Booking Details</h2>
+        <h2>Diet Survey Details</h2>
 
         <table className="content-table">
           <thead>
             <tr>
               <th>ID</th>
-              {/* <th>PROFILE</th> */}
               <th>FULLNAME</th>
               <th>DATE</th>
               <th>CONTACT</th>
+              <th>EMAIL</th>
+              <th>SURVEY</th>
             </tr>
           </thead>
           <tbody>
-            {BookingData.map((data) => (
+            {DietSurveyData.map((data) => (
               <tr key={data.id}>
                 <td>{data.id}</td>
 
                 <td>{data.fullname}</td>
                 <td>{data.Date}</td>
                 <td>{data.contact}</td>
+                <td>{data.email}</td>
+                <Link to="detail">
+                  <td>READ</td>
+                </Link>
               </tr>
             ))}
           </tbody>
@@ -34,4 +40,4 @@ const AdminBooking = () => {
   );
 };
 
-export default AdminBooking;
+export default AdmindietSurvey;

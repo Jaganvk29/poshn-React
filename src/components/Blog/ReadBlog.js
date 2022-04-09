@@ -1,11 +1,8 @@
 import React from "react";
-import ReadYoga from "../../Assets/Blog_image/Readyoga.png";
-import BlogPostCard from "./BlogPostCard";
-import Excer from "../../Assets/Blog_image/Excer.png";
-import Meat from "../../Assets/Blog_image/Meat.png";
 import Footer from "../Footer/Footer";
 import { useParams } from "react-router-dom";
 import { blogData } from "./blogData";
+import LatestBlogAbout from "../About/LatestBlogAbout";
 
 export const ReadBlog = () => {
   const params = useParams();
@@ -37,19 +34,10 @@ export const ReadBlog = () => {
       </div>
       <div className="read-articels-container">
         <h1>RELATED ARTICELS</h1>
-        <div className="read-articels flex">
-          <BlogPostCard
-            img={Meat}
-            title={"I hate green vegetables, I love junk food."}
-            date={"03 JUNE 2021"}
-          />
-          <BlogPostCard
-            img={Excer}
-            title={"I can deadlift twice my weight, Is it enough for a person?"}
-            date={"03 JUNE 2021"}
-          />
-        </div>
+
+        <LatestBlogAbout num={2} />
       </div>
+
       <Footer />
     </div>
   );

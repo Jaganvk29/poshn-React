@@ -9,16 +9,16 @@ import { Link, useParams } from "react-router-dom";
 import "slick-carousel/slick/slick-theme.css";
 import BlogPostCard from "../Blog/BlogPostCard";
 
-const LatestBlogAbout = () => {
+const LatestBlogAbout = (props) => {
   return (
-    <section class="has-snap has-ani blogs-section">
-      <div class="wrapper">
-        <h1>The Latest Blogs</h1>
-        <div class="blogs-container">
+    <section className="has-snap has-ani blogs-section">
+      <div className="wrapper">
+        {props.header && <h1>{props.header}</h1>}
+        <div className="blogs-container">
           {blogData.map(
             (blog, index) =>
-              index < 3 && (
-                <div class="blog-card">
+              index < props.num && (
+                <div key={blog.blogId} className="blog-card">
                   <Link to={`/blog/${blog.blogId}`}>
                     <BlogPostCard
                       img={blog.blogthumbnail}

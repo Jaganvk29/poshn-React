@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { faqData } from "../Faq/faqdata";
+import { faqData } from "../../Faq/faqdata";
 import { useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 

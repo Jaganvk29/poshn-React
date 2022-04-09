@@ -1,5 +1,6 @@
 import React, { useState, Fragment } from "react";
 import Footer from "../Footer/Footer";
+import ReCAPTCHA from "react-google-recaptcha";
 
 import { useForm } from "react-hook-form";
 import prevbtn from "../../Assets/prevbtn.png";
@@ -10,6 +11,7 @@ const Survey = () => {
   const [selected, setSelected] = useState([]);
   const [formstep, setFormStep] = useState(0);
   const [othersel, setOthersel] = useState(false);
+  const [isVerified, setIsVerified] = useState(false);
 
   console.log(othersel);
 
@@ -19,6 +21,11 @@ const Survey = () => {
     watch,
     formState: { errors, isValid },
   } = useForm({ mode: "all" });
+
+  function handlerecaptcha(value) {
+    console.log("Captcha value:", value);
+    setIsVerified(true);
+  }
 
   const onSubmit = (data) => console.log(data);
 
@@ -30,9 +37,6 @@ const Survey = () => {
       }
     } else {
       setSelected(selected.filter((select) => select !== e.target.value));
-      // if (e.target.checked !== "other") {
-      //   setOthersel(false);
-      // }
     }
   };
 
@@ -71,6 +75,24 @@ const Survey = () => {
       );
     }
   };
+  const renderStartButton = () => {
+    if (formstep >= 1) {
+      return undefined;
+    } else {
+      return (
+        <button
+          disabled={!isVerified}
+          type="button"
+          onClick={completeFormStep}
+          className="btn btn-dark"
+        >
+          START
+        </button>
+      );
+    }
+  };
+
+  const valid = isValid && isVerified;
 
   const rendernxtButton = () => {
     if (formstep > 9) {
@@ -78,7 +100,7 @@ const Survey = () => {
     } else {
       return (
         <button
-          disabled={!isValid}
+          disabled={!valid}
           type="button"
           onClick={completeFormStep}
           className="btn btn-dark"
@@ -176,6 +198,11 @@ const Survey = () => {
                         </label>
                       </div>
                     </div>
+
+                    <ReCAPTCHA
+                      sitekey="6LfnJFwfAAAAAPTvk8M5nHeJ217TKlfWUyyedRtT"
+                      onChange={handlerecaptcha}
+                    />
                   </div>
                 </section>
               )}
@@ -437,6 +464,7 @@ const Survey = () => {
               <div className="formnavbtn">
                 {rendernxtButton()}
                 {rendersubmitButton()}
+                {/* {renderStartButton()} */}
               </div>
               {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
             </form>

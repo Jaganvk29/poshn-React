@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import PoshContext from "../../PoshContext";
 
 const Nav = (props) => {

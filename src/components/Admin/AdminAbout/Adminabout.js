@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import person from "../../Assets/person.jpg";
+import person from "../../../Assets/person.jpg";
 
 const Adminabout = () => {
   const [textState, setTextState] = useState({

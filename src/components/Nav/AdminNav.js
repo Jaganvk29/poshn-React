@@ -26,16 +26,6 @@ const AdminNav = (props) => {
             {/* <!-- Logo --> */}
             <NavLink to="/" className="logo logo-1"></NavLink>
 
-            {/* <!-- Hamburger --> */}
-            <button
-              onClick={hamburgerhandler}
-              className="hamburger flex flex-col flex-jc-sb"
-            >
-              <span className="bg-color-5"></span>
-              <span className="bg-color-5"></span>
-              <span className="bg-color-5"></span>
-            </button>
-
             {/* <!--Desktop Menu --> */}
             <div className="menu-desk flex-jc-sb flex-ai-c">
               <NavLink
@@ -65,7 +55,18 @@ const AdminNav = (props) => {
                 Log Out
               </button>{" "}
             </Link>
+
+            <button
+              onClick={hamburgerhandler}
+              className="hamburger flex flex-col flex-jc-sb"
+            >
+              <span className="bg-color-5"></span>
+              <span className="bg-color-5"></span>
+              <span className="bg-color-5"></span>
+            </button>
           </div>
+
+          {/* <!-- Hamburger --> */}
 
           {/* <!-- Overlay --> */}
           <div className="overlay"></div>

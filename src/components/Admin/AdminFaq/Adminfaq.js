@@ -1,7 +1,7 @@
 import React from "react";
-import { faqData } from "../Faq/faqdata";
+import { faqData } from "../../Faq/faqdata";
 import { Link } from "react-router-dom";
-import editpen from "../../Assets/Editpen.png";
+import editpen from "../../../Assets/Editpen.png";
 
 const Adminfaq = () => {
   return (

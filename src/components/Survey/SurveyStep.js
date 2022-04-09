@@ -140,20 +140,6 @@ const SurveyStep = (props) => {
               </label>
             </div>
           )}
-
-          {/* <SurevyOptions
-            register={{ ...props.register }}
-            answer="Yo-Yo and So-So"
-          ></SurevyOptions>
-          <SurevyOptions
-            register={{ ...props.register }}
-            answer="Positive but I can do better"
-          ></SurevyOptions>
-
-          <SurevyOptions
-            register={{ ...props.register }}
-            answer="I have healthy sustainable relationship"
-          ></SurevyOptions> */}
         </div>
         {<p>{props.validationmsg}</p>}
       </section>

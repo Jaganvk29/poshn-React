@@ -49,3 +49,17 @@
   background-color: var(--color-7);
   color: var(--color-1);
 }
+
+.btn-dark:disabled{
+  background-color: #707bb7;
+  /* border: 2px solid rgb(120, 120, 120); */
+  /* color: var(--grey-6); */
+  color: rgba(255, 255, 255, 0.445);
+}
+
+.btn-dark:disabled:hover{
+  background-color: #707bb7;
+  
+  cursor:not-allowed;
+
+}

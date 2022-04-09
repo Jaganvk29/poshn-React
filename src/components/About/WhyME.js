@@ -4,12 +4,12 @@ import food from "../../Assets/food.png";
 
 const WhyME = () => {
   return (
-    <section class="why-me">
-      <div class="wrapper">
-        <div class="content">
-          <img class="img-title" src={whymeimg} />
-          <div class="text mx-auto">
-            <img class="border-1 shadow-1" src={food} />
+    <section className="why-me">
+      <div className="wrapper">
+        <div className="content">
+          <img className="img-title" src={whymeimg} />
+          <div className="text mx-auto">
+            <img className="border-1 shadow-1" src={food} />
             <h1>I can help you to achieve goals</h1>
             <p>
               Mudita is an Indian diet specialist, singer, and film producer.

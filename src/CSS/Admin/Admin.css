@@ -104,7 +104,7 @@ margin-top: 20px;
 
 .menuitem:hover ,.active{
     background-color: var(--color-7);
-    width: 100%;
+    /* width: 100%; */
     max-height: 80px;
     color: white;
    display: flex;
@@ -121,6 +121,7 @@ margin-top: 20px;
     
     padding: 24px;
     flex: 1 1 10rem ;
+    max-width: 100%;
   
 
 }
@@ -368,4 +369,7 @@ justify-content: flex-end;
     .dashboardmenu{
         display: none;
     }
+
+ 
+  
   }

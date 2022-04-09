@@ -1,8 +1,8 @@
 import React from "react";
 
 import Footer from "../Footer/Footer";
-import PartnerGym from "./PartnerGym";
-import { Link, NavLink, Routes, Route, Outlet } from "react-router-dom";
+
+import { Link, Outlet } from "react-router-dom";
 const Partners = () => {
   return (
     <div className="partner-container">

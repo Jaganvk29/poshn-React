@@ -24,14 +24,15 @@
   margin-bottom: 40px;
 }
 
-.test-cards {
-  display: grid;
-  grid-template-columns: repeat(6, 310px);
-  overflow: hidden;
-  scroll-behavior: smooth;
+/* .test-cards { */
+  /* display: grid; */
+  /* grid-template-columns: repeat(6, 310px); */
+  /* min-width: 1200px; */
+  /* overflow: hidden; */
+  /* scroll-behavior: smooth; */
   /* overflow-x: scroll; */
-  /* display: flex; */
-}
+  
+/* } */
 
 /* .test-cards::-webkit-scrollbar {
   width: 0;
@@ -102,7 +103,7 @@
   }
 
   .test-cards {
-    display: grid;
+    /* display: grid; */
     grid-template-columns: repeat(5, 450px);
     scroll-behavior: smooth;
   }

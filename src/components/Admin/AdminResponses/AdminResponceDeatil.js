@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { ContactUsData } from "./Data/ContactUsData";
+import { ContactUsData } from "../Data/ContactUsData";
 
 const AdminResponceDeatil = () => {
   const params = useParams();

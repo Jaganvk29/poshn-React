@@ -1,12 +1,11 @@
 import React, { useRef, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../../CSS/main.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { AboutData } from "../About/AboutData";
 
 const AboutMe = () => {
-  const paramlins = useParams();
   const { ref, inView } = useInView({
     threshold: 0.3,
   });

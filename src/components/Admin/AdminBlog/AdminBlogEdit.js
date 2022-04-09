@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import { blogData } from "../Blog/blogData";
+import { blogData } from "../../Blog/blogData";
 import { useForm } from "react-hook-form";
 
 const AdminBlogEdit = () => {
