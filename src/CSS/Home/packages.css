@@ -1,6 +1,6 @@
 /* OVER ALL CONTAINER */
 .packages {
-  /* height: 150vh; */
+
   background-color: var(--color-3);
 }
 /* BLUE COLOR CONTAINER */
@@ -68,7 +68,7 @@
 
 .package-tc {
   padding: 48px 0;
-  /* padding: 48px auto; */
+  
   text-align: center;
   color: var(--gray-6);
 }

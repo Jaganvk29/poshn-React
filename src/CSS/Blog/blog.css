@@ -5,8 +5,7 @@
 
 .hlblog {
   justify-content: space-around;
-/* flex-wrap: wrap; */
-/* flex-direction: column-reverse; */
+
 }
 .hlblog-text {
   padding-right: 32px;
@@ -36,7 +35,7 @@
 
 .blog-post-card {
   margin-bottom: 64px;
-  /* width: 100%; */
+  
   max-width: 560px;
 }
 

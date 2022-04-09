@@ -2,14 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-direction: row; */
     min-height: 100vh;
-    /* background-color: red; */
-    /* width: 100%; */
-
-
-    
-   
 
 }
 
@@ -18,7 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
+   
     width: 100%;
 
 }
@@ -30,10 +23,7 @@
     align-items: center;
     flex-direction: column;
     max-width: 800px;
-    /* background-color: #207edc; */
-
-  
-
+   
 }
 
 .survey{
@@ -44,29 +34,15 @@
     min-height: 100vh;
     max-width: 100%;
     padding: 1rem;
-    /* background-color: aqua; */
- 
+
 }
-
-
 .newwrapper{
-    max-width: 100%;
-   /* background-color: #08090A; */
+    max-width: 100%; 
 }
-
-
-
 
 .survey input[type="checkbox"]{
     display: none;
 }
-
-
-
-
-
-
-
 
 .survey span , .userText input{
     color: #6D747A;
@@ -89,13 +65,10 @@
 .survey label input[type="checkbox"]:checked +span{
     background-color: var(--color-7);
     color: rgb(255, 255, 255);
-/* min-width: 200px; */
 
 } 
 
-/* span{
-    background-color: aqua;
-} */
+
 
 .survey label input[type="checkbox"]:checked +span::before{
 
@@ -132,7 +105,7 @@
 
 .survey-ques-container{
     max-width: 592px;
-    /* margin-bottom: 48px; */
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -227,15 +200,10 @@
         align-items: center;
         flex-direction: column;
         max-width: 400px;
-        /* background-color: #207edc; */
-    
-      
-    
     }
 
     .survey-ques > h1{
         font-size: 20px;
-
     }
   }
 

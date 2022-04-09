@@ -54,19 +54,7 @@
   font-size: 13px;
 }
 
-/* animation */
-/* .diet-chart .text {
-  opacity: 0;
-  transform: translateX(-100px);
-  transition-property: opacity, transform;
-  transition-timing-function: ease;
-  transition-duration: 600ms;
-}
 
-.diet-chart.ani .text {
-  opacity: 1;
-  transform: translateX(0);
-} */
 @media screen and (min-width: 380px) {
   .diet-chart {
     padding-left: 3%;

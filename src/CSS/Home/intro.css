@@ -54,20 +54,7 @@
   object-position: center bottom;
 }
 
-/* animation
-.intro-section .text {
-  opacity: 0;
-  transform: translate(-100px, 0);
-  animation: header-ani-end 400ms ease-in-out forwards;
-  animation-delay: 400ms;
-}
 
-.intro-section .img-container {
-  opacity: 0;
-  transform: translate(100px, 0);
-  animation: header-ani-end 400ms ease-in-out forwards;
-  animation-delay: 300ms;
-} */
 
 @media screen and (min-width: 630px) {
   .intro-section .wrapper {

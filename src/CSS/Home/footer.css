@@ -87,33 +87,4 @@
   color: #ffffff;
 }
 
-/* animations */
-/* .footer .socials,
-.footer .links-item {
-  opacity: 0;
-  transition-property: opacity, transform;
-  transition-timing-function: ease;
-  transition-duration: 600ms;
-}
 
-.footer .socials {
-  transform: translate(-100px, 0);
-}
-
-.footer .links-item {
-  transform: translate(0, 100px);
-}
-
-.footer .links-item:nth-child(2) {
-  transition-delay: 200ms;
-}
-
-.footer .links-item:nth-child(3) {
-  transition-delay: 400ms;
-}
-
-.footer.ani .socials,
-.footer.ani .links-item {
-  opacity: 1;
-  transform: translate(0, 0);
-} */

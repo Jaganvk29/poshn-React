@@ -5,7 +5,7 @@
 
 .admin-login-container{
     min-height: 100vh;
-    /* width: 100%; */
+   
     background-color: var(--color-7);
     display: flex;
     justify-content: center;
@@ -24,7 +24,7 @@ margin-top: 20px;
 }
 .admin-login >form{
     display: flex;
-    /* gap:20px ;     */
+   
     flex-direction: column; 
 }
 
@@ -57,21 +57,15 @@ margin-top: 20px;
    
    
 }
-/* .dashboardmenu2{
-    flex: 1 1 40rem ;
-   
-    min-height: 92vh;
-    max-width: 372px;
-   
-} */
+
 .dashboardmenu{
     
     flex: 1 1 10rem ;
-    /* position: fixed; */
+   
     min-height: 100vh;
     max-width: 372px;
    
-    /* background-color: aqua; */
+  
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -79,32 +73,30 @@ margin-top: 20px;
     align-items: center;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.0.2);
     background-color: #fff;
-    /* display: none; */
+  
    
 
 }
 
 .menuitem{
    
-    /* background-color: white; */
+    
     min-width: 100%;
     min-height: 80px;
    display: flex;
    justify-content: center;
    align-items: center;
-   /* background-color: var(--color-7); */
+ 
 
    
 }
-/* .active{
 
-} */
 
 
 
 .menuitem:hover ,.active{
     background-color: var(--color-7);
-    /* width: 100%; */
+   
     max-height: 80px;
     color: white;
    display: flex;
@@ -137,8 +129,7 @@ margin-top: 20px;
     margin: 12px;
     background-color: white;
     max-height: 419px;
-    /* display: flex; */
-    /* justify-content: space-between; */
+    
 
     border-radius: 12px;
     padding: 24px;
@@ -204,17 +195,14 @@ margin-top: 20px;
     margin-top: 29px;
     display: flex;
     justify-content: space-between;
-    /* justify-content: center; */
+   
 }
 .reponces-data{
     margin-top: 29px;
     display: flex;
     justify-content: space-between;
 }
-/* 
-table {
-    width: 100%;
-  } */
+
 
   .content-table{
       border-collapse: collapse;
@@ -226,7 +214,7 @@ table {
 
   .content-table thead tr{
     border-bottom:1px solid  #dddddd;
-      /* background-color: rgb(10, 173, 222); */
+    
       color: var(--gray-6);
       text-align: center;
       font-weight: bold;
@@ -234,10 +222,7 @@ table {
 
 
   .content-table th,.content-table  td{
-
-
     padding: 15px 15px;
-
   }
   
 
@@ -248,13 +233,7 @@ table {
 
   }
 
-  /* .content-table tbody tr:nth-of-type(even){
-   background-color: #f3f3f3;
-
-} */
-
-
-
+  
 
 /* ADMIN FAQ */
 adminfaq-container{
@@ -271,7 +250,7 @@ adminfaq-container{
 .adminfaq{
     max-width: 100%;
    
-    /* background-color: aqua; */
+   
     display: flex;
     justify-content: center;
    
