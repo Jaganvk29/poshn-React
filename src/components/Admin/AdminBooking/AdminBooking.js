@@ -16,6 +16,7 @@ const AdminBooking = () => {
               <th>FULLNAME</th>
               <th>DATE</th>
               <th>CONTACT</th>
+              <th>CONSULTATION</th>
             </tr>
           </thead>
           <tbody>
@@ -26,6 +27,7 @@ const AdminBooking = () => {
                 <td>{data.fullname}</td>
                 <td>{data.Date}</td>
                 <td>{data.contact}</td>
+                <td>{data.consultaion}</td>
               </tr>
             ))}
           </tbody>

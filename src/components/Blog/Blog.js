@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../Footer/Footer";
 import BlogPostCard from "./BlogPostCard";
 import { Link } from "react-router-dom";
 import HlBlog from "./HlBlog";
@@ -12,11 +11,19 @@ const Blog = () => {
       <div className="blog-container">
         <div className="wrapper">
           {/* HIGHLIGHTED(hl) BLOG -- FIRST POST */}
-          <HlBlog />
+
+          <HlBlog
+            img={blogData[0].blogthumbnail}
+            title={blogData[0].blogtitle}
+            date={blogData[0].blogDate}
+            content={blogData[0].blogContent}
+          />
+
           <hr className="hlseperator" />
 
           <div className="blog-posts-container flex">
-            {blogData.map((blog) => (
+            {/* IT SKIPS THE FIRST POST TO LOOP */}
+            {blogData.slice(1).map((blog) => (
               <Link key={blog.blogId} to={`./${blog.blogId}`}>
                 <BlogPostCard
                   img={blog.blogthumbnail}
@@ -32,7 +39,6 @@ const Blog = () => {
         title="I will help you to achieve your health goals"
         btntext="Book Free Consultation"
       />
-      <Footer />
     </div>
   );
 };

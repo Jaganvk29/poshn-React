@@ -5,6 +5,7 @@ import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import TestimonalCard from "./TestimonalCard";
 
 const Testimonials = () => {
   const [sliderAction, setAliderAction] = useState([]);
@@ -53,135 +54,31 @@ const Testimonials = () => {
       </div>
       <div className="test-cards">
         <Slider ref={sliderref} {...settings_3}>
-          <div className="test-card">
-            <div>
-              <p>
-                "I couldn't have asked for more than this. I didn't even need
-                training. I have gotten at least 50 times the value from PoshN."
-              </p>
-              <div className="author flex flex-ai-c">
-                <img
-                  className="img"
-                  src="https://picsum.photos/id/1023/367/267"
-                />
-                <div className="info">
-                  <h5>Rohit Ransore</h5>
-                  <h6>UX designer at ATG</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="test-card">
-            <div>
-              <p>
-                "I couldn't have asked for more than this. I didn't even need
-                training. I have gotten at least 50 times the value from PoshN."
-              </p>
-              <div className="author flex flex-ai-c">
-                <img
-                  className="img"
-                  src="https://picsum.photos/id/1023/367/267"
-                />
-                <div className="info">
-                  <h5>Rohit Ransore</h5>
-                  <h6>UX designer at ATG</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="test-card">
-            <div>
-              <p>
-                "I couldn't have asked for more than this. I didn't even need
-                training. I have gotten at least 50 times the value from PoshN."
-              </p>
-              <div className="author flex flex-ai-c">
-                <img
-                  className="img"
-                  src="https://picsum.photos/id/1023/367/267"
-                />
-                <div className="info">
-                  <h5>Rohit Ransore</h5>
-                  <h6>UX designer at ATG</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="test-card">
-            <div>
-              <p>
-                "I couldn't have asked for more than this. I didn't even need
-                training. I have gotten at least 50 times the value from PoshN."
-              </p>
-              <div className="author flex flex-ai-c">
-                <img
-                  className="img"
-                  src="https://picsum.photos/id/1023/367/267"
-                />
-                <div className="info">
-                  <h5>Rohit Ransore</h5>
-                  <h6>UX designer at ATG</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="test-card">
-            <div>
-              <p>
-                "I couldn't have asked for more than this. I didn't even need
-                training. I have gotten at least 50 times the value from PoshN."
-              </p>
-              <div className="author flex flex-ai-c">
-                <img
-                  className="img"
-                  src="https://picsum.photos/id/1023/367/267"
-                />
-                <div className="info">
-                  <h5>Rohit Ransore</h5>
-                  <h6>UX designer at ATG</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="test-card">
-            <div>
-              <p>
-                "I couldn't have asked for more than this. I didn't even need
-                training. I have gotten at least 50 times the value from PoshN."
-              </p>
-              <div className="author flex flex-ai-c">
-                <img
-                  className="img"
-                  src="https://picsum.photos/id/1023/367/267"
-                />
-                <div className="info">
-                  <h5>Rohit Ransore</h5>
-                  <h6>UX designer at ATG</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="test-card">
-            <div>
-              <p>
-                "I couldn't have asked for more than this. I didn't even need
-                training. I have gotten at least 50 times the value from PoshN."
-              </p>
-              <div className="author flex flex-ai-c">
-                <img
-                  className="img"
-                  src="https://picsum.photos/id/1023/367/267"
-                />
-                <div className="info">
-                  <h5>Rohit Ransore</h5>
-                  <h6>UX designer at ATG</h6>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* MAP THE CARDS ONCE WE GET DATABASE INTEGRATION DONE */}
+          <TestimonalCard
+            userComment=" I couldn't have asked for more than this. I didn't even need training. I have gotten at least 50 times the value from PoshN."
+            userPic="https://picsum.photos/id/1023/367/267"
+            userName="Rohit Ransore"
+            userJob="UX designer at ATG"
+          />
+          <TestimonalCard
+            userComment=" I couldn't have asked for more than this. I didn't even need training. I have gotten at least 50 times the value from PoshN."
+            userPic="https://picsum.photos/id/1023/367/267"
+            userName="Rohit Ransore"
+            userJob="UX designer at ATG"
+          />
+          <TestimonalCard
+            userComment=" I couldn't have asked for more than this. I didn't even need training. I have gotten at least 50 times the value from PoshN."
+            userPic="https://picsum.photos/id/1023/367/267"
+            userName="Rohit Ransore"
+            userJob="UX designer at ATG"
+          />
+          <TestimonalCard
+            userComment=" I couldn't have asked for more than this. I didn't even need training. I have gotten at least 50 times the value from PoshN."
+            userPic="https://picsum.photos/id/1023/367/267"
+            userName="Rohit Ransore"
+            userJob="UX designer at ATG"
+          />
         </Slider>
       </div>
     </section>

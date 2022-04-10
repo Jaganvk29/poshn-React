@@ -4,6 +4,7 @@ import Nav from "./components/Nav/Nav";
 import Pages from "./Pages";
 import ScrollToTop from "./ScrollToTop";
 import PoshContext from "./PoshContext";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   const { isLogged, authHandler } = useContext(PoshContext);
@@ -13,6 +14,7 @@ const App = () => {
       {isLogged ? <AdminNav /> : <Nav />}
       <ScrollToTop />
       <Pages />
+      <Footer />
     </div>
   );
 };

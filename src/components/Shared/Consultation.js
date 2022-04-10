@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from "react";
-import ModalContact from "../Home/Modal/ModalContact";
+import BookingModal from "../Home/Modal/BookingModal";
 import PoshContext from "../../PoshContext";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -76,7 +76,7 @@ const Consultation = (props) => {
           </motion.button>
         </div>
       </div>
-      <ModalContact open={isOpen}></ModalContact>
+      <BookingModal open={isOpen}></BookingModal>
     </section>
   );
 };

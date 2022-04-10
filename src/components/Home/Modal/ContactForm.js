@@ -2,6 +2,8 @@ import React, { useContext, useState } from "react";
 import PoshContext from "../../../PoshContext";
 import { useForm } from "react-hook-form";
 import ReCAPTCHA from "react-google-recaptcha";
+import Input from "./Inputs/Input";
+import InputTextArea from "./Inputs/InputTextArea";
 
 const ContactForm = (props) => {
   // CONTEXT FOR BOOKING (CONSULTATION PAGE) US MODAL
@@ -57,127 +59,94 @@ const ContactForm = (props) => {
             <form className="form" onSubmit={handleSubmit(onSubmit)}>
               <div className="container">
                 <div className="flex-1 mr-32px">
-                  <div className="field mb-24px">
-                    <label>Name</label>
-                    <div
-                      className={`input flex flex-ai-c ${
-                        isFocused ? " input flex flex-ai-c focus" : " "
-                      }`}
-                    >
-                      <div className="icon icon-user  icon-grey mr-10px "></div>
-                      <input
-                        // name="name"
-                        className="input-field "
-                        type="text"
-                        placeholder="Enter name"
-                        // ref={userNameref}
-                        {...register("username", {
-                          required: "You need a name",
-                          minLength: {
-                            value: 3,
-                            message: "Please enter a longer name",
-                          },
-                          maxLength: {
-                            value: 50,
-                            message: "Please enter a shorter name",
-                          },
-                        })}
-                        // onBlur={(e) => setIsFocused(false)}
-                        // onFocus={(e) => setIsFocused(true)}
-                      />
-                    </div>
-                    {errors.username && (
-                      <p className="form-err-text">{errors.username.message}</p>
-                    )}
-                  </div>
-                  <div className="field mb-24px">
-                    <label>Email</label>
-                    <div
-                      className={`input flex flex-ai-c ${
-                        isFocused ? " input flex flex-ai-c focus" : " "
-                      }`}
-                    >
-                      <div className="icon icon-mail icon-grey mr-10px"></div>
-                      <input
-                        name="email"
-                        className="input-field"
-                        type="text"
-                        placeholder="Enter email"
-                        // ref={userEmailref}
-                        {...register("useremail", {
-                          required: "You need a Email",
+                  <Input
+                    label="Name"
+                    placeholder="Enter Your Name"
+                    icon="icon-user"
+                    errors={
+                      errors.username && (
+                        <p className="form-err-text">
+                          {errors.username.message}
+                        </p>
+                      )
+                    }
+                    registerinput={register("username", {
+                      required: "You need a name",
+                      minLength: {
+                        value: 3,
+                        message: "Please enter a longer name",
+                      },
+                      maxLength: {
+                        value: 50,
+                        message: "Please enter a shorter name",
+                      },
+                    })}
+                  />
 
-                          pattern: {
-                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                            message: "invalid email address",
-                          },
-                        })}
-                        // onBlur={(e) => setIsFocused(false)}
-                        // onFocus={(e) => setIsFocused(true)}
-                      />
-                    </div>
-                    {errors.useremail && (
-                      <p className="form-err-text">
-                        {errors.useremail.message}
-                      </p>
-                    )}
-                  </div>
-                  <div className="field">
-                    <label>Phone</label>
-                    <div className="input flex flex-ai-c">
-                      <div className="icon icon-phone icon-grey mr-10px"></div>
-                      <input
-                        name="phone"
-                        className="input-field"
-                        type="tel"
-                        placeholder="Enter phone"
-                        // ref={userPhoneref}
-                        {...register("userphone", {
-                          required: "YOU NEED A PHONE NUMBER",
-                          minLength: {
-                            value: 10,
-                            message: "Number is Too Short",
-                          },
-                          pattern: {
-                            value:
-                              /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/,
-                            message: "Please enter a valid phone number",
-                          },
-                        })}
-                      />
-                    </div>
-                    {errors.userphone && (
-                      <p className="form-err-text">
-                        {errors.userphone.message}
-                      </p>
-                    )}
-                  </div>
+                  <Input
+                    label="Email"
+                    placeholder="Enter email"
+                    icon="icon-mail"
+                    errors={
+                      errors.useremail && (
+                        <p className="form-err-text">
+                          {errors.useremail.message}
+                        </p>
+                      )
+                    }
+                    registerinput={register("useremail", {
+                      required: "You need a Email",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: "invalid email address",
+                      },
+                    })}
+                  />
+
+                  <Input
+                    label="Phone"
+                    placeholder="Enter Phone Number"
+                    icon="icon-phone"
+                    errors={
+                      errors.userphone && (
+                        <p className="form-err-text">
+                          {errors.userphone.message}
+                        </p>
+                      )
+                    }
+                    registerinput={register("userphone", {
+                      required: "YOU NEED A PHONE NUMBER",
+                      minLength: {
+                        value: 10,
+                        message: "Number is Too Short",
+                      },
+                      pattern: {
+                        value:
+                          /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/,
+                        message: "Please enter a valid phone number",
+                      },
+                    })}
+                  />
                 </div>
                 <div class="flex-2">
-                  <div class="field flex flex-col h-full">
-                    <label>Message</label>
-                    <div class="input flex flex-ai-c h-full flex-grow">
-                      <textarea
-                        name="message"
-                        class="input-field"
-                        cols=""
-                        rows="5"
-                        // ref={userMesgref}
-                        {...register("usermessage", {
-                          required: "You Need Add a Message",
-                          minLength: {
-                            value: 20,
-                            message: "Message is Too Short",
-                          },
-                        })}
-                      ></textarea>
-                    </div>
-                    {errors.usermessage && (
-                      <p className="form-err-text">
-                        {errors.usermessage.message}
-                      </p>
-                    )}
-                  </div>
+                  <InputTextArea
+                    label="Message"
+                    placeholder="ENTER A MESSAGE"
+                    registerinput={register("usermessage", {
+                      required: "You Need Add a Message",
+                      minLength: {
+                        value: 20,
+                        message: "Message is Too Short",
+                      },
+                    })}
+                    errors={
+                      errors.usermessage && (
+                        <p className="form-err-text">
+                          {errors.usermessage.message}
+                        </p>
+                      )
+                    }
+                  />
                 </div>
               </div>
               {/* CHECK BOXES */}

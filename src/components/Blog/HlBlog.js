@@ -1,11 +1,16 @@
 import React from "react";
-import ropeworkout from "../../Assets/ropeworkout.png";
 import { motion } from "framer-motion";
-const HlBlog = () => {
+import { Link } from "react-router-dom";
+import { blogData } from "./blogData";
+
+const HlBlog = (props) => {
   const variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   };
+
+  const contentText = props.content;
+  const trimmedcontent = contentText.substr(0, 200);
 
   return (
     <motion.div
@@ -15,19 +20,15 @@ const HlBlog = () => {
       className="hlblog flex"
     >
       <div className="hlblog-text flex">
-        <p>03 JUNE 2021</p>
-        <h1>HIIT Workouts: How effective they really are?</h1>
-        <p>
-          We are dreamers, scientists, engineers, writers, artists. Each of us
-          has a personal reason to try to create a more emotionally resilient
-          world. We are dreamers, scientists, engineers, writers, artists. Each
-          of us has a personal reason to try to create a more emotionally
-          resilient world.
-        </p>
-        <button className="btn btn-toggle">Read</button>
+        <p>{props.date}</p>
+        <h1>{props.title}</h1>
+        <p>{trimmedcontent}...</p>
+        <Link key={blogData[0].blogId} to={`./${blogData[0].blogId}`}>
+          <button className="btn btn-toggle">Read</button>
+        </Link>
       </div>
       <div className="hlblog-img">
-        <img src={ropeworkout} />
+        <img src={props.img} />
       </div>
     </motion.div>
   );

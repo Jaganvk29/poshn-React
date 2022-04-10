@@ -15,9 +15,7 @@ const About = () => {
       <WhyME />
       <Testimonials />
       <Consultation title="Connect Now" btntext="Book Free Consultation" />
-
       <LatestBlogAbout />
-      <Footer />
     </div>
   );
 };

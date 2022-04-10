@@ -202,8 +202,7 @@ input:-internal-autofill-selected {
 }
 
 .booking .input.focus .icon {
-  filter: invert(48%) sepia(47%) saturate(3429%) hue-rotate(2deg)
-    brightness(100%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(20%) sepia(76%) saturate(1654%) hue-rotate(214deg) brightness(90%) contrast(87%);
 }
 
 .mr-10px {

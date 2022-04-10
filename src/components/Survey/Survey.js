@@ -471,7 +471,6 @@ const Survey = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </Fragment>
   );
 };

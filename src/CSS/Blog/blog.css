@@ -31,6 +31,10 @@
   justify-content: space-evenly;
 }
 
+.blog-posts-container:first-child{
+  display: none;
+}
+
 /* BLOG CARD */
 
 .blog-post-card {

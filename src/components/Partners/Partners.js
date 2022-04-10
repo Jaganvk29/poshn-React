@@ -24,7 +24,6 @@ const Partners = () => {
         </div>
       </div>
       <div className="spacer"></div>
-      <Footer />
     </div>
   );
 };

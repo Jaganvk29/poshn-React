@@ -1,7 +1,14 @@
 import React from "react";
 import silver from "../../Assets/package_img/silver.png";
+import gold from "../../Assets/package_img/gold.png";
+import diamond from "../../Assets/package_img/Diamond.png";
+import platinum from "../../Assets/package_img/platinum.png";
+import diab from "../../Assets/package_img/diab.png";
+import nut from "../../Assets/package_img/nut.png";
+
 import Consultation from "../Shared/Consultation";
 import Footer from "../Footer/Footer";
+import PlanCard from "./PlanCard";
 
 const Plan = () => {
   return (
@@ -16,75 +23,48 @@ const Plan = () => {
           </h1>
 
           <div className="plan-card-container">
-            <div className="plan-card">
-              <img src={silver} />
-              <h2>Silver Package</h2>
-              <p>
-                Includes Initial Nutrition Assessment (Up to 75 minutes) and one
-                follow up session (30 minutes)
-              </p>
-              <button className="btn btn-dark plan-card-btn">
-                Book free consultation
-              </button>
-            </div>
+            <PlanCard
+              planimg={silver}
+              planTitle="Silver Package"
+              plancontent="Includes Initial Nutrition Assessment (Up to 75 minutes) and one
+                follow up session (30 minutes)"
+              planbtnname="Book free consultation"
+            />
+            <PlanCard
+              planimg={gold}
+              planTitle="Gold Package"
+              plancontent="Includes Initial Nutrition Assessment (Up to 75 minutes) and 2 follow up session (30minutes)"
+              planbtnname="Book free consultation"
+            />
 
-            <div className="plan-card">
-              <img src={silver} />
-              <h2>Silver Package</h2>
-              <p>
-                Includes Initial Nutrition Assessment (Up to 75 minutes) and one
-                follow up session (30 minutes)
-              </p>
-              <button className="btn btn-dark plan-card-btn">
-                Book free consultation
-              </button>
-            </div>
+            <PlanCard
+              planimg={diamond}
+              planTitle="Diamond Package"
+              plancontent="Includes Initial Nutrition Assessment (Up to 75 minutes) and 4 follow up session (30minutes)"
+              planbtnname="Book free consultation"
+            />
 
-            <div className="plan-card">
-              <img src={silver} />
-              <h2>Silver Package</h2>
-              <p>
-                Includes Initial Nutrition Assessment (Up to 75 minutes) and one
-                follow up session (30 minutes)
-              </p>
-              <button className="btn btn-dark plan-card-btn">
-                Book free consultation
-              </button>
-            </div>
+            <PlanCard
+              planimg={platinum}
+              planTitle="Platinum Package"
+              plancontent="Includes Initial Nutrition Assessment (Up to 75 minutes) and one
+                follow up session (30 minutes)"
+              planbtnname="Book free consultation"
+            />
 
-            <div className="plan-card">
-              <img src={silver} />
-              <h2>Silver Package</h2>
-              <p>
-                Includes Initial Nutrition Assessment (Up to 75 minutes) and one
-                follow up session (30 minutes)
-              </p>
-              <button className="btn btn-dark plan-card-btn">
-                Book free consultation
-              </button>
-            </div>
-            <div className="plan-card">
-              <img src={silver} />
-              <h2>Silver Package</h2>
-              <p>
-                Includes Initial Nutrition Assessment (Up to 75 minutes) and one
-                follow up session (30 minutes)
-              </p>
-              <button className="btn btn-dark plan-card-btn">
-                Book free consultation
-              </button>
-            </div>
-            <div className="plan-card">
-              <img src={silver} />
-              <h2>Silver Package</h2>
-              <p>
-                Includes Initial Nutrition Assessment (Up to 75 minutes) and one
-                follow up session (30 minutes)
-              </p>
-              <button className="btn btn-dark plan-card-btn">
-                Book free consultation
-              </button>
-            </div>
+            <PlanCard
+              planimg={diab}
+              planTitle="Diabetes nutrition coaching package"
+              plancontent="Includes Initial Nutrition Assessment (Up to 75 minutes)and 2 follow up sessions (45 minutes each). Also includes one grocery store tour of client’s choice and 1session of Pantry Reorganization."
+              planbtnname="Book free consultation"
+            />
+
+            <PlanCard
+              planimg={nut}
+              planTitle="Fit bride(wedding package)"
+              plancontent="4/8/12 week consultation for weight management as well as vibrantand glowing skin. This package is especially curated for Bride. Bundle pricing for family/Bridesmaidsavailable."
+              planbtnname="Book free consultation"
+            />
           </div>
         </div>
       </div>
@@ -92,7 +72,6 @@ const Plan = () => {
         title="I will help you to achieve your health goals"
         btntext="Book Free Consultation"
       />
-      <Footer />
     </div>
   );
 };

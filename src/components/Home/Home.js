@@ -19,7 +19,6 @@ const Home = () => {
       />
       <Packages />
       <LatestBlogAbout header="The Latest Blogs" num={3} />
-      <Footer />
     </div>
   );
 };

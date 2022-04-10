@@ -5,6 +5,7 @@ export const BookingData = [
     Date: "04/04/2022",
     contact: "9888777666",
     email: "email@email.com",
+    consultaion: ["Diet", "Fit", "SLIM", "OTHER"],
   },
   {
     id: "2",
@@ -12,6 +13,7 @@ export const BookingData = [
     Date: "04/04/2022",
     contact: "9888777666",
     email: "email@email.com",
+    consultaion: ["Diet", "Fit", "SLIM", "OTHER"],
   },
   {
     id: "3",
@@ -19,6 +21,7 @@ export const BookingData = [
     Date: "04/04/2022",
     contact: "9888777666",
     email: "email@email.com",
+    consultaion: ["Diet", "Fit", "SLIM", "OTHER"],
   },
   {
     id: "4",
@@ -26,6 +29,7 @@ export const BookingData = [
     Date: "04/04/2022",
     contact: "9888777666",
     email: "email@email.com",
+    consultaion: ["Diet", "Fit", "SLIM", "OTHER"],
   },
   {
     id: "5",
@@ -33,6 +37,7 @@ export const BookingData = [
     Date: "04/04/2022",
     contact: "9888777666",
     email: "email@email.com",
+    consultaion: ["Diet", "Fit", "SLIM", "OTHER"],
   },
   {
     id: "6",
@@ -40,6 +45,7 @@ export const BookingData = [
     Date: "04/04/2022",
     contact: "9888777666",
     email: "email@email.com",
+    consultaion: ["Diet", "Fit", "SLIM", "OTHER"],
   },
   {
     id: "7",
@@ -47,6 +53,7 @@ export const BookingData = [
     Date: "04/04/2022",
     contact: "9888777666",
     email: "email@email.com",
+    consultaion: ["Diet", "Fit", "SLIM", "OTHER"],
   },
   {
     id: "8",
@@ -54,6 +61,7 @@ export const BookingData = [
     Date: "04/04/2022",
     contact: "9888777666",
     email: "email@email.com",
+    consultaion: ["Diet", "Fit", "SLIM", "OTHER"],
   },
   {
     id: "9",
@@ -61,6 +69,7 @@ export const BookingData = [
     Date: "04/04/2022",
     contact: "9888777666",
     email: "email@email.com",
+    consultaion: ["Diet", "Fit", "SLIM", "OTHER"],
   },
   {
     id: "10",
@@ -68,6 +77,7 @@ export const BookingData = [
     Date: "04/04/2022",
     contact: "9888777666",
     email: "email@email.com",
+    consultaion: ["Diet", "Fit", "SLIM", "OTHER"],
   },
   {
     id: "11",
@@ -75,5 +85,6 @@ export const BookingData = [
     Date: "04/04/2022",
     contact: "9888777666",
     email: "email@email.com",
+    consultaion: ["Diet", "Fit", "SLIM", "OTHER"],
   },
 ];

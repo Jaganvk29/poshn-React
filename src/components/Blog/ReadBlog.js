@@ -37,8 +37,6 @@ export const ReadBlog = () => {
 
         <LatestBlogAbout num={2} />
       </div>
-
-      <Footer />
     </div>
   );
 };
