@@ -7,7 +7,7 @@ const PlanCard = (props) => {
       <img src={props.planimg} />
       <h2>{props.planTitle}</h2>
       <p>{props.plancontent}</p>
-      <button className="btn btn-dark plan-card-btn">
+      <button onClick={props.onPress} className="btn btn-dark plan-card-btn">
         {props.planbtnname}
       </button>
     </div>

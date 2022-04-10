@@ -64,9 +64,9 @@ const AboutMe = (props) => {
           <h1>Hello, I’m Mudita</h1>
           <p>{AboutData[0].aboutdesc}</p>
           {props.readmorebtn && (
-            <button className="btn btn-toggle">
-              <Link to={"/about"}>Read more</Link>
-            </button>
+            <Link to={"/about"}>
+              <button className="btn btn-toggle">Read more</button>
+            </Link>
           )}
         </motion.div>
       </div>

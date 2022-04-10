@@ -8,7 +8,6 @@ import PoshContext from "../../PoshContext";
 const Intro = () => {
   const { contactIsOpen, contactModalHandler } = useContext(PoshContext);
   const buttonClick = () => {
-    console.log("CLICKED");
     contactModalHandler(true);
   };
 

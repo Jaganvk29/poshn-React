@@ -10,19 +10,27 @@ const AdminResponceDeatil = () => {
   return (
     <div>
       <div className="managecontainer">
-        <h1>RESPONSE DETAIL : {ContactUsData[responseId].fullname}</h1>
+        <h1>RESPONSE DETAILS</h1>
 
-        <h2>NAME</h2>
-        <p>{ContactUsData[responseId].fullname}</p>
+        <div className="responsesDetail">
+          <h4>NAME</h4>
+          <p>{ContactUsData[responseId].fullname}</p>
+        </div>
 
-        <h2>CONTACT</h2>
-        <p>{ContactUsData[responseId].contact}</p>
+        <div className="responsesDetail">
+          <h4>CONTACT</h4>
+          <p>{ContactUsData[responseId].contact}</p>
+        </div>
 
-        <h2>EMAIL</h2>
-        <p>{ContactUsData[responseId].email}</p>
+        <div className="responsesDetail">
+          <h4>EMAIL</h4>
+          <p>{ContactUsData[responseId].email}</p>
+        </div>
 
-        <h2>MESSAGE</h2>
-        <p>{ContactUsData[responseId].message}</p>
+        <div className="responsesDetail">
+          <h4>MESSAGE</h4>
+          <p>{ContactUsData[responseId].message}</p>
+        </div>
       </div>
     </div>
   );

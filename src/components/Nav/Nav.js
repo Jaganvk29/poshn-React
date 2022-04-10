@@ -1,9 +1,11 @@
 import React, { useContext, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import PoshContext from "../../PoshContext";
+import ModalContact from "../Home/Modal/ModalContact";
 
 const Nav = (props) => {
   const { contactIsOpen, contactModalHandler } = useContext(PoshContext);
+
   const buttonClick = () => {
     console.log("CLICKED");
     contactModalHandler(true);
@@ -48,14 +50,14 @@ const Nav = (props) => {
                 About
               </NavLink>
 
-              {/* DIET GUIDE */}
+              {/* Plan / Package */}
               <NavLink
-                to="/dietguide"
+                to="/plans"
                 className={({ isActive }) =>
                   isActive ? "activeNav" : "color-5"
                 }
               >
-                Diet guide
+                Plans
               </NavLink>
               {/* OUR PARTNERS */}
               <NavLink
@@ -106,10 +108,10 @@ const Nav = (props) => {
             </NavLink>
             <NavLink
               onClick={() => setNavOpen(false)}
-              to="/dietguide"
+              to="/plans"
               className="color-NavLink"
             >
-              Diet guide
+              Plans
             </NavLink>
             <NavLink
               onClick={() => setNavOpen(false)}
@@ -135,6 +137,7 @@ const Nav = (props) => {
           </div>
         </nav>
       </header>
+      <ModalContact open={contactIsOpen} />
       <div>{props.children}</div>
     </div>
   );

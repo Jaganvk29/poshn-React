@@ -1,10 +1,11 @@
 import React from "react";
+import ReactDOM from "react-dom";
 
 import Booking from "./Booking";
 
 const BookingModal = ({ open }) => {
   if (!open) return null;
-  return (
+  return ReactDOM.createPortal(
     <>
       <div>
         <div className="Modal"></div>
@@ -12,7 +13,8 @@ const BookingModal = ({ open }) => {
           <Booking />
         </div>
       </div>
-    </>
+    </>,
+    document.getElementById("contactPortal")
   );
 };
 

@@ -209,6 +209,8 @@ input:-internal-autofill-selected {
   margin-right: 10px;
 }
 
+
+
 .booking .input-field::placeholder {
   color: rgba(147, 156, 163, 1);
 }

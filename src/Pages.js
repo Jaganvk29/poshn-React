@@ -45,7 +45,7 @@ const Pages = () => {
         <Route path="fitnesscoaches" element={<FitnessCoach />} />
         <Route path="gym" element={<PartnerGym />} />
       </Route>
-      <Route path="/dietguide" element={<Plan />} />
+      <Route path="/plans" element={<Plan />} />
       <Route path="/survey" element={<Survey />} />
       <Route path="/admin" element={<Admin />} />
       <Route path="/faq" element={<Faq />} />
