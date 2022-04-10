@@ -7,7 +7,7 @@ import { useInView } from "react-intersection-observer";
 const Consultation = (props) => {
   const { isOpen, modalHandler } = useContext(PoshContext);
 
-  //  MODAL BTN HANDLER POPUP
+  //  MODAL BUTTON HANDLER POPUP
   const buttonClick = () => {
     console.log("CLICKED");
     modalHandler(true);
