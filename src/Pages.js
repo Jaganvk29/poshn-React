@@ -29,6 +29,7 @@ import AdminAddBlog from "./components/Admin/AdminBlog/AdminAddBlog";
 import AdminSurveyDetail from "./components/Admin/AdminSurvey/AdminSurveyDetail";
 import AdminResponceDeatil from "./components/Admin/AdminResponses/AdminResponceDeatil";
 import Pagenotfound from "./components/404/Pagenotfound";
+import Faq from "./components/Faq/Faq";
 
 const Pages = () => {
   return (
@@ -47,6 +48,7 @@ const Pages = () => {
       <Route path="/dietguide" element={<Plan />} />
       <Route path="/survey" element={<Survey />} />
       <Route path="/admin" element={<Admin />} />
+      <Route path="/faq" element={<Faq />} />
 
       {/* ADMIN PAGE PROTECTED ROUTES */}
 

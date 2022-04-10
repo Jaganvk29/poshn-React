@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const { ref, inView } = useInView({
@@ -68,9 +69,9 @@ const Footer = () => {
             <h3>About</h3>
             <div class="flex flex-col">
               <a href="#">Join the network</a>
-              <a href="#">FAQ</a>
-              <a href="#">Blog</a>
-              <a href="#">About Poshn</a>
+              <Link to="/faq">FAQ</Link>
+              <Link to="/blog">Blog</Link>
+              <Link to="/about">About Poshn</Link>
               <a href="#">Our team</a>
             </div>
           </div>

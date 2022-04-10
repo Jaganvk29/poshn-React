@@ -1,23 +1,22 @@
 import React from "react";
 import AboutMeHeader from "./AboutMeHeader";
-import AboutMeHero from "./AboutMeHero";
 import Testimonials from "./Testimonials";
 import WhyME from "./WhyME";
-import ConsultationAbout from "./ConsultationAbout";
 import LatestBlogAbout from "./LatestBlogAbout";
 import Footer from "../Footer/Footer";
-import Faq from "../Faq/Faq";
+import AboutMe from "../Shared/AboutMe";
+import Consultation from "../Shared/Consultation";
 
 const About = () => {
   return (
     <div>
       <AboutMeHeader />
-      <AboutMeHero />
+      <AboutMe />
       <WhyME />
       <Testimonials />
-      <ConsultationAbout />
+      <Consultation title="Connect Now" btntext="Book Free Consultation" />
+
       <LatestBlogAbout />
-      <Faq />
       <Footer />
     </div>
   );

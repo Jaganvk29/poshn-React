@@ -4,7 +4,7 @@ import BlogPostCard from "./BlogPostCard";
 import { Link } from "react-router-dom";
 import HlBlog from "./HlBlog";
 import { blogData } from "./blogData";
-import Consultation from "../Home/Consultation";
+import Consultation from "../Shared/Consultation";
 
 const Blog = () => {
   return (
@@ -28,7 +28,10 @@ const Blog = () => {
           </div>
         </div>
       </div>
-      <Consultation />
+      <Consultation
+        title="I will help you to achieve your health goals"
+        btntext="Book Free Consultation"
+      />
       <Footer />
     </div>
   );

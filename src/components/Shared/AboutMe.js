@@ -5,7 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { AboutData } from "../About/AboutData";
 
-const AboutMe = () => {
+const AboutMe = (props) => {
   const { ref, inView } = useInView({
     threshold: 0.3,
   });
@@ -53,7 +53,7 @@ const AboutMe = () => {
 
   return (
     <section ref={ref} className="has-snap has-ani about-me-section">
-      <h1 className="title">About me</h1>
+      {props.header && <h1 className="title">About me</h1>}
       <div className="wrapper">
         <motion.img
           animate={photoani}
@@ -63,9 +63,11 @@ const AboutMe = () => {
         <motion.div animate={textani} className="text">
           <h1>Hello, I’m Mudita</h1>
           <p>{AboutData[0].aboutdesc}</p>
-          <button className="btn btn-toggle">
-            <Link to={"/about"}>Read more</Link>
-          </button>
+          {props.readmorebtn && (
+            <button className="btn btn-toggle">
+              <Link to={"/about"}>Read more</Link>
+            </button>
+          )}
         </motion.div>
       </div>
     </section>

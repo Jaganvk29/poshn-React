@@ -1,6 +1,6 @@
 import React from "react";
 import silver from "../../Assets/package_img/silver.png";
-import Consultation from "../Home/Consultation";
+import Consultation from "../Shared/Consultation";
 import Footer from "../Footer/Footer";
 
 const Plan = () => {
@@ -88,7 +88,10 @@ const Plan = () => {
           </div>
         </div>
       </div>
-      <Consultation />
+      <Consultation
+        title="I will help you to achieve your health goals"
+        btntext="Book Free Consultation"
+      />
       <Footer />
     </div>
   );

@@ -1,10 +1,10 @@
 import React, { useEffect, useContext } from "react";
-import ModalContact from "./Modal/ModalContact";
+import ModalContact from "../Home/Modal/ModalContact";
 import PoshContext from "../../PoshContext";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const Consultation = () => {
+const Consultation = (props) => {
   const { isOpen, modalHandler } = useContext(PoshContext);
 
   //  MODAL BTN HANDLER POPUP
@@ -65,16 +65,14 @@ const Consultation = () => {
     >
       <div class="wrapper">
         <div class="text">
-          <motion.h1 animate={textani}>
-            I will help you to achieve your health goals
-          </motion.h1>
+          <motion.h1 animate={textani}>{props.title}</motion.h1>
 
           <motion.button
             animate={paraani}
             onClick={buttonClick}
             class="btn btn-dark contact-us-btn"
           >
-            Book free consultation
+            {props.btntext}
           </motion.button>
         </div>
       </div>

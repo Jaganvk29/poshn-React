@@ -1,9 +1,5 @@
 
 
-/* .plan-container{
-
-width: 100vw;
-}  */
 .plan-img {
     position: relative;
    background-color: black;
@@ -65,10 +61,6 @@ width: 100vw;
   .plan-card > p{
     margin-bottom: 30px;
   }
-
-
-
-
 
   .plan-card-btn {
     border-radius: 8px;

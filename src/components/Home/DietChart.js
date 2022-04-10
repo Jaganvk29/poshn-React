@@ -3,6 +3,7 @@ import diet_chart_leaf from "../../Assets/svg/diet-chart-leaf.svg";
 import citrusfruits from "../../Assets//citrusfruit.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 
 const DietChart = () => {
   const { ref, inView } = useInView({
@@ -63,9 +64,11 @@ const DietChart = () => {
             numerous accolades, including two National Film Awards and five Film
             fare Awards.
           </motion.p>
-          <motion.button animate={textani} class="btn btn-toggle">
-            Let’s find out what will work for you
-          </motion.button>
+          <Link to="/survey">
+            <motion.button animate={textani} class="btn btn-toggle">
+              Let’s find out what will work for you
+            </motion.button>
+          </Link>
         </div>
       </div>
     </section>
