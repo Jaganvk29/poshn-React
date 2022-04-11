@@ -9,22 +9,10 @@ const WhyME = () => {
     threshold: 0.1,
   });
   const textani = useAnimation();
-  // const photoani = useAnimation();
 
   useEffect(() => {
     // TO CHECK IF ITS VIEW PORT TO START ANIMATION
     if (inView) {
-      // photoani.start({
-      //   x: 0,
-      //   opacity: 1,
-
-      //   transition: {
-      //     ease: "easeInOut",
-      //     duration: 0.5,
-      //     bounce: 0.3,
-      //   },
-      // });
-
       textani.start({
         ease: "easeInOut",
         y: 0,
@@ -38,11 +26,6 @@ const WhyME = () => {
     }
     // TO CHECK IF ITS NOT VIEW PORT TO REMOVE ANIMATION
     if (!inView) {
-      // photoani.start({
-      //   x: -100,
-      //   opacity: 0,
-      // });
-
       textani.start({
         y: 100,
         opacity: 0,

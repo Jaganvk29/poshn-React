@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const DietChart = () => {
   const { ref, inView } = useInView({
-    threshold: 0.4,
+    threshold: 0.2,
   });
   const textani = useAnimation();
   const paraani = useAnimation();
@@ -51,11 +51,11 @@ const DietChart = () => {
     }
   }, [inView]);
   return (
-    <section ref={ref} class="has-snap has-ani diet-chart bg-color-4">
-      <img class="leaf" src={diet_chart_leaf} />
-      <img class="img" src={citrusfruits} />
-      <div class="wrapper">
-        <div class="text">
+    <section ref={ref} className="has-snap has-ani diet-chart bg-color-4">
+      <img className="leaf" src={diet_chart_leaf} />
+      <img className="img" src={citrusfruits} />
+      <div className="wrapper">
+        <div className="text">
           <motion.h1 animate={textani}>Your body is unique</motion.h1>
           <motion.p animate={paraani}>
             Your body is unique random diet plans from the internet won’t work
@@ -65,7 +65,7 @@ const DietChart = () => {
             fare Awards.
           </motion.p>
           <Link to="/survey">
-            <motion.button animate={textani} class="btn btn-toggle">
+            <motion.button animate={textani} className="btn btn-toggle">
               Let’s find out what will work for you
             </motion.button>
           </Link>

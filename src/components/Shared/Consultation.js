@@ -61,16 +61,16 @@ const Consultation = (props) => {
   return (
     <section
       ref={ref}
-      class="has-snap has-ani consultation flex flex-ai-c flex-jc-c"
+      className="has-snap has-ani consultation flex flex-ai-c flex-jc-c"
     >
-      <div class="wrapper">
-        <div class="text">
+      <div className="wrapper">
+        <div className="text">
           <motion.h1 animate={textani}>{props.title}</motion.h1>
 
           <motion.button
             animate={paraani}
             onClick={buttonClick}
-            class="btn btn-dark contact-us-btn"
+            className="btn btn-dark contact-us-btn"
           >
             {props.btntext}
           </motion.button>

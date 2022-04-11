@@ -1,10 +1,8 @@
 import React from "react";
 import AboutMeHeader from "./AboutMeHeader";
-import Testimonials from "./Testimonials";
 import WhyME from "./WhyME";
 import LatestBlogAbout from "./LatestBlogAbout";
 import AboutMe from "../Shared/AboutMe";
-import Consultation from "../Shared/Consultation";
 import { motion } from "framer-motion";
 
 const About = () => {

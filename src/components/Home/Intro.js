@@ -12,7 +12,7 @@ const Intro = () => {
   };
 
   const { ref, inView } = useInView({
-    threshold: 0.3,
+    threshold: 0.2,
   });
   const textani = useAnimation();
   const photoani = useAnimation();

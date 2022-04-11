@@ -16,7 +16,7 @@ const Plan = () => {
   const { isOpen, modalHandler } = useContext(PoshContext);
 
   const { ref, inView } = useInView({
-    threshold: 0.15,
+    threshold: 0.095,
   });
 
   const photoani = useAnimation();

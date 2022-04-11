@@ -7,18 +7,15 @@ const Nav = (props) => {
   const { contactIsOpen, contactModalHandler } = useContext(PoshContext);
 
   const buttonClick = () => {
-    console.log("CLICKED");
     contactModalHandler(true);
   };
 
   const [navopen, setNavOpen] = useState(false);
 
   const paramlins = useParams();
-  console.log(paramlins);
 
   const hamburgerhandler = () => {
     setNavOpen(!navopen);
-    console.log("YES THIS ONE");
   };
 
   return (

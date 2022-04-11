@@ -15,7 +15,7 @@ const Adminblog = () => {
 
           <div className="adminblog">
             {blogData.map((blog) => (
-              <div key={blog.blogId} class="blog-card">
+              <div key={blog.blogId} className="blog-card">
                 <Link to={`edit/${blog.blogId}`}>
                   <BlogPostCard
                     img={blog.blogthumbnail}

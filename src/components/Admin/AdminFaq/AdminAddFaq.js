@@ -1,13 +1,8 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+
 import { useForm } from "react-hook-form";
 
 const AdminAddFaq = () => {
-  //   const [textState, setTextState] = useState({
-  //     question: faqData[faqId].faqQuestion,
-  //     answer: faqData[faqId].faqAnswer,
-  //   });
-
   const {
     register,
     handleSubmit,

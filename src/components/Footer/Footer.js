@@ -48,26 +48,26 @@ const Footer = () => {
   }, [inView]);
 
   return (
-    <footer class="has-snap has-ani footer flex flex-jc-c flex-ai-c">
-      <div ref={ref} class="wrapper flex flex-wrap flex-jc-sb">
-        <motion.div animate={socailanimate} class="socials">
-          <div class="social-links flex flex-jc-sb">
-            <a href="#" class="facebook"></a>
-            <a href="#" class="twitter"></a>
-            <a href="#" class="instagram"></a>
-            <a href="#" class="pinterest"></a>
-            <a href="#" class="linkedin"></a>
+    <footer className="has-snap has-ani footer flex flex-jc-c flex-ai-c">
+      <div ref={ref} className="wrapper flex flex-wrap flex-jc-sb">
+        <motion.div animate={socailanimate} className="socials">
+          <div className="social-links flex flex-jc-sb">
+            <a href="#" className="facebook"></a>
+            <a href="#" className="twitter"></a>
+            <a href="#" className="instagram"></a>
+            <a href="#" className="pinterest"></a>
+            <a href="#" className="linkedin"></a>
           </div>
           <h4>Poshn</h4>
           <h5>578 Broadway #607 New York, NY 10025</h5>
         </motion.div>
         <motion.div
           animate={quicklinks}
-          class="links flex flex-wrap flex-jc-sb"
+          className="links flex flex-wrap flex-jc-sb"
         >
-          <div class="about links-item">
+          <div className="about links-item">
             <h3>About</h3>
-            <div class="flex flex-col">
+            <div className="flex flex-col">
               <a href="#">Join the network</a>
               <Link to="/faq">FAQ</Link>
               <Link to="/blog">Blog</Link>
@@ -75,17 +75,17 @@ const Footer = () => {
               <a href="#">Our team</a>
             </div>
           </div>
-          <div class="useful-links links-item">
+          <div className="useful-links links-item">
             <h3>Useful links</h3>
-            <div class="flex flex-col">
+            <div className="flex flex-col">
               <a href="#">Privacy Policy</a>
               <a href="#">Terms of service</a>
               <a href="#">Contact Us</a>
             </div>
           </div>
-          <div class="terms links-item">
+          <div className="terms links-item">
             <h3>Terms of service</h3>
-            <div class="flex flex-col">
+            <div className="flex flex-col">
               <a href="#">Privacy Policy</a>
               <a href="#">Terms of Service</a>
             </div>

@@ -53,8 +53,8 @@ const Packages = () => {
   }, [inView]);
 
   return (
-    <div>
-      <div ref={ref} className=" packages">
+    <div ref={ref}>
+      <div className=" packages">
         <div className=" packages-title-container flex bg-color-7">
           <div className=" wrapper flex packages-title">
             <motion.h1 animate={textani}>

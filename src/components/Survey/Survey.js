@@ -142,7 +142,7 @@ const Survey = () => {
                         <div>
                           <input
                             name="name"
-                            class="input-field"
+                            className="input-field"
                             type="text"
                             placeholder="Enter Your Name"
                             {...register("userdetails.name", {
@@ -163,7 +163,7 @@ const Survey = () => {
                       <label>
                         <input
                           name="name"
-                          class="input-field"
+                          className="input-field"
                           type="text"
                           placeholder="Enter Your Mobile Number"
                           {...register("userdetails.number", {
@@ -187,7 +187,7 @@ const Survey = () => {
                         <label>
                           <input
                             name="name"
-                            class="input-field"
+                            className="input-field"
                             type="email"
                             placeholder="Enter Your Email Address"
                             {...register("userdetails.email", {

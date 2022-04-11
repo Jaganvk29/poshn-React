@@ -43,14 +43,14 @@ const ContactForm = (props) => {
 
   return (
     <div>
-      <div class="scroll ">
-        <div class="content">
-          <div class="btn-container">
-            <button onClick={modalBtnHandler} class="btn-close"></button>
+      <div className="scroll ">
+        <div className="content">
+          <div className="btn-container">
+            <button onClick={modalBtnHandler} className="btn-close"></button>
           </div>
           <div className="booking">
             <div className="btn-container">
-              <button onClick={modalBtnHandler} class="btn-close"></button>
+              <button onClick={modalBtnHandler} className="btn-close"></button>
             </div>
             <div className="title">
               <h2>Get in touch!</h2>
@@ -128,7 +128,7 @@ const ContactForm = (props) => {
                     })}
                   />
                 </div>
-                <div class="flex-2">
+                <div className="flex-2">
                   <InputTextArea
                     label="Message"
                     placeholder="ENTER A MESSAGE"
@@ -152,9 +152,9 @@ const ContactForm = (props) => {
               {/* CHECK BOXES */}
 
               {props.checkboxes && (
-                <div class="field mt-40px">
+                <div className="field mt-40px">
                   <label>Consultation type</label>
-                  <div class="btn-selection">
+                  <div className="btn-selection">
                     <label>
                       <input
                         type="checkbox"
@@ -165,7 +165,7 @@ const ContactForm = (props) => {
                           required: "You Need To Select Atleast One",
                         })}
                       />
-                      <span class="input-btn">Diet</span>
+                      <span className="input-btn">Diet</span>
                     </label>
                     <label>
                       <input
@@ -177,7 +177,7 @@ const ContactForm = (props) => {
                           required: "You Need To Select Atleast One",
                         })}
                       />
-                      <span class="input-btn">Nutrition</span>
+                      <span className="input-btn">Nutrition</span>
                     </label>
                     <label>
                       <input
@@ -189,7 +189,7 @@ const ContactForm = (props) => {
                           required: "You Need To Select Atleast One",
                         })}
                       />
-                      <span class="input-btn">Fitness</span>
+                      <span className="input-btn">Fitness</span>
                     </label>
                     <label>
                       <input
@@ -201,7 +201,7 @@ const ContactForm = (props) => {
                           required: "You Need To Select Atleast One",
                         })}
                       />
-                      <span class="input-btn">Fatloss</span>
+                      <span className="input-btn">Fatloss</span>
                     </label>
                   </div>
                   {errors.consultationtype && (
@@ -218,49 +218,49 @@ const ContactForm = (props) => {
                 onChange={handlerecaptcha}
               />
               {/* RECAPTCA ENDS */}
-              <div class="text-center">
+              <div className="text-center">
                 <button
                   disabled={!formValid}
                   type="submit"
-                  class="btn btn-dark submit-btn"
+                  className="btn btn-dark submit-btn"
                 >
                   Book free consultation
                 </button>
               </div>
             </form>
-            <div class="form-footer">
-              <div class="hr-1"></div>
-              <div class="flex flex-col">
-                <div class="col-1">
-                  <div class="flex">
-                    <div class="icon icon-blue icon-map-pin mr-10px"></div>
+            <div className="form-footer">
+              <div className="hr-1"></div>
+              <div className="flex flex-col">
+                <div className="col-1">
+                  <div className="flex">
+                    <div className="icon icon-blue icon-map-pin mr-10px"></div>
                     <p>102 Street 2410 Las, Las veges</p>
                   </div>
-                  <div class="flex">
-                    <div class="icon icon-blue icon-phone mr-10px"></div>
+                  <div className="flex">
+                    <div className="icon icon-blue icon-phone mr-10px"></div>
                     <p>+1 26354517</p>
                   </div>
-                  <div class="flex">
-                    <div class="icon icon-blue icon-mail mr-10px"></div>
+                  <div className="flex">
+                    <div className="icon icon-blue icon-mail mr-10px"></div>
                     <p>Hello@PoshN.com</p>
                   </div>
                 </div>
-                <div class="hr-2"></div>
-                <div class="col-2">
-                  <div class="flex">
-                    <div class="icon icon-blue icon-instagram-outline mr-10px"></div>
+                <div className="hr-2"></div>
+                <div className="col-2">
+                  <div className="flex">
+                    <div className="icon icon-blue icon-instagram-outline mr-10px"></div>
                     <p>Instagram</p>
                   </div>
-                  <div class="flex">
-                    <div class="icon icon-blue icon-facebook-outline mr-10px"></div>
+                  <div className="flex">
+                    <div className="icon icon-blue icon-facebook-outline mr-10px"></div>
                     <p>Facebook</p>
                   </div>
-                  <div class="flex">
-                    <div class="icon icon-blue icon-twitter-outline mr-10px"></div>
+                  <div className="flex">
+                    <div className="icon icon-blue icon-twitter-outline mr-10px"></div>
                     <p>Twitter</p>
                   </div>
-                  <div class="flex">
-                    <div class="icon icon-blue icon-linkedin-outline mr-10px"></div>
+                  <div className="flex">
+                    <div className="icon icon-blue icon-linkedin-outline mr-10px"></div>
                     <p>LinkedIN</p>
                   </div>
                 </div>

@@ -65,3 +65,25 @@
   .plan-card-btn {
     border-radius: 8px;
   }
+
+
+
+  @media screen and (max-width: 845px) {
+ 
+    .plan-img h1{
+      font-size: 2.5rem;
+    }
+
+    .plan-img {
+      background-size: cover;
+      background-position: center center;
+      color: white;
+      height:400px;
+      max-width:100% ;
+      padding-top: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    }
+

@@ -72,3 +72,12 @@
   text-align: center;
   color: var(--gray-6);
 }
+
+
+
+@media screen and (max-width: 845px) {
+ 
+.packages-title h1{
+  font-size: 2rem;
+}
+}

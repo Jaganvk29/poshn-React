@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { blogData } from "../Blog/blogData";
-
 import { Link } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -10,7 +9,7 @@ import "slick-carousel/slick/slick.css";
 
 const LatestBlogAbout = (props) => {
   const { ref, inView } = useInView({
-    threshold: 0.4,
+    threshold: 0.2,
   });
   const textani = useAnimation();
   const photoani = useAnimation();
