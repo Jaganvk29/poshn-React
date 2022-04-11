@@ -63,38 +63,35 @@ const Survey = () => {
     if (formstep === 10) {
       return (
         <button
+          // THIS PREVENTS LOGGING COLLETED DATA NEED CHANGES WHEN WE GOT BACKEND
+          onClick={completeFormStep}
           disabled={!isValid}
           type="submit"
           className="btn btn-dark"
-          onClick={completeFormStep}
         >
           Submit
         </button>
       );
     }
   };
-  const renderStartButton = () => {
-    if (formstep >= 1) {
-      return undefined;
-    } else {
-      return (
-        <button
-          disabled={!isVerified}
-          type="button"
-          onClick={completeFormStep}
-          className="btn btn-dark"
-        >
-          START
-        </button>
-      );
-    }
-  };
 
+  // CHECKS CAPTCHA AND FORM INPUTS ARE VALID
   const valid = isValid && isVerified;
 
   const rendernxtButton = () => {
     if (formstep > 9) {
       return undefined;
+    } else if (formstep === 0) {
+      return (
+        <button
+          disabled={!valid}
+          type="button"
+          onClick={completeFormStep}
+          className="btn btn-dark"
+        >
+          ANSWER
+        </button>
+      );
     } else {
       return (
         <button
@@ -208,7 +205,8 @@ const Survey = () => {
                         </label>
                       </div>
                     </div>
-
+                  </div>
+                  <div className="recaptcha-con">
                     <ReCAPTCHA
                       sitekey="6LfnJFwfAAAAAPTvk8M5nHeJ217TKlfWUyyedRtT"
                       onChange={handlerecaptcha}
@@ -225,12 +223,8 @@ const Survey = () => {
                   option2="Yo-Yo and So-So"
                   option3="Positive but I can do better"
                   option4="I have healthy sustainable relationship"
-                  optional="OTHER THINGS"
                   register={{
                     ...register("Question1", { required: true }),
-                  }}
-                  optionalRegister={{
-                    ...register("Question1.other", { required: true }),
                   }}
                   validationmsg={
                     errors.Question1 && (

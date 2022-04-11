@@ -47,7 +47,7 @@
 .survey span , .userText input{
     color: #6D747A;
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-top: 20px;
     min-height: 48px;
     min-width: 100%;
     padding: 10px 20px;
@@ -59,8 +59,9 @@
     align-items: center;
     transition: all 0.1s ease;
 }
-
-
+.recaptcha-con{
+    margin-top: 20px;
+}
  
 .survey label input[type="checkbox"]:checked +span{
     background-color: var(--color-7);
@@ -192,6 +193,21 @@
 }
 
 
+.formnavbtn button{
+
+font-size: 1.5rem;
+    width: 10rem;
+    /* height: 3rem; */
+/* font-size: 1em; */
+    padding: 0.75rem;
+}
+
+
+
+.otherText label {
+    margin-top: 20px;
+}
+
 @media only screen and (max-width: 600px) {
 
     .survey > form{
@@ -204,6 +220,11 @@
 
     .survey-ques > h1{
         font-size: 20px;
+    }
+
+
+    .otherText input {
+        font-size: 14px;
     }
   }
 
