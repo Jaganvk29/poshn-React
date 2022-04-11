@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import hand from "../../../Assets/Package_Icon/Hand.png";
+
 const CardPackage = (props) => {
   return (
     <div className="package-card">
@@ -9,7 +9,7 @@ const CardPackage = (props) => {
         <h2>{props.titleText}</h2>
         <p>{props.subTitle}</p>
       </div>
-      <Link to="/dietguide">
+      <Link to="/plans">
         {" "}
         <button className="btn btn-toggle">{props.btnText}</button>
       </Link>

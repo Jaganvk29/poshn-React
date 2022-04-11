@@ -1,20 +1,65 @@
-import React from "react";
-import momos from "../../Assets/momos.png";
-import veggies from "../../Assets/veggies.png";
-import Slider from "react-slick";
+import React, { useEffect } from "react";
 import { blogData } from "../Blog/blogData";
-import "slick-carousel/slick/slick.css";
-import { Link, useParams } from "react-router-dom";
 
-import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import BlogPostCard from "../Blog/BlogPostCard";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
 const LatestBlogAbout = (props) => {
+  const { ref, inView } = useInView({
+    threshold: 0.4,
+  });
+  const textani = useAnimation();
+  const photoani = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      photoani.start({
+        y: 0,
+
+        opacity: 1,
+
+        transition: {
+          ease: "easeInOut",
+          duration: 0.5,
+          bounce: 0.3,
+        },
+      });
+
+      textani.start({
+        opacity: 1,
+        scale: 1,
+        transition: {
+          ease: "easeInOut",
+          duration: 0.5,
+          bounce: 0.3,
+        },
+      });
+    }
+    // TO CHECK IF ITS NOT VIEW PORT TO REMOVE ANIMATION
+    if (!inView) {
+      photoani.start({
+        y: 100,
+        opacity: 0,
+      });
+
+      textani.start({
+        scale: 0.3,
+        opacity: 0,
+      });
+    }
+  }, [inView]);
+
   return (
-    <section className="has-snap has-ani blogs-section">
+    <section ref={ref} className="has-snap has-ani blogs-section">
       <div className="wrapper">
-        {props.header && <h1>{props.header}</h1>}
-        <div className="blogs-container">
+        {props.header && (
+          <motion.h1 animate={textani}>{props.header}</motion.h1>
+        )}
+        <motion.div animate={photoani} className="blogs-container">
           {blogData.map(
             (blog, index) =>
               index < props.num && (
@@ -29,7 +74,7 @@ const LatestBlogAbout = (props) => {
                 </div>
               )
           )}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

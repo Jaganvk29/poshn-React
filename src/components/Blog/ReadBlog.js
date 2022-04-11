@@ -1,42 +1,85 @@
 import React from "react";
-import Footer from "../Footer/Footer";
 import { useParams } from "react-router-dom";
 import { blogData } from "./blogData";
 import LatestBlogAbout from "../About/LatestBlogAbout";
-
+import { motion } from "framer-motion";
 export const ReadBlog = () => {
   const params = useParams();
   const postId = params.postId;
-  console.log(postId);
 
-  console.log(params.postId);
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
+  const item1 = {
+    hidden: { opacity: 0, x: -100 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+      },
+    },
+  };
+  const item2 = {
+    hidden: { opacity: 0, x: 100 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+      },
+    },
+  };
+
+  const item3 = {
+    hidden: { opacity: 0, y: 100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+      },
+    },
+  };
+
   return (
-    <div>
-      <div className="readBlog-container">
+    <motion.div
+      intial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.2 } }}
+    >
+      <motion.div
+        variants={variants}
+        initial="hidden"
+        animate="visible"
+        className="readBlog-container"
+      >
         <div className="wrapper">
           <div className="readBlog">
-            <div className="readBlog-header">
+            <motion.div variants={item1} className="readBlog-header">
               <h1> {blogData[postId].blogtitle}</h1>
               <div className="readBlog-details">
                 <p>{blogData[postId].blogAuther}</p>
                 <hr className="readblog-detals-hr" />
                 <p>{blogData[postId].blogDate}</p>
               </div>
-            </div>
-            <div className="readBlog-img">
+            </motion.div>
+            <motion.div variants={item2} className="readBlog-img">
               <img src={blogData[postId].blogthumbnail} />
-            </div>
-            <div className="readBlog-text">
+            </motion.div>
+            <motion.div variants={item3} className="readBlog-text">
               <p>{blogData[postId].blogContent}</p>
-            </div>
+            </motion.div>
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className="read-articels-container">
         <h1>RELATED ARTICELS</h1>
 
         <LatestBlogAbout num={2} />
       </div>
-    </div>
+    </motion.div>
   );
 };

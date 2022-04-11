@@ -1,11 +1,15 @@
 import React from "react";
-
-import Footer from "../Footer/Footer";
+import { motion } from "framer-motion";
 
 import { Link, Outlet } from "react-router-dom";
 const Partners = () => {
   return (
-    <div className="partner-container">
+    <motion.div
+      className="partner-container"
+      intial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.2 } }}
+    >
       <div className="wrapper">
         <div className="partner">
           <div className="partner-title">
@@ -24,7 +28,7 @@ const Partners = () => {
         </div>
       </div>
       <div className="spacer"></div>
-    </div>
+    </motion.div>
   );
 };
 

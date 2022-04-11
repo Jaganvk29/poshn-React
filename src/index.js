@@ -8,9 +8,11 @@ import { PoshProvider } from "./PoshContext.js";
 const root = ReactDom.createRoot(document.getElementById("root"));
 
 root.render(
+  // <React.StrictMode>
   <BrowserRouter>
     <PoshProvider>
       <App />
     </PoshProvider>
   </BrowserRouter>
+  // </React.StrictMode>
 );

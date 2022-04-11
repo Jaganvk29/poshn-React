@@ -3,20 +3,24 @@ import AboutMeHeader from "./AboutMeHeader";
 import Testimonials from "./Testimonials";
 import WhyME from "./WhyME";
 import LatestBlogAbout from "./LatestBlogAbout";
-import Footer from "../Footer/Footer";
 import AboutMe from "../Shared/AboutMe";
 import Consultation from "../Shared/Consultation";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div>
+    <motion.div
+      intial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.2 } }}
+    >
       <AboutMeHeader />
       <AboutMe />
       <WhyME />
-      <Testimonials />
-      <Consultation title="Connect Now" btntext="Book Free Consultation" />
+
+      {/* <Consultation title="Connect Now" btntext="Book Free Consultation" /> */}
       <LatestBlogAbout />
-    </div>
+    </motion.div>
   );
 };
 

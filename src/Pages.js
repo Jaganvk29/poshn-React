@@ -1,7 +1,7 @@
 import React from "react";
 import About from "./components/About/About";
 import Home from "./components/Home/Home";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Blog from "./components/Blog/Blog";
 import { ReadBlog } from "./components/Blog/ReadBlog";
 import Partners from "./components/Partners/Partners";
@@ -31,65 +31,71 @@ import AdminResponceDeatil from "./components/Admin/AdminResponses/AdminResponce
 import Pagenotfound from "./components/404/Pagenotfound";
 import Faq from "./components/Faq/Faq";
 
+import { AnimatePresence } from "framer-motion";
+
 const Pages = () => {
+  const location = useLocation();
+
   return (
-    <Routes>
-      {/* MAIN NAV ROUTES */}
-      <Route path="/*" element={<Pagenotfound />}></Route>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/blog/:postId" element={<ReadBlog />} />
-      <Route path="/ourpartners/*" element={<Partners />}>
-        <Route index path="doctors" element={<PartnerDoctor />} />
-        <Route path="fitnesscoaches" element={<FitnessCoach />} />
-        <Route path="gym" element={<PartnerGym />} />
-      </Route>
-      <Route path="/plans" element={<Plan />} />
-      <Route path="/survey" element={<Survey />} />
-      <Route path="/admin" element={<Admin />} />
-      <Route path="/faq" element={<Faq />} />
-
-      {/* ADMIN PAGE PROTECTED ROUTES */}
-
-      <Route element={<ProtectedRoutes />}>
-        <Route path="/admin/main" element={<AdminMain />}>
-          <Route path="dashboard" element={<AdminHome />} />
-          <Route path="about" element={<Adminabout />} />
-
-          <Route path="myproducts" element={<Myproduct />} />
-
-          {/* FAQ */}
-          <Route path="faq" element={<Adminfaq />}></Route>
-          <Route path="faq/add" element={<AdminAddFaq />} />
-          <Route path="faq/edit/:faqId" element={<AdminFaqEdit />} />
-
-          {/* BLOG */}
-          <Route path="blog" element={<Adminblog />} />
-          <Route path="blog/add" element={<AdminAddBlog />} />
-          <Route path="blog/edit/:blogId" element={<AdminBlogEdit />} />
-
-          <Route path="bookings" element={<AdminBooking />} />
-          {/* MANAGE PARTNERS */}
-          <Route path="manage" element={<AdminManage />}>
-            <Route index path="doctors" element={<PartnerDoctor />} />
-            <Route path="fitnesscoaches" element={<FitnessCoach />} />
-            <Route path="gym" element={<PartnerGym />} />
-          </Route>
-          {/* DIET SURVEY */}
-          <Route path="dietsurvey" element={<AdmindietSurvey />} />
-          <Route path="dietsurvey/detail" element={<AdminSurveyDetail />} />
-
-          {/* RESPONSES */}
-          <Route path="responses" element={<Adminresponses />} />
-          <Route path="responses" element={<Adminresponses />} />
-          <Route
-            path="responses/detail/:resposeID"
-            element={<AdminResponceDeatil />}
-          />
+    <AnimatePresence>
+      <Routes location={location} key={location.pathname}>
+        {/* MAIN NAV ROUTES */}
+        <Route path="/*" element={<Pagenotfound />}></Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:postId" element={<ReadBlog />} />
+        <Route path="/ourpartners/*" element={<Partners />}>
+          <Route index path="doctors" element={<PartnerDoctor />} />
+          <Route path="fitnesscoaches" element={<FitnessCoach />} />
+          <Route path="gym" element={<PartnerGym />} />
         </Route>
-      </Route>
-    </Routes>
+        <Route path="/plans" element={<Plan />} />
+        <Route path="/survey" element={<Survey />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/faq" element={<Faq />} />
+
+        {/* ADMIN PAGE PROTECTED ROUTES */}
+
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/admin/main" element={<AdminMain />}>
+            <Route path="dashboard" element={<AdminHome />} />
+            <Route path="about" element={<Adminabout />} />
+
+            <Route path="myproducts" element={<Myproduct />} />
+
+            {/* FAQ */}
+            <Route path="faq" element={<Adminfaq />}></Route>
+            <Route path="faq/add" element={<AdminAddFaq />} />
+            <Route path="faq/edit/:faqId" element={<AdminFaqEdit />} />
+
+            {/* BLOG */}
+            <Route path="blog" element={<Adminblog />} />
+            <Route path="blog/add" element={<AdminAddBlog />} />
+            <Route path="blog/edit/:blogId" element={<AdminBlogEdit />} />
+
+            <Route path="bookings" element={<AdminBooking />} />
+            {/* MANAGE PARTNERS */}
+            <Route path="manage" element={<AdminManage />}>
+              <Route index path="doctors" element={<PartnerDoctor />} />
+              <Route path="fitnesscoaches" element={<FitnessCoach />} />
+              <Route path="gym" element={<PartnerGym />} />
+            </Route>
+            {/* DIET SURVEY */}
+            <Route path="dietsurvey" element={<AdmindietSurvey />} />
+            <Route path="dietsurvey/detail" element={<AdminSurveyDetail />} />
+
+            {/* RESPONSES */}
+            <Route path="responses" element={<Adminresponses />} />
+            <Route path="responses" element={<Adminresponses />} />
+            <Route
+              path="responses/detail/:resposeID"
+              element={<AdminResponceDeatil />}
+            />
+          </Route>
+        </Route>
+      </Routes>
+    </AnimatePresence>
   );
 };
 

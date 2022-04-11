@@ -1,10 +1,8 @@
-import React, { useState, Fragment } from "react";
-import Footer from "../Footer/Footer";
+import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-
 import { useForm } from "react-hook-form";
 import prevbtn from "../../Assets/prevbtn.png";
-
+import { motion } from "framer-motion";
 import SurveyStep from "./SurveyStep";
 
 const Survey = () => {
@@ -114,7 +112,11 @@ const Survey = () => {
   // console.log(selected);
   // console.log(othersel);
   return (
-    <Fragment>
+    <motion.div
+      intial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.2 } }}
+    >
       <div className="survey-container bg-color-2">
         <div className="newwrapper">
           {prevbtnrender()}
@@ -165,8 +167,16 @@ const Survey = () => {
                           type="text"
                           placeholder="Enter Your Mobile Number"
                           {...register("userdetails.number", {
-                            required: true,
-                            minLength: 10,
+                            required: "YOU NEED A PHONE NUMBER",
+                            minLength: {
+                              value: 10,
+                              message: "Number is Too Short",
+                            },
+                            pattern: {
+                              value:
+                                /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/,
+                              message: "Please enter a valid phone number",
+                            },
                           })}
                         />
                         {errors.userdetails?.number && (
@@ -471,7 +481,7 @@ const Survey = () => {
           </div>
         </div>
       </div>
-    </Fragment>
+    </motion.div>
   );
 };
 

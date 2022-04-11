@@ -1,13 +1,60 @@
-import React from "react";
+import React, { useEffect } from "react";
 import whymeimg from "../../Assets/Why me_.png";
 import food from "../../Assets/food.png";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const WhyME = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+  });
+  const textani = useAnimation();
+  // const photoani = useAnimation();
+
+  useEffect(() => {
+    // TO CHECK IF ITS VIEW PORT TO START ANIMATION
+    if (inView) {
+      // photoani.start({
+      //   x: 0,
+      //   opacity: 1,
+
+      //   transition: {
+      //     ease: "easeInOut",
+      //     duration: 0.5,
+      //     bounce: 0.3,
+      //   },
+      // });
+
+      textani.start({
+        ease: "easeInOut",
+        y: 0,
+        opacity: 1,
+
+        transition: {
+          duration: 0.5,
+          bounce: 0.3,
+        },
+      });
+    }
+    // TO CHECK IF ITS NOT VIEW PORT TO REMOVE ANIMATION
+    if (!inView) {
+      // photoani.start({
+      //   x: -100,
+      //   opacity: 0,
+      // });
+
+      textani.start({
+        y: 100,
+        opacity: 0,
+      });
+    }
+  }, [inView]);
+
   return (
-    <section className="why-me">
+    <section ref={ref} className="why-me">
       <div className="wrapper">
         <div className="content">
-          <img className="img-title" src={whymeimg} />
+          <motion.img animate={textani} className="img-title" src={whymeimg} />
           <div className="text mx-auto">
             <img className="border-1 shadow-1" src={food} />
             <h1>I can help you to achieve goals</h1>
