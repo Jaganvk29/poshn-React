@@ -7,11 +7,9 @@ const AdminNav = (props) => {
   const { isLogged, authHandler } = useContext(PoshContext);
 
   const paramlins = useParams();
-  console.log(paramlins);
 
   const hamburgerhandler = () => {
     setNavOpen(!navopen);
-    console.log("YES THIS ONE");
   };
 
   const logoutBtnHadler = () => {
@@ -24,7 +22,11 @@ const AdminNav = (props) => {
         <nav className={navopen ? "nav open" : "nav"}>
           <div className="wrapper flex flex-jc-sb flex-ai-c bg-color-7">
             {/* <!-- Logo --> */}
-            <NavLink to="/" className="logo logo-1"></NavLink>
+            <NavLink
+              onClick={() => setNavOpen(false)}
+              to="/"
+              className="logo logo-1"
+            ></NavLink>
 
             {/* <!--Desktop Menu --> */}
             <div className="menu-desk flex-jc-sb flex-ai-c">
@@ -135,6 +137,16 @@ const AdminNav = (props) => {
               className="color-7"
             >
               Manage
+            </NavLink>
+            <NavLink
+              to={"/"}
+              onClick={() => {
+                setNavOpen(false);
+                logoutBtnHadler();
+              }}
+              className="color-7"
+            >
+              Log Out
             </NavLink>
           </div>
         </nav>

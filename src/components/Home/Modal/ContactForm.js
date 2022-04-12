@@ -53,8 +53,8 @@ const ContactForm = (props) => {
               <button onClick={modalBtnHandler} className="btn-close"></button>
             </div>
             <div className="title">
-              <h2>Get in touch!</h2>
-              <h5>Get advice related to the service</h5>
+              <h2>{props.formtitle}</h2>
+              <h5>{props.formsubtitle}</h5>
             </div>
             <form className="form" onSubmit={handleSubmit(onSubmit)}>
               <div className="container">

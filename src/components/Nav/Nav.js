@@ -24,7 +24,11 @@ const Nav = (props) => {
         <nav className={navopen ? "nav open" : "nav"}>
           <div className="wrapper flex flex-jc-sb flex-ai-c bg-color-7">
             {/* <!-- Logo --> */}
-            <NavLink to="/" className="logo logo-1"></NavLink>
+            <NavLink
+              onClick={() => setNavOpen(false)}
+              to="/"
+              className="logo logo-1"
+            ></NavLink>
 
             {/* <!-- Hamburger --> */}
             <button

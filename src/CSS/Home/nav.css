@@ -16,20 +16,25 @@
 /* nav logo */
 .logo {
 
-  width: 161.29px;
-  height: 64px;
+  width: 150.29px;
+ 
+  height: 54px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 .nav .logo-1 {
-  background-image: url("/Assets/logo-final.svg");
+  background-image: url("../../Assets/logo-final.svg");
+ 
 }
 
-.nav .logo-2 {
+
+
+
+/* .nav .logo-2 {
   background-image: url("/Assets/logo-2.png");
-}
+} */
 
 /* nav hamburger */
 .nav .hamburger {
