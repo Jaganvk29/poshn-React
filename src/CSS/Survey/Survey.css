@@ -102,6 +102,35 @@
     margin-right: 10px;
 }
 
+
+/* SURVEY LAST PAGE */
+
+
+.survey-last-page{
+    
+    display: flex;
+    justify-content: center;
+align-items: center;
+flex-direction: column;
+
+
+}
+.survey-last-page > h1 , .survey-last-page > p{
+  margin: 30px 0;
+  text-align: center;
+
+}
+
+.survey-last-page > p{
+    font-size: 1.5rem;
+}
+
+.survey-last-page > button{
+    font-size: 1.2em;
+   padding: 1.2rem 1rem;
+}
+
+
 /* SURVEY QUESTION  CONTAINER (HEADER)*/
 
 .survey-ques-container{

@@ -1,15 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useForm } from "react-hook-form";
 import prevbtn from "../../Assets/prevbtn.png";
 import { motion } from "framer-motion";
 import SurveyStep from "./SurveyStep";
-
+import BookingModal from "../Home/Modal/BookingModal";
+import PoshContext from "../../PoshContext";
 const Survey = () => {
   const [selected, setSelected] = useState([]);
   const [formstep, setFormStep] = useState(0);
   const [othersel, setOthersel] = useState(false);
   const [isVerified, setIsVerified] = useState(false);
+  const { isOpen, modalHandler } = useContext(PoshContext);
+
+  //  MODAL BUTTON HANDLER POPUP
+  const ModalbtnHandler = () => {
+    console.log("CLICKED");
+    modalHandler(true);
+  };
 
   console.log(othersel);
 
@@ -64,10 +72,11 @@ const Survey = () => {
       return (
         <button
           // THIS PREVENTS LOGGING COLLETED DATA NEED CHANGES WHEN WE GOT BACKEND
-          onClick={completeFormStep}
+
           disabled={!isValid}
           type="submit"
           className="btn btn-dark"
+          onClick={completeFormStep}
         >
           Submit
         </button>
@@ -458,11 +467,6 @@ const Survey = () => {
 
               {/* SUBMIT ALERT */}
 
-              {formstep === 11 && (
-                <div>
-                  <h1> SURVEY SUBMITED</h1>
-                </div>
-              )}
               {/* {errors.Answers && <p>This field is required</p>} */}
 
               <div className="formnavbtn">
@@ -472,6 +476,33 @@ const Survey = () => {
               </div>
               {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
             </form>
+
+            {formstep === 11 && (
+              <div className="wrapper">
+                <div className="survey-last-page">
+                  <h1> Advice given based on your answers submitted!</h1>
+
+                  <p>
+                    For athletes, high altitude produces two contradictory
+                    effects on performance. For explosive events (sprints up to
+                    400 metres, long jump, triple jump) the reduction in
+                    atmospheric pressure means there is less resistance from the
+                    atmosphere and the athlete's performance will generally be
+                    better at high altitude.
+                  </p>
+
+                  <button
+                    type="button"
+                    onClick={ModalbtnHandler}
+                    className="btn btn-dark"
+                  >
+                    Book Free Consultation
+                  </button>
+                </div>
+
+                <BookingModal open={isOpen}></BookingModal>
+              </div>
+            )}
           </div>
         </div>
       </div>
