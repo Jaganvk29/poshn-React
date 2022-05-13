@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { blogData } from "./blogData";
+import PoshContext from "../../PoshContext";
+import ImageHandler from "./ImageHandler";
 
 const HlBlog = (props) => {
+  const { Blogdatahandler, blogData, isloadedhandler, loaded } =
+    useContext(PoshContext);
+
   const variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
@@ -41,15 +46,15 @@ const HlBlog = (props) => {
       className="hlblog flex"
     >
       <motion.div variants={item1} className="hlblog-text flex">
-        <p>{props.date}</p>
+        <p>{props.date.substr(0, 10)}</p>
         <h1>{props.title}</h1>
-        <p>{trimmedcontent}...</p>
-        <Link key={blogData[0].blogId} to={`./${blogData[0].blogId}`}>
+        <div dangerouslySetInnerHTML={{ __html: trimmedcontent }}></div>
+        <Link key={blogData[0].id} to={`./${props.postLink}`}>
           <button className="btn btn-toggle">Read</button>
         </Link>
       </motion.div>
       <motion.div variants={item2} className="hlblog-img">
-        <img src={props.img} />
+        <ImageHandler img={props.img} />
       </motion.div>
     </motion.div>
   );

@@ -4,6 +4,14 @@
   z-index: 10;
 }
 
+.nav-a-color {
+  background: linear-gradient(135deg, #ffaa2c 0%, #fcff00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 16px;
+  font-weight: 500;
+}
 /* wrapper */
 .nav .wrapper {
   position: relative;
@@ -15,9 +23,8 @@
 
 /* nav logo */
 .logo {
-
   width: 150.29px;
- 
+
   height: 54px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -25,12 +32,8 @@
 }
 
 .nav .logo-1 {
-  background-image: url("../../Assets/logo-final.svg");
- 
+  background-image: url("../../Assets/logo-final.png");
 }
-
-
-
 
 /* .nav .logo-2 {
   background-image: url("/Assets/logo-2.png");
@@ -108,7 +111,7 @@
 }
 
 .nav .menu-mob a:hover {
-  background-color: var(--color-3);
+  background-color: var(--color-7);
 }
 /* nav mobile animation */
 .nav.open .menu-mob {
@@ -124,7 +127,7 @@
 .nav .menu-desk a {
   position: relative;
   font-style: bold;
-  font-size: 16px;
+  font-size: 18px;
 }
 .activeNav {
   color: rgb(255, 255, 255);
@@ -132,7 +135,7 @@
 }
 
 .nav .menu-desk > a:hover {
-  color: rgb(255, 255, 255);
+  color: var(--color-5);
   transition: color 300ms ease-in-out;
 }
 
@@ -173,8 +176,8 @@
   }
 
   .nav .logo {
-    max-width: 161.29px;
-    height: 64px;
+    max-width: 181.29px;
+    height: 74px;
   }
 
   .nav .hamburger {

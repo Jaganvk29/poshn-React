@@ -25,17 +25,21 @@
 }
 
 /* .test-cards { */
-  /* display: grid; */
-  /* grid-template-columns: repeat(6, 310px); */
-  /* min-width: 1200px; */
-  /* overflow: hidden; */
-  /* scroll-behavior: smooth; */
-  /* overflow-x: scroll; */
-  
+/* display: grid; */
+/* grid-template-columns: repeat(6, 310px); */
+/* min-width: 1200px; */
+/* overflow: hidden; */
+/* scroll-behavior: smooth; */
+/* overflow-x: scroll; */
+
 /* } */
 
 /* .test-cards::-webkit-scrollbar {
   width: 0;
+} */
+
+/* .test-cards {
+  margin-left: 400px;
 } */
 
 .test-card {
@@ -45,12 +49,20 @@
 .test-card > div {
   /* display: block; */
   padding: 32px;
-  width: 100;
+  /* width: 100%; */
   overflow: hidden;
-  height: 232px;
+
+  /* height: 232px; */
   background: #ffffff;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
+
+  max-width: 432px;
+  max-height: 276px;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
 }
 
 .test-card p {
@@ -138,10 +150,7 @@
   }
 }
 
-
-
-
-.feedback{
+.feedback {
   display: flex;
   flex-direction: r;
 }

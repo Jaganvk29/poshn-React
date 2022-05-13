@@ -1,6 +1,6 @@
 .blogs-section {
-  margin-top: 50px;
-   padding: 0 0 70px; 
+  margin-top: 108px;
+  margin-bottom: 130px;
 }
 
 .blogs-section .wrapper {
@@ -15,6 +15,14 @@
   letter-spacing: -0.01em;
   color: var(--color-7);
   margin-bottom: 32px;
+}
+
+.blogs-section-readblog .blogs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  column-gap: 24px;
+  row-gap: 64px;
 }
 
 .blogs-section .blogs-container {
@@ -58,17 +66,11 @@
   color: var(--gray-6);
 }
 
-
-
 @media screen and (min-width: 845px) {
- 
-
   .blogs-section h1 {
     font-size: 56px;
   }
 }
-
-
 
 @media screen and (min-width: 1270px) {
   .blog-card {

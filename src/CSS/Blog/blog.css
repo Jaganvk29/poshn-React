@@ -1,11 +1,15 @@
 .blog-container {
   margin: 56px auto 64px auto;
 }
+
+.blogs-section-readblog {
+  max-width: 1200px;
+  width: 100%;
+}
 /* HIGH LIGHED BLOG POST  */
 
 .hlblog {
   justify-content: space-around;
-
 }
 .hlblog-text {
   padding-right: 32px;
@@ -16,7 +20,7 @@
 
 .hlblog-img > img {
   max-height: 360px;
- max-width: 582;
+  max-width: 582;
 }
 
 .hlseperator {
@@ -31,7 +35,7 @@
   justify-content: space-evenly;
 }
 
-.blog-posts-container:first-child{
+.blog-posts-container:first-child {
   display: none;
 }
 
@@ -39,7 +43,7 @@
 
 .blog-post-card {
   margin-bottom: 64px;
-  
+
   max-width: 560px;
 }
 
@@ -61,7 +65,7 @@
   color: var(--color-9);
 }
 
-.post-card-info > p {
+.post-card-info p {
   word-wrap: break;
   margin-top: 4px;
   font-style: normal;
@@ -73,14 +77,24 @@
 
 /* READBLOG */
 
+.blog-content-data div img {
+  /* height: 100px; */
+  width: 100%;
+}
+
 .readBlog-container {
   max-width: 794px;
   margin: auto;
+}
+.readBlog-img {
+  display: flex;
+  justify-content: center;
 }
 
 .readBlog-img > img {
   width: 100%;
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .readBlog {
@@ -120,6 +134,13 @@
   margin: 0 10px;
 }
 
+.hlblog-text button {
+  min-width: 138.47px;
+  min-height: 48px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
 /* RELATED ARTICLE */
 .read-articels-container {
   margin-top: 80px;
@@ -141,28 +162,44 @@
   align-items: flex-start;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1365px) {
+  .readBlog-img > img {
+    width: 80%;
+    margin-top: 40px;
+  }
 
+  .hlblog-img > img {
+    max-width: 600px;
+    max-height: 400px;
+    width: 100%;
+  }
   .blog-post-card {
-    
     max-width: 460px;
   }
+  .hlblog-text button {
+    margin-top: 20px;
+    min-width: 120.47px;
+    min-height: 40px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .hlblog-text h1 {
+    font-size: 26px;
+  }
+  .hlblog-text p {
+    font-size: 16px;
+  }
 }
-
-@media only screen and (max-width: 1000px) {
-
+@media only screen and (max-width: 900px) {
   .blog-post-card {
-   
-   
     max-width: 360px;
   }
-
 
   .hlblog {
     justify-content: center;
     align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column-reverse;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
   }
   .hlblog-text {
     padding-right: 0px;
@@ -170,21 +207,20 @@
     justify-content: center;
     align-items: flex-start;
   }
-  
+
   .hlblog-img > img {
     width: 100%;
   }
-  
- 
-
-
 }
-
 @media only screen and (max-width: 800px) {
-
   .blog-post-card {
-    
-    
     max-width: 560px;
+  }
+
+  .hlblog-text h1 {
+    font-size: 20px;
+  }
+  .hlblog-text p {
+    font-size: 14px;
   }
 }

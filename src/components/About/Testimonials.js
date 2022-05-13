@@ -50,14 +50,24 @@ const Testimonials = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    arrows: false,
     responsive: [
       {
-        breakpoint: 1250,
+        breakpoint: 1647,
+        settings: {
+          arrows: false,
+          slidesToShow: 3,
+        },
+      },
+
+      {
+        breakpoint: 1240,
         settings: {
           arrows: false,
           slidesToShow: 2,
         },
       },
+
       {
         breakpoint: 678,
         settings: {

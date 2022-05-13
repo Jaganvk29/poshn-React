@@ -45,12 +45,12 @@ const Intro = () => {
     // TO CHECK IF ITS NOT VIEW PORT TO REMOVE ANIMATION
     if (!inView) {
       textani.start({
-        x: -200,
+        x: -100,
         opacity: 0,
       });
 
       photoani.start({
-        x: 200,
+        x: 100,
         opacity: 0,
       });
     }
@@ -62,7 +62,7 @@ const Intro = () => {
       className="intro-section has-ani flex flex-jc-c bg-color-3"
     >
       <div className="leaf-1"></div>
-      <div className="leaf-2"></div>
+
       <div className="wrapper">
         <motion.div animate={textani} className="text flex flex-col flex-jc-c">
           <h1>Balanced nutrition for a lean & fit body</h1>

@@ -1,7 +1,8 @@
 /* OVER ALL CONTAINER */
 .packages {
-
   background-color: var(--color-3);
+  margin-top: -50px;
+  z-index: 1;
 }
 /* BLUE COLOR CONTAINER */
 .packages-title-container {
@@ -62,22 +63,108 @@
 
 .package-card-header p {
   margin-top: 16px;
+  font-size: 1rem;
   color: var(--gray-6);
   text-align: center;
 }
 
 .package-tc {
   padding: 48px 0;
-  
+
   text-align: center;
   color: var(--gray-6);
 }
 
-
-
 @media screen and (max-width: 845px) {
- 
-.packages-title h1{
-  font-size: 2rem;
+  .packages-title h1 {
+    font-size: 2rem;
+  }
 }
+
+@media screen and (max-width: 1366px) {
+  .packages-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .package-card {
+    padding: 36px;
+    height: 380px;
+    width: 320px;
+    margin-top: 48px;
+    background-color: var(--color-1);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .package-card img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .package-card-header {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+  }
+  .package-card-header h2 {
+    margin-top: 28px;
+    font-weight: 600;
+    color: var(--color-9);
+  }
+
+  .package-card-header p {
+    margin-top: 14px;
+    font-size: 1rem;
+    color: var(--gray-6);
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .packages-title h1 {
+    font-size: 2rem;
+  }
+
+  .package-card {
+    padding: 36px;
+    height: 350px;
+    width: 300px;
+    margin-top: 24px;
+    background-color: var(--color-1);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .package-card img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .package-card-header {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+  }
+  .package-card-header h2 {
+    margin-top: 20px;
+    font-weight: 600;
+    color: var(--color-9);
+  }
+
+  .package-card-header p {
+    margin-top: 14px;
+    font-size: 14px;
+    color: var(--gray-6);
+    font-weight: 400;
+    text-align: center;
+  }
 }

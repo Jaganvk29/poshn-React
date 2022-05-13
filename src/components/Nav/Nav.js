@@ -45,7 +45,7 @@ const Nav = (props) => {
               <NavLink
                 to="/about"
                 className={({ isActive }) =>
-                  isActive ? "activeNav" : "color-5"
+                  isActive ? "activeNav" : "nav-a-color"
                 }
               >
                 About
@@ -55,7 +55,7 @@ const Nav = (props) => {
               <NavLink
                 to="/plans"
                 className={({ isActive }) =>
-                  isActive ? "activeNav" : "color-5"
+                  isActive ? "activeNav" : "nav-a-color"
                 }
               >
                 Plans
@@ -64,7 +64,7 @@ const Nav = (props) => {
               <NavLink
                 to="/ourpartners/doctors"
                 className={({ isActive }) =>
-                  isActive ? "activeNav" : "color-5"
+                  isActive ? "activeNav" : "nav-a-color"
                 }
               >
                 Our partners
@@ -73,16 +73,16 @@ const Nav = (props) => {
               <NavLink
                 to="/blog"
                 className={({ isActive }) =>
-                  isActive ? "activeNav" : "color-5"
+                  isActive ? "activeNav" : "nav-a-color"
                 }
               >
                 Blogs
               </NavLink>
               {/* SURVEY */}
               <NavLink
-                to="/survey"
+                to="/surveylogin"
                 className={({ isActive }) =>
-                  isActive ? "activeNav" : "color-5"
+                  isActive ? "activeNav" : "nav-a-color"
                 }
               >
                 Survey

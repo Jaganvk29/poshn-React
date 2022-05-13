@@ -14,7 +14,6 @@ const App = () => {
       {isLogged ? <AdminNav /> : <Nav />}
       <ScrollToTop />
       <Pages />
-      <Footer />
     </div>
   );
 };

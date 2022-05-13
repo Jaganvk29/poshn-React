@@ -11,6 +11,7 @@ import PlanCard from "./PlanCard";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import PlanHeader from "./PlanHeader";
+import Footer from "../Footer/Footer";
 
 const Plan = () => {
   const { isOpen, modalHandler } = useContext(PoshContext);
@@ -116,6 +117,7 @@ const Plan = () => {
           title="I will help you to achieve your health goals"
           btntext="Book Free Consultation"
         />
+        <Footer />
       </div>
     </div>
   );

@@ -63,19 +63,15 @@ const Consultation = (props) => {
       ref={ref}
       className="has-snap has-ani consultation flex flex-ai-c flex-jc-c"
     >
-      <div className="wrapper">
+      <motion.div animate={textani} className="wrapper">
         <div className="text">
-          <motion.h1 animate={textani}>{props.title}</motion.h1>
+          <h1>{props.title}</h1>
 
-          <motion.button
-            animate={paraani}
-            onClick={buttonClick}
-            className="btn btn-dark contact-us-btn"
-          >
+          <button onClick={buttonClick} className="btn btn-dark contact-us-btn">
             {props.btntext}
-          </motion.button>
+          </button>
         </div>
-      </div>
+      </motion.div>
       <BookingModal open={isOpen}></BookingModal>
     </section>
   );

@@ -1,9 +1,44 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import BlogPostCard from "../../Blog/BlogPostCard";
-import { blogData } from "../../Blog/blogData";
+// import { blogData } from "../../Blog/blogData";
 import { Link } from "react-router-dom";
-
+import axios from "axios";
+import PoshContext from "../../../PoshContext";
 const Adminblog = () => {
+  const { Blogdatahandler, blogData, isloadedhandler, loaded } =
+    useContext(PoshContext);
+
+  const getBlogData = async () => {
+    var Responce = await axios
+      .get("http://18.209.153.146/blog/")
+      .then((data) => {
+        const ResponceData = data.data;
+        const BlogData = [];
+        ResponceData.forEach((element) => {
+          BlogData.push({
+            id: element.id,
+
+            title: element.title,
+            content: element.content,
+            image: element.image,
+            draft: element.draft,
+            date: element.created,
+            slug: element.slug,
+          });
+        });
+        Blogdatahandler(BlogData);
+        console.log(data.data);
+        isloadedhandler(data.status);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  useEffect(() => {
+    getBlogData();
+  }, []);
+
   return (
     <div>
       <div className="dash-col1">
@@ -15,12 +50,13 @@ const Adminblog = () => {
 
           <div className="adminblog">
             {blogData.map((blog) => (
-              <div key={blog.blogId} className="blog-card">
-                <Link to={`edit/${blog.blogId}`}>
+              <div key={blog.id} className="blog-card">
+                <Link to={`edit/${blog.slug}`}>
                   <BlogPostCard
-                    img={blog.blogthumbnail}
-                    title={blog.blogtitle}
-                    date={blog.blogDate}
+                    img={blog.image}
+                    title={blog.title}
+                    date={blog.date}
+                    draft={blog.draft}
                   />
                 </Link>
               </div>

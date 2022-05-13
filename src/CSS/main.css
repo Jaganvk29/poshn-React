@@ -19,6 +19,8 @@
 @import url("./Admin/Admin.css");
 /* PLAN */
 @import url("./Plan/Plan.css");
+/* LOADER */
+@import url(./loader.css);
 
 html {
   font-size: 100%;
@@ -34,8 +36,6 @@ html {
   border: 0;
   outline: none;
   box-sizing: inherit;
-  
-  
 }
 
 a {
@@ -46,5 +46,3 @@ a:hover,
 button:hover {
   cursor: pointer;
 }
-
-

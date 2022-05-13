@@ -1,15 +1,41 @@
-import React from "react";
-
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import { Navigate } from "react-router-dom";
 
 const AdminAddFaq = () => {
+  const [isPosted, setisPosted] = useState(false);
+  const [activeloader, setactiveloader] = useState(false);
+
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors, isValid },
   } = useForm({ mode: "all" });
-  const onSubmit = (data) => console.log(data);
+
+  // POST REQUEST TO CREATE NEW FAQ
+  const onSubmit = (data) => {
+    axios
+      .post(
+        "http://18.209.153.146/admin/faq/",
+        {
+          question: data.faqquestion,
+          answer: data.faqanswer,
+        },
+        {
+          headers: {
+            Authorization: `Token ${"b9c5149c48133e6ec998a3d0f052f3cd3122b82d"}`,
+          },
+        }
+      )
+      .then((response) => {
+        setisPosted(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div>
@@ -58,9 +84,22 @@ const AdminAddFaq = () => {
                 )}
 
                 <div className="adminsavebtn">
-                  <button type="submit" className="btn btn-dark">
+                  <button
+                    disabled={!isValid}
+                    type="submit"
+                    onClick={() => setactiveloader(true)}
+                    className="btn btn-dark"
+                  >
                     ADD
                   </button>
+
+                  {isPosted.status === 201 ? (
+                    <Navigate to="/admin/main/faq" />
+                  ) : activeloader && isValid ? (
+                    <div className="loadercenter">
+                      <div className="loader flex flex-jc-c flex-ai-c"></div>
+                    </div>
+                  ) : null}
                 </div>
               </form>
             </div>

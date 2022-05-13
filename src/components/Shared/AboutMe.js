@@ -54,6 +54,7 @@ const AboutMe = (props) => {
   return (
     <section ref={ref} className="has-snap has-ani about-me-section">
       {props.header && <h1 className="title">About me</h1>}
+      <div className="leaf-2"></div>
       <div className="wrapper">
         <motion.img
           animate={photoani}

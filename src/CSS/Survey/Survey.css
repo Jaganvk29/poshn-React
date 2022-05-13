@@ -1,260 +1,232 @@
-.survey-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-
+.survey-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
+.survey-ans {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-.survey-ans{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-   
-    width: 100%;
-
+  width: 100%;
 }
 
-
-.survey > form{
-    display: flex; 
-     justify-content: flex-start; 
-    align-items: center;
-    flex-direction: column;
-    max-width: 800px;
-   
+.survey > form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  max-width: 800px;
 }
 
-.survey{
-     display: flex; 
-     justify-content: center; 
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    max-width: 100%;
-    padding: 1rem;
-
+.survey {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 100%;
+  padding: 1rem;
 }
-.newwrapper{
-    max-width: 100%; 
-}
-
-.survey input[type="checkbox"]{
-    display: none;
+.newwrapper {
+  max-width: 100%;
 }
 
-.survey span , .userText input{
-    color: #6D747A;
-    font-weight: 500;
-    margin-top: 20px;
-    min-height: 48px;
-    min-width: 100%;
-    padding: 10px 20px;
-    position: relative;
-    border-radius:32px ;
-    background-color: #EBECF5;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    transition: all 0.1s ease;
-}
-.recaptcha-con{
-    margin-top: 20px;
-}
- 
-.survey label input[type="checkbox"]:checked +span{
-    background-color: var(--color-7);
-    color: rgb(255, 255, 255);
-
-} 
-
-
-
-.survey label input[type="checkbox"]:checked +span::before{
-
-    border: 5px solid rgb(255, 255, 255);
-   
-    min-height: 30px;
-    min-width: 30px;
-    background: transparent;
+.survey input[type="checkbox"] {
+  display: none;
 }
 
-.survey label input[type="checkbox"]:hover +span::before{
-    min-height: 30px;
-    min-width: 30px;
-    transition: all 0.1s ease;
-    border: 5px solid rgb(255, 255, 255);
-   
+.survey span,
+.userText input {
+  color: #6d747a;
+  font-weight: 500;
+  margin-top: 20px;
+  min-height: 48px;
+  min-width: 100%;
+  padding: 10px 20px;
+  position: relative;
+  border-radius: 32px;
+  background-color: #ebecf5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.1s ease;
 }
-.survey span:hover{
-    background-color: #EAECFD;
-   
-}
-
-.survey span::before{
- 
-    content: "";
-    height: 30px;
-    width: 30px;
-    border: 15px solid rgb(255, 255, 255);
-    border-radius: 100%;
-    margin-right: 10px;
+.recaptcha-con {
+  margin-top: 20px;
 }
 
+.survey label input[type="checkbox"]:checked + span {
+  background-color: var(--color-7);
+  color: rgb(255, 255, 255);
+}
+
+.survey label input[type="checkbox"]:checked + span::before {
+  border: 5px solid rgb(255, 255, 255);
+
+  min-height: 30px;
+  min-width: 30px;
+  background: transparent;
+}
+
+.survey label input[type="checkbox"]:hover + span::before {
+  min-height: 30px;
+  min-width: 30px;
+  transition: all 0.1s ease;
+  border: 5px solid rgb(255, 255, 255);
+}
+.survey span:hover {
+  background-color: #eaecfd;
+}
+
+.survey span::before {
+  content: "";
+  height: 30px;
+  width: 30px;
+  border: 15px solid rgb(255, 255, 255);
+  border-radius: 100%;
+  margin-right: 10px;
+}
 
 /* SURVEY LAST PAGE */
 
-
-.survey-last-page{
-    
-    display: flex;
-    justify-content: center;
-align-items: center;
-flex-direction: column;
-
-
+.surveycompleted .wrapper {
+  width: 100%;
+  height: 100vh;
 }
-.survey-last-page > h1 , .survey-last-page > p{
+
+.survey-last-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.survey-last-page > h1,
+.survey-last-page > p {
   margin: 30px 0;
   text-align: center;
-
 }
 
-.survey-last-page > p{
-    font-size: 1.5rem;
+.survey-last-page > p {
+  font-size: 1.5rem;
 }
 
-.survey-last-page > button{
-    font-size: 1.2em;
-   padding: 1.2rem 1rem;
+.survey-last-page > button {
+  font-size: 1.2em;
+  padding: 1.2rem 1rem;
 }
-
 
 /* SURVEY QUESTION  CONTAINER (HEADER)*/
 
-.survey-ques-container{
-    max-width: 592px;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.survey-ques-container {
+  max-width: 592px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .survey-ques {
-    margin-bottom: 48px;
+  margin-bottom: 48px;
 }
 
+.survey-ques > h1 {
+  text-align: center;
+  line-height: 48px;
+  font-size: 32px;
+  /* width: 592px; */
 
-.survey-ques > h1{
-    text-align: center;
-    line-height: 48px;
-    font-size: 32px;
-    /* width: 592px; */
-
-    font-weight: 600;
-    color: #08090A;
+  font-weight: 600;
+  color: #08090a;
 }
 
-.survey-ques-no-tracker > h3{
-    color: var(--color-7);
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 600;
+.survey-ques-no-tracker > h3 {
+  color: var(--color-7);
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
 }
 
-
-.survey-prevbtn > p{
-    color: var(--gray-6);
-
+.survey-prevbtn > p {
+  color: var(--gray-6);
 }
 
-
-.survey-prevbtn > p:hover{
-    color: var(--color-7);
-
+.survey-prevbtn > p:hover {
+  color: var(--color-7);
 }
 
-.survey-prevbtn{
-    width: 10%;
-    margin-top: 40px;
-    
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    cursor: pointer;
+.survey-prevbtn {
+  width: 10%;
+  margin-top: 40px;
 
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
 }
 
-
-.survey-prevbtn > img{
-    width: 24px;
-    height: 24px;
-
+.survey-prevbtn > img {
+  width: 24px;
+  height: 24px;
 }
 
-.otherText{
-   margin-bottom: 16px;
-    min-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.otherText {
+  margin-bottom: 16px;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.otherText input{
-    max-width: 100%;
-    border: 2px solid rgb(41, 45, 156);
-    height: 40px;
-    font-size: 20px;
-    border-radius: 8px;
-    padding: 10px;
-    
+.otherText input {
+  max-width: 100%;
+  border: 2px solid rgb(41, 45, 156);
+  height: 40px;
+  font-size: 20px;
+  border-radius: 8px;
+  padding: 10px;
 }
 
-.formnavbtn{
-    margin: 16px;
-    max-width: 572px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
+.formnavbtn {
+  margin: 16px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-
-.formnavbtn button{
-
-font-size: 1.5rem;
-    width: 10rem;
-    /* height: 3rem; */
-/* font-size: 1em; */
-    padding: 0.75rem;
+.formnavbtn button {
+  font-size: 1.5rem;
+  width: 10rem;
+  /* height: 3rem; */
+  /* font-size: 1em; */
+  padding: 0.75rem;
 }
-
-
 
 .otherText label {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 600px) {
-
-    .survey > form{
-        display: flex; 
-         justify-content: flex-start; 
-        align-items: center;
-        flex-direction: column;
-        max-width: 400px;
-    }
-
-    .survey-ques > h1{
-        font-size: 20px;
-    }
-
-
-    .otherText input {
-        font-size: 14px;
-    }
+  .survey > form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    max-width: 400px;
   }
 
+  .survey-ques > h1 {
+    font-size: 20px;
+  }
 
+  .otherText input {
+    font-size: 14px;
+  }
+}

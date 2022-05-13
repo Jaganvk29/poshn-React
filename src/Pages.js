@@ -30,8 +30,10 @@ import AdminSurveyDetail from "./components/Admin/AdminSurvey/AdminSurveyDetail"
 import AdminResponceDeatil from "./components/Admin/AdminResponses/AdminResponceDeatil";
 import Pagenotfound from "./components/404/Pagenotfound";
 import Faq from "./components/Faq/Faq";
-
+import SurveyUser from "./components/Survey/SurveyUser";
+import SurveyCompleted from "./components/Survey/Steps/SurveyCompleted";
 import { AnimatePresence } from "framer-motion";
+import AdminBookingDetails from "./components/Admin/AdminBooking/AdminBookingDetails";
 
 const Pages = () => {
   const location = useLocation();
@@ -52,6 +54,10 @@ const Pages = () => {
         </Route>
         <Route path="/plans" element={<Plan />} />
         <Route path="/survey" element={<Survey />} />
+        <Route path="/surveycompleted" element={<SurveyCompleted />} />
+
+        <Route path="/surveylogin" element={<SurveyUser />} />
+
         <Route path="/admin" element={<Admin />} />
         <Route path="/faq" element={<Faq />} />
 
@@ -74,7 +80,13 @@ const Pages = () => {
             <Route path="blog/add" element={<AdminAddBlog />} />
             <Route path="blog/edit/:blogId" element={<AdminBlogEdit />} />
 
+            {/* BOOKINGS */}
             <Route path="bookings" element={<AdminBooking />} />
+            <Route
+              path="bookings/detail/:resposeID"
+              element={<AdminBookingDetails />}
+            />
+
             {/* MANAGE PARTNERS */}
             <Route path="manage" element={<AdminManage />}>
               <Route index path="doctors" element={<PartnerDoctor />} />
@@ -83,6 +95,7 @@ const Pages = () => {
             </Route>
             {/* DIET SURVEY */}
             <Route path="dietsurvey" element={<AdmindietSurvey />} />
+
             <Route path="dietsurvey/detail" element={<AdminSurveyDetail />} />
 
             {/* RESPONSES */}

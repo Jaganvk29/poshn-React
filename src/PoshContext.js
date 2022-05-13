@@ -7,6 +7,21 @@ export function PoshProvider({ children }) {
   const [contactIsOpen, setContactIsOpen] = useState(false);
 
   const [isLogged, setIsLogged] = useState(false);
+
+  const [blogData, setBlogData] = useState([]);
+  const [loaded, setLoaded] = useState(false);
+
+  const [readBlog, setReadBlog] = useState([]);
+
+  const [surveyuser, setsurveyuser] = useState([]);
+
+  // Survey
+  const [isSelected, setisSelected] = useState(false);
+  // Survey MODAL
+  const surveyselectHandler = function (isopen) {
+    setisSelected(isopen);
+  };
+
   // BOOKING MODAL
   const modalHandler = function (expand) {
     setIsOpen(expand);
@@ -22,6 +37,29 @@ export function PoshProvider({ children }) {
     setIsLogged(loggedIn);
   };
 
+  // BLOG API DATA
+
+  const Blogdatahandler = (userId) => {
+    setBlogData(userId);
+  };
+
+  // BLOG API IS LOADED ?
+  const isloadedhandler = (load) => {
+    setLoaded(load);
+  };
+
+  // READ BLOG
+
+  const readBloghandler = (userId) => {
+    setReadBlog(userId);
+  };
+
+  // Survey User ID
+
+  const surveyUserHandler = (userId) => {
+    setsurveyuser(userId);
+  };
+
   return (
     <PoshContext.Provider
       value={{
@@ -34,6 +72,24 @@ export function PoshProvider({ children }) {
         // ADMIN LOGIN HANDLER
         isLogged,
         authHandler,
+        // BLOG DATA API
+        Blogdatahandler,
+        blogData,
+        // BLOG DATA LOADED ?
+        isloadedhandler,
+        loaded,
+
+        // READ BLOG FETCH
+        readBloghandler,
+        readBlog,
+
+        // Surevy User Id
+        surveyUserHandler,
+        surveyuser,
+
+        // SURVEY
+        isSelected,
+        surveyselectHandler,
       }}
     >
       {children}

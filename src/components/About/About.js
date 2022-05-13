@@ -5,6 +5,9 @@ import LatestBlogAbout from "./LatestBlogAbout";
 import AboutMe from "../Shared/AboutMe";
 import { motion } from "framer-motion";
 
+import AboutPoshN from "./AboutPoshN";
+import Footer from "../Footer/Footer";
+
 const About = () => {
   return (
     <motion.div
@@ -13,11 +16,11 @@ const About = () => {
       exit={{ opacity: 0, transition: { duration: 0.2 } }}
     >
       <AboutMeHeader />
-      <AboutMe />
+      <AboutPoshN />
       <WhyME />
 
       {/* <Consultation title="Connect Now" btntext="Book Free Consultation" /> */}
-      <LatestBlogAbout />
+      <Footer />
     </motion.div>
   );
 };

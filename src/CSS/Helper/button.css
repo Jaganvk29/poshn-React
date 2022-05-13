@@ -17,6 +17,16 @@
   color: var(--color-1);
 }
 
+.btn-danger {
+  background-color: rgb(223, 29, 29);
+  color: var(--color-1);
+}
+
+.btn-warning {
+  background-color: rgb(248, 142, 20);
+  color: var(--color-1);
+}
+
 .btn-ol-light {
   border: 2px solid var(--color-7);
   background-color: transparent;
@@ -26,7 +36,8 @@
   height: 48px;
 }
 
-.btn-dark:hover {
+.btn-dark:hover,
+.submit-btn:hover {
   opacity: 0.7;
 }
 
@@ -40,29 +51,37 @@
 }
 
 .btn-toggle {
-   border: 1px solid var(--color-7);
+  border: 1px solid var(--color-7);
   background-color: var(--color-1);
-  color: var(--color-7); 
- 
+  color: var(--color-7);
 }
 
 .btn-toggle:hover {
-  background-color: var(--color-7) ;
-  color: var(--color-1) ;
+  background-color: var(--color-7);
+  color: var(--color-1);
 }
 
-.btn-dark:disabled{
+.btn-dark:disabled {
   background-color: #707bb7;
   /* border: 2px solid rgb(120, 120, 120); */
   /* color: var(--grey-6); */
   color: rgba(255, 255, 255, 0.445);
 }
 
-
-
-.btn-dark:disabled:hover{
+.btn-dark:disabled:hover {
   background-color: #707bb7;
-  
-  cursor:not-allowed;
 
+  cursor: not-allowed;
+}
+.btn-toggle:disabled {
+  /* background-color: #707bb7; */
+  /* border: 2px solid rgb(120, 120, 120); */
+  /* color: var(--grey-6); */
+  color: rgba(0, 0, 0, 0.445);
+}
+
+.btn-toggle:disabled:hover {
+  background-color: #707bb7;
+  color: white;
+  cursor: not-allowed;
 }

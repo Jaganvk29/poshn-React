@@ -32,9 +32,7 @@ const AdminNav = (props) => {
             <div className="menu-desk flex-jc-sb flex-ai-c">
               <NavLink
                 to="/admin/main/dashboard"
-                className={({ isActive }) =>
-                  isActive ? "color-9" : "color-12"
-                }
+                className={({ isActive }) => (isActive ? "color-7" : "color-9")}
               >
                 Dashboard
               </NavLink>
@@ -42,9 +40,7 @@ const AdminNav = (props) => {
               {/* DIET GUIDE */}
               <NavLink
                 to="/admin/main/about"
-                className={({ isActive }) =>
-                  isActive ? "color-9" : "color-12"
-                }
+                className={({ isActive }) => (isActive ? "color-7" : "color-9")}
               >
                 About
               </NavLink>

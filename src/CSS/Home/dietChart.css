@@ -6,7 +6,7 @@
   background-position: bottom left;
   background-repeat: repeat-x;
   height: 800px;
-  padding-top: 50px;
+  padding-top: 100px;
 }
 
 /* leaf */
@@ -54,7 +54,6 @@
   font-size: 13px;
 }
 
-
 @media screen and (min-width: 380px) {
   .diet-chart {
     padding-left: 3%;
@@ -95,7 +94,14 @@
 }
 
 @media screen and (min-width: 845px) {
+  /* .diet-chart .wrapper {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  } */
+
   .diet-chart {
+    padding-top: 100px;
     height: 800px;
   }
 

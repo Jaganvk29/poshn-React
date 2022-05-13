@@ -64,8 +64,8 @@ const DietChart = () => {
             numerous accolades, including two National Film Awards and five Film
             fare Awards.
           </motion.p>
-          <Link to="/survey">
-            <motion.button animate={textani} className="btn btn-toggle">
+          <Link to="/surveylogin">
+            <motion.button animate={textani} className="btn  btn-toggle">
               Let’s find out what will work for you
             </motion.button>
           </Link>
