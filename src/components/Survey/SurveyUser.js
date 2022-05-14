@@ -40,7 +40,7 @@ const SurveyUser = (props) => {
         if (response.status === 201) {
           setTimeout(() => {
             history("/survey");
-          }, 3000);
+          }, 1000);
         }
       })
       .catch((error) => {
@@ -52,103 +52,109 @@ const SurveyUser = (props) => {
     <div className="survey-container bg-color-2">
       <div className="newwrapper">
         <div>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <section>
-              <div className="survey-ques">
-                <h1>Enter your details to attend Diet survey questions</h1>
-              </div>
-              <div className="survey-ans">
-                <div className="userText">
-                  <label>
-                    <div>
-                      <input
-                        name="name"
-                        className="input-field"
-                        type="text"
-                        placeholder="Enter Your Name"
-                        {...register("userdetails.name", {
-                          required: true,
-                          minLength: 3,
-                        })}
-                        phone
-                      />
-                    </div>
-                    {errors.userdetails?.name && (
-                      <p className="form-err-text">
-                        Minimum 3 Character Required
-                      </p>
-                    )}
-                  </label>
+          {isPosted.status != 201 ? (
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <section>
+                <div className="survey-ques">
+                  <h1>Enter your details to attend Diet survey questions</h1>
                 </div>
-
-                <div className="userText">
-                  <label>
-                    <input
-                      name="phone"
-                      className="input-field"
-                      type="text"
-                      placeholder="Enter Your Mobile Number"
-                      {...register("userdetails.number", {
-                        required: "YOU NEED A PHONE NUMBER",
-                        minLength: {
-                          value: 10,
-                          message: "Number is Too Short",
-                        },
-                        pattern: {
-                          value:
-                            /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/,
-                          message: "Please enter a valid phone number",
-                        },
-                      })}
-                    />
-                    {errors.userdetails?.number && (
-                      <p className="form-err-text">Invalid Mobile Number</p>
-                    )}{" "}
-                    {props.phonevalid}
-                  </label>
+                <div className="survey-ans">
                   <div className="userText">
                     <label>
-                      <input
-                        name="name"
-                        className="input-field"
-                        type="email"
-                        placeholder="Enter Your Email Address"
-                        {...register("userdetails.email", {
-                          required: true,
-                          pattern: {
-                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                            message: "invalid email address",
-                          },
-                        })}
-                      />
-
-                      {errors.userdetails?.email && (
+                      <div>
+                        <input
+                          name="name"
+                          className="input-field"
+                          type="text"
+                          placeholder="Enter Your Name"
+                          {...register("userdetails.name", {
+                            required: true,
+                            minLength: 3,
+                          })}
+                          phone
+                        />
+                      </div>
+                      {errors.userdetails?.name && (
                         <p className="form-err-text">
-                          {errors.userdetails?.email.message}
+                          Minimum 3 Character Required
                         </p>
                       )}
                     </label>
                   </div>
+
+                  <div className="userText">
+                    <label>
+                      <input
+                        name="phone"
+                        className="input-field"
+                        type="text"
+                        placeholder="Enter Your Mobile Number"
+                        {...register("userdetails.number", {
+                          required: "YOU NEED A PHONE NUMBER",
+                          minLength: {
+                            value: 10,
+                            message: "Number is Too Short",
+                          },
+                          pattern: {
+                            value:
+                              /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/,
+                            message: "Please enter a valid phone number",
+                          },
+                        })}
+                      />
+                      {errors.userdetails?.number && (
+                        <p className="form-err-text">Invalid Mobile Number</p>
+                      )}{" "}
+                      {props.phonevalid}
+                    </label>
+                    <div className="userText">
+                      <label>
+                        <input
+                          name="name"
+                          className="input-field"
+                          type="email"
+                          placeholder="Enter Your Email Address"
+                          {...register("userdetails.email", {
+                            required: true,
+                            pattern: {
+                              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                              message: "invalid email address",
+                            },
+                          })}
+                        />
+
+                        {errors.userdetails?.email && (
+                          <p className="form-err-text">
+                            {errors.userdetails?.email.message}
+                          </p>
+                        )}
+                      </label>
+                    </div>
+                  </div>
                 </div>
+                <div className="recaptcha-con">
+                  <ReCAPTCHA
+                    sitekey="6LfnJFwfAAAAAPTvk8M5nHeJ217TKlfWUyyedRtT"
+                    onChange={handlerecaptcha}
+                  />
+                </div>
+              </section>
+              <div className="formnavbtn">
+                <button
+                  //   disabled={!isValid}
+                  type="submit"
+                  //   onClick={completeFormStep}
+                  className="btn btn-dark"
+                >
+                  ANSWER
+                </button>
               </div>
-              <div className="recaptcha-con">
-                <ReCAPTCHA
-                  sitekey="6LfnJFwfAAAAAPTvk8M5nHeJ217TKlfWUyyedRtT"
-                  onChange={handlerecaptcha}
-                />
-              </div>
-            </section>
-            <div className="formnavbtn">
-              <button
-                //   disabled={!isValid}
-                type="submit"
-                //   onClick={completeFormStep}
-                className="btn btn-dark"
-              >
-                ANSWER
-              </button>
+            </form>
+          ) : (
+            <div className="flex flex-jc-c">
+              <div className="loader flex flex-jc-c flex-ai-c"></div>
             </div>
-          </form>
+          )}
         </div>
       </div>
     </div>

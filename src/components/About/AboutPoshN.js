@@ -74,37 +74,47 @@ const AboutPoshN = (props) => {
   return (
     <section ref={ref} className="has-snap has-ani about-me-section">
       <div className="wrapper">
-        <div className="AboutPoshn-Container flex flex-jc-c flex-ai-c">
-          <img className="ab-img-top" src={aboutData.image1} />
-          <h1 className="ab-title">{aboutData.name}</h1>
-          <div className="ab-img-bottom-container">
-            <img className="ab-img-left" src={aboutData.image2} />
-            <img className="ab-img-right" src={aboutData.image3} />
+        {isloaded === 200 ? (
+          <div className="AboutPoshn-Container flex flex-jc-c flex-ai-c">
+            <img className="ab-img-top" src={aboutData.image1} />
+            <h1 className="ab-title">{aboutData.name}</h1>
+            <div className="ab-img-bottom-container">
+              <img className="ab-img-left" src={aboutData.image2} />
+              <img className="ab-img-right" src={aboutData.image3} />
+            </div>
+            <div className="ab-poshn-text-container">
+              <p>{aboutData.about}</p>
+
+              <h1>Experience</h1>
+              <p>{aboutData.experience}</p>
+
+              <h1>
+                Professional
+                <br /> Background
+              </h1>
+
+              <p>{aboutData.professional_background}</p>
+
+              <h1>
+                Professional <br />
+                Affiliations
+              </h1>
+
+              <p>{aboutData.professional_affiliations}</p>
+            </div>
           </div>
-          <div className="ab-poshn-text-container">
-            <p>{aboutData.about}</p>
-
-            <h1>Experience</h1>
-            <p>{aboutData.experience}</p>
-
-            <h1>
-              Professional
-              <br /> Background
-            </h1>
-
-            <p>{aboutData.professional_background}</p>
-
-            <h1>
-              Professional <br />
-              Affiliations
-            </h1>
-
-            <p>{aboutData.professional_affiliations}</p>
+        ) : (
+          <div className="flex flex-jc-c">
+            <div className="loader flex flex-jc-c flex-ai-c"></div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );
 };
 
 export default AboutPoshN;
+
+// {activeloader && (
+//
+// )}

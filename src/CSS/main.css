@@ -46,3 +46,7 @@ a:hover,
 button:hover {
   cursor: pointer;
 }
+
+.pg-nt-found {
+  width: 50%;
+}

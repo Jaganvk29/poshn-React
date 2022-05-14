@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import LatestBlogAbout from "../About/LatestBlogAbout";
 import { motion } from "framer-motion";
@@ -7,8 +7,10 @@ import axios from "axios";
 import _ from "lodash";
 import ImageHandler from "./ImageHandler";
 import Footer from "../Footer/Footer";
-
+import pagenotdound from "../../Assets/pagenotdound.png";
 export const ReadBlog = () => {
+  const [isblogfound, setisblogfound] = useState(false);
+
   const { blogData, isloadedhandler, loaded, readBloghandler, readBlog } =
     useContext(PoshContext);
 
@@ -33,6 +35,21 @@ export const ReadBlog = () => {
       })
       .catch((error) => {
         console.log(error);
+
+        if (error.response) {
+          if (error.response.status === 404) {
+            setisblogfound(true);
+          }
+          //do something
+          console.log(error.response);
+        } else if (error.request) {
+          console.log("ERROR REQUEST");
+          //do something else
+        } else if (error.message) {
+          console.log("ERROR MESSAGE");
+
+          //do something other than the other two
+        }
       });
   };
 
@@ -115,21 +132,27 @@ export const ReadBlog = () => {
                   ></div>
                 </motion.div>
               </div>
+              <div className="read-articels-container">
+                <h1>RELATED ARTICELS</h1>
+
+                <LatestBlogAbout readblogcss={true} num={2} />
+              </div>
+            </div>
+          ) : isblogfound ? (
+            <div className="flex flex-d-c flex-jc-c flex-ai-c height100vh">
+              <img className="pg-nt-found" src={pagenotdound} />
+              <h1>No Blog Found in This Url</h1>
             </div>
           ) : (
-            <div className="loadercenter">
+            <div className="flex flex-jc-c flex-ai-c height100vh">
               <div className="loader flex flex-jc-c flex-ai-c"></div>
             </div>
           )}
         </div>
       </motion.div>
-      <div className="read-articels-container">
-        <h1>RELATED ARTICELS</h1>
-
-        <LatestBlogAbout readblogcss={true} num={2} />
-      </div>
 
       <Footer />
     </motion.div>
   );
 };
+// isblogfound

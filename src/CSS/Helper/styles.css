@@ -41,8 +41,15 @@
   display: flex;
 }
 
+.flex-d-c {
+  flex-direction: column;
+}
 .inline-flex {
   display: inline-flex;
+}
+
+.height100vh {
+  height: 100vh;
 }
 
 /****************************** flex styles **********************************/

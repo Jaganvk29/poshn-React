@@ -8,7 +8,7 @@ const Faq = () => {
   const [apiStatus, setApiStatus] = useState();
 
   const getFaqData = () => {
-    axios.get("http://18.209.153.146/faq/").then((data) => {
+    axios.get(`${process.env.REACT_APP_API_URL}/faq/`).then((data) => {
       const ResponseData = data.data;
       setApiStatus(data.status);
 

@@ -1,12 +1,8 @@
 import React, { useState, useContext } from "react";
-
 import { useForm } from "react-hook-form";
 import prevbtn from "../../Assets/prevbtn.png";
 import { motion } from "framer-motion";
-import SurveyStep from "./SurveyStep";
-import BookingModal from "../Home/Modal/BookingModal";
 import PoshContext from "../../PoshContext";
-import SurveyUser from "./SurveyUser";
 import SurveyContext from "../../SurveyContext";
 import axios from "axios";
 import Step1 from "./Steps/Step1";
@@ -19,9 +15,11 @@ import Step7 from "./Steps/Step7";
 import Step8 from "./Steps/Step8";
 import Step9 from "./Steps/Step9";
 import Step10 from "./Steps/Step10";
-import { Link, Navigate } from "react-router-dom";
-import Lib from "react-slick/lib";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+
 const Survey = () => {
+  let history = useNavigate();
+
   // SURVEY SENT SUCESSFULLY STATE
   const [isPosted, setIsPosted] = useState(false);
 
@@ -43,7 +41,6 @@ const Survey = () => {
   };
 
   // SURVEY USER ID
-  // console.log(surveyuser.data.id);
 
   const {
     register,
@@ -54,10 +51,6 @@ const Survey = () => {
 
   console.log(userid);
   const onSubmit = (data) => {
-    // const formData = new FormData();
-
-    // const userid = 3;
-
     const Step1 = {
       question: {
         question_text: "Tell us about Your current relationship with foods?",
@@ -156,18 +149,6 @@ const Survey = () => {
       choices: data.Question10,
       user: userid,
     };
-
-    // console.log(Step1);
-    // console.log(Step2);
-    // console.log(Step3);
-    // console.log(Step4);
-    // console.log(Step5);
-    // console.log(Step6);
-    // console.log(Step7);
-    // console.log(Step8);
-    // console.log(Step9);
-    // console.log(Step10);
-
     console.log(data);
 
     function formstepdata1() {
@@ -271,16 +252,16 @@ const Survey = () => {
       });
   };
 
-  const checkboxhandler = (e) => {
-    if (e.target.checked) {
-      setSelected([...selected, e.target.value]);
-      if (e.target.value === "other") {
-        setOthersel(!othersel);
-      }
-    } else {
-      setSelected(selected.filter((select) => select !== e.target.value));
-    }
-  };
+  // const checkboxhandler = (e) => {
+  //   if (e.target.checked) {
+  //     setSelected([...selected, e.target.value]);
+  //     if (e.target.value === "other") {
+  //       setOthersel(!othersel);
+  //     }
+  //   } else {
+  //     setSelected(selected.filter((select) => select !== e.target.value));
+  //   }
+  // };
 
   const completeFormStep = () => {
     // setFormStep((cur) => cur + 1);
@@ -355,8 +336,6 @@ const Survey = () => {
     }
   };
 
-  // console.log(selected);
-  // console.log(othersel);
   return (
     <motion.div
       intial={{ opacity: 0 }}
@@ -375,13 +354,8 @@ const Survey = () => {
                   )}
                 </div>
               </div>
+
               <form onSubmit={handleSubmit(onSubmit)}>
-                {/* USER DETAILS*/}
-
-                {/* {formstep === 0 && (
-              
-              )} */}
-
                 {/* STEP 1 */}
                 {formstep === 0 && (
                   <Step1
@@ -560,8 +534,13 @@ const Survey = () => {
                 <div className="formnavbtn">
                   {rendernxtButton()}
                   {rendersubmitButton()}
+                  {isPosted && (
+                    <div className="flex flex-jc-c">
+                      <div className="loader flex flex-jc-c flex-ai-c"></div>
+                    </div>
+                  )}
                 </div>
-                <pre>{JSON.stringify(watch(), null, 2)}</pre>
+                {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
               </form>
 
               {isPosted && <Navigate to={"/surveycompleted"} />}

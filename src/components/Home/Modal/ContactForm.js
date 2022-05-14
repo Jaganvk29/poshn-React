@@ -68,7 +68,7 @@ const ContactForm = (props) => {
 
     await axios
       .post(
-        `http://18.209.153.146/${
+        ` ${process.env.REACT_APP_API_URL}/${
           props.checkboxes ? "consultation/" : "contact/"
         }`,
         formData
